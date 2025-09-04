@@ -1,0 +1,128 @@
+.search-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+}
+
+.search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-box svg {
+  position: absolute;
+  left: 12px;
+  z-index: 1;
+}
+
+.search-input {
+  padding: 10px 15px 10px 40px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 250px;
+  transition: all 0.3s ease;
+  outline: none;
+  border-color: #133B5F;
+  box-shadow: 0 0 0 3px rgba(19, 59, 95, 0.1);
+}
+
+.search-input:focus {
+  
+}
+
+.filter-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-select,
+.sort-select {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-select:focus,
+.sort-select:focus {
+  outline: none;
+  border-color: #133B5F;
+  box-shadow: 0 0 0 3px rgba(19, 59, 95, 0.1);
+}
+
+@media (max-width: 768px) {
+  .search-filter {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+  
+  .search-input {
+    width: 100%;
+  }
+  
+  .filter-controls {
+    width: 100%;
+  }
+  
+  .filter-select,
+  .sort-select {
+    flex: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-controls {
+    flex-direction: column;
+  }
+  
+  .filter-select,
+  .sort-select {
+    width: 100%;
+  }
+}
+
+/* Target your select dropdowns */
+/* General select styling */
+.filter-select,
+.sort-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  
+  background: #fff; /* white background, change if needed */
+  color: #133B5F;   /* your website text color */
+  font-size: 14px;
+  font-weight: 500;
+
+  padding: 10px 40px 10px 18px; /* space for custom arrow */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+/* Hover/focus effect */
+.filter-select:hover,
+.sort-select:hover,
+.filter-select:focus,
+.sort-select:focus {
+  border-color: #133B5F;
+}
+
+/* Custom dropdown arrow */
+.filter-select,
+.sort-select {
+  position: relative;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%23133B5F' height='12' viewBox='0 0 24 24' width='12' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+}

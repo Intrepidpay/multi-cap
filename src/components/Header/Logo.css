@@ -1,0 +1,49 @@
+:root {
+  --brand-color: #133B5F;
+  --logo-mark-size: 56px;
+  --brand-font-size: 1.2rem;
+  --tagline-font-size: 0.85rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.1;
+}
+
+.brand-name {
+  color: var(--brand-color);
+  font-weight: 700;
+  font-size: var(--brand-font-size);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.brand-tagline {
+  color: var(--brand-color);
+  font-weight: 500;
+  font-size: var(--tagline-font-size);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 2px;
+  margin-left: -4% ;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .brand-name {
+    font-size: calc(var(--brand-font-size) * 0.9);
+  }
+  
+  .brand-tagline {
+    font-size: calc(var(--tagline-font-size) * 0.9);
+  }
+}

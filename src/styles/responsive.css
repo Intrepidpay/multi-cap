@@ -1,0 +1,66 @@
+/* Mobile First Approach */
+
+/* Base container styles */
+.container {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* Small devices (phones, 480px and down) */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* Utility classes for responsive design */
+.hide-on-mobile {
+  display: block;
+}
+
+.show-on-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hide-on-mobile {
+    display: none;
+  }
+  
+  .show-on-mobile {
+    display: block;
+  }
+}
+
+/* Additional responsive helpers */
+@media (max-width: 768px) {
+  .text-center-mobile {
+    text-align: center;
+  }
+  
+  .full-width-mobile {
+    width: 100%;
+  }
+}

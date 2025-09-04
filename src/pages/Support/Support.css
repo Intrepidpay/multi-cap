@@ -1,0 +1,248 @@
+.support {
+  padding: 50px 0;
+}
+
+.support h2 {
+  color: #133B5F;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2.2rem;
+}
+
+.support-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 50px;
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.support-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #E9EDF8;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.support-tabs button {
+  all: unset;               /* removes global button styles */
+  background: none;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #666;
+  cursor: pointer;
+  position: relative;
+}
+
+.support-tabs button {
+  all: unset;                /* reset globals */
+  display: inline-block;     /* prevents weird text-like expansion */
+  box-sizing: border-box;    /* keeps padding from overflowing */
+  
+  background: none;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #666;
+  cursor: pointer;
+  position: relative;
+  line-height: 1.2;          /* avoids vertical overflow */
+}
+
+.support-tabs button:hover {
+  background: none;          /* prevent global hover background */
+  transform: none;           /* prevent global hover transform */
+}
+
+.support-tabs button.active {
+  color: #133B5F;
+}
+
+.support-tabs button.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #133B5F;
+}
+
+.tab-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.faq-section {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.faq-item h3 {
+  color: #133B5F;
+  margin: 0 0 15px;
+  font-size: 1.2rem;
+}
+
+.faq-item p {
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.contact-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-method {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-method h3 {
+  color: #133B5F;
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+}
+
+.contact-details {
+  font-weight: 600;
+  color: #133B5F;
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+}
+
+.contact-description {
+  color: #666;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.contact-form {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h3 {
+  color: #133B5F;
+  margin: 0 0 20px;
+  font-size: 1.3rem;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #133B5F;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #E9EDF8;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #133B5F;
+}
+
+.contact-form button {
+  background-color: #133B5F;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #0d2a43;
+}
+
+@media (max-width: 992px) {
+  .contact-section {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .contact-methods {
+    order: 2;
+  }
+  
+  .contact-form {
+    order: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .support-tabs {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .support-tabs button {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .faq-item {
+    padding: 20px;
+  }
+  
+  .contact-method, .contact-form {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .support h2 {
+    font-size: 1.8rem;
+  }
+  
+  .support-intro {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+}
