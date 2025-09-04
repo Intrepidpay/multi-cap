@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Intrepidpay.github.io/multi-cap/",
+  "homepage": "https://www.multicapital.online",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
