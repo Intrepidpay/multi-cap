@@ -84,6 +84,44 @@
       } 
     }
     </script>
+
+    <!-- Organization Structured Data for Logo in Search Results -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Multicapital Warehouse",
+      "url": "https://www.multicapital.online",
+      "logo": "https://www.multicapital.online/logo.png",
+      "sameAs": [
+        "https://twitter.com/multicapital",
+        "https://facebook.com/multicapital",
+        "https://instagram.com/multicapital"
+      ],
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "telephone": "+1 (825) 746-8686",
+        "contactType": "customer service",
+        "areaServed": "US",
+        "availableLanguage": "English"
+      }]
+    }
+    </script>
+
+    <!-- Website Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Multicapital Warehouse",
+      "url": "https://www.multicapital.online",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.multicapital.online/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
     
     <!-- Preload critical resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -145,4 +183,4 @@
 Multicapital Warehouse delivers a premium online retail experience, offering trusted service, secure checkout, and reliable delivery of quality products.
     </noscript>
   </body>
-  </html>
+</html>
