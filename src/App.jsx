@@ -33,7 +33,7 @@ const router = createBrowserRouter(
     },
   ],
   {
-    basename: "/multi-cap", // 👈 this is important for GitHub Pages
+    basename: "/", 
   }
 )
 
