@@ -64,7 +64,7 @@ const ProductDetail = () => {
     // Add structured data to the page
     const script = document.createElement('script');
     script.type = 'application/ld+json';
-    script.text = JSON.stringify(structuredData);
+    script.text = JSON.stringify(structructuredData);
     document.head.appendChild(script);
 
     return () => {
@@ -133,10 +133,13 @@ const ProductDetail = () => {
               )}
             </div>
             
+            {/* Enhanced Star Rating */}
             <div className="product-detail-rating">
               <div className="product-detail-stars">
-                {"★".repeat(Math.floor(product.rating.value))}
-                {"☆".repeat(5 - Math.floor(product.rating.value))}
+                <div 
+                  className="product-detail-stars-inner" 
+                  style={{ width: `${(product.rating.value / 5) * 100}%` }}
+                ></div>
               </div>
               <span className="product-detail-review-count">
                 ({product.rating.count} reviews)
