@@ -4,10 +4,152 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PremiumRetail - Your Premium Shopping Destination</title>
+    
+    <!-- Primary Meta Tags -->
+    <title>Multicapital Warehouse</title>
+    <meta name="title" content="Multicapital Warehouse">
+    <meta name="description" content="Discover premium products at unbeatable prices. Shop electronics, rare arts, home goods and more with fast shipping and exceptional customer service.">
+    <meta name="keywords" content="premium shopping, electronics, rare arts, home goods, online store, ecommerce">
+    <meta name="author" content="Multicapital Warehouse">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.multicapital.online/">
+    <meta property="og:title" content="Multicapital Warehouse">
+    <meta property="og:description" content="Discover premium products at unbeatable prices. Shop electronics, rare arts, home goods and more.">
+    <meta property="og:image" content="https://www.multicapital.online/social-preview.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.multicapital.online/">
+    <meta property="twitter:title" content="Multicapital Warehouse">
+    <meta property="twitter:description" content="Discover premium products at unbeatable prices. Shop electronics, rare arts, home goods and more.">
+    <meta property="twitter:image" content="https://www.multicapital.online/social-preview.jpg">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    
+    <!-- Canonical URL for SEO -->
+    <link rel="canonical" href="https://www.multicapital.online/">
+    
+    <!-- Structured Data for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Store",
+      "name": "Multicapital Warehouse",
+      "image": "https://www.multicapital.online/logo.png",
+      "@id": "https://www.multicapital.online/",
+      "url": "https://www.multicapital.online/",
+      "telephone": "+1 (825) 746-8686",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Commerce Street",
+        "addressLocality": "New York",
+        "addressRegion": "NY",
+        "postalCode": "10001",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 40.7127753,
+        "longitude": -74.0059728
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "09:00",
+        "closes": "21:00"
+      } 
+    }
+    </script>
+    
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <style>
+      /* Basic loading styles */
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+          'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+          sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: #f8f9fa;
+      }
+      
+      #root {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      
+      /* Loading animation */
+      .loading-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+      }
+      
+      .loading-spinner {
+        width: 50px;
+        height: 50px;
+        border: 5px solid #f3f3f3;
+        border-top: 5px solid #3498db;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin-bottom: 20px;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Loading state until React hydrates -->
+      <div class="loading-container">
+        <div class="loading-spinner"></div>
+        <p>Loading PremiumRetail...</p>
+      </div>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
+    
+    <!-- Simple popup example that would work with React -->
+    <div id="newsletter-popup" style="display: none; position: fixed; bottom: 20px; right: 20px; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); z-index: 1000; max-width: 300px;">
+      <h3 style="margin-top: 0;">Stay Updated!</h3>
+      <p>Subscribe to our newsletter for exclusive deals.</p>
+      <input type="email" placeholder="Your email" style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 4px;">
+      <button style="background: #3498db; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Subscribe</button>
+      <button onclick="document.getElementById('newsletter-popup').style.display = 'none'" style="position: absolute; top: 5px; right: 5px; background: none; border: none; font-size: 16px; cursor: pointer;">×</button>
+    </div>
+    
+    <script>
+      // Simple script to show popup after delay
+      setTimeout(function() {
+        document.getElementById('newsletter-popup').style.display = 'block';
+      }, 5000);
+    </script>
   </body>
-</html>
+  </html>
