@@ -21,9 +21,7 @@ const products = [
     },
     reviews: [
       {
-        author: "Satisfied Customer",
-        rating: 5,
-        comment: "Excellent product, fast shipping!"
+        rating: 5
       }
     ]
   },
@@ -47,9 +45,7 @@ const products = [
     },
     reviews: [
       {
-        author: "Happy Viewer",
-        rating: 4,
-        comment: "Great picture quality, easy setup."
+        rating: 4
       }
     ]
   },
@@ -73,9 +69,7 @@ const products = [
     },
     reviews: [
       {
-        author: "Adventure Seeker",
-        rating: 5,
-        comment: "Handles rough trails like a champ!"
+        rating: 5
       }
     ]
   },
@@ -99,9 +93,7 @@ const products = [
     },
     reviews: [
       {
-        author: "Gaming Enthusiast",
-        rating: 5,
-        comment: "Best gaming experience I've ever had!"
+        rating: 5
       }
     ]
   },
@@ -125,9 +117,7 @@ const products = [
     },
     reviews: [
       {
-        author: "Professional Photographer",
-        rating: 5,
-        comment: "Crystal clear images and excellent low-light performance."
+        rating: 5
       }
     ]
   },
@@ -138,7 +128,7 @@ const products = [
     category: "home appliances",
     description: "Energy-efficient refrigerator with smart features and ample storage.",
     images: [
-      "https://images.unsplash.com/photo-1599623560574-39c485ba5605?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+      "https://images.unsplash.com/--1599623560574-39c485ba5605?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
     ],
     highDemand: false,
     sold: false,
@@ -151,9 +141,7 @@ const products = [
     },
     reviews: [
       {
-        author: "Home Chef",
-        rating: 4,
-        comment: "Spacious and keeps everything perfectly chilled."
+        rating: 4
       }
     ]
   },
@@ -177,9 +165,7 @@ const products = [
     },
     reviews: [
       {
-        author: "Audio Enthusiast",
-        rating: 5,
-        comment: "Amazing sound quality and battery life!"
+        rating: 5
       }
     ]
   },
@@ -203,9 +189,7 @@ const products = [
     },
     reviews: [
       {
-        author: "Fitness Enthusiast",
-        rating: 4,
-        comment: "Great for tracking workouts and daily activity."
+        rating: 4
       }
     ]
   },
@@ -229,9 +213,7 @@ const products = [
     },
     reviews: [
       {
-        author: "City Commuter",
-        rating: 5,
-        comment: "Perfect for my daily commute, folds up easily."
+        rating: 5
       }
     ]
   },
@@ -255,9 +237,7 @@ const products = [
     },
     reviews: [
       {
-        author: "Power User",
-        rating: 5,
-        comment: "Handles all my demanding applications with ease."
+        rating: 5
       }
     ]
   },
@@ -281,9 +261,7 @@ const products = [
     },
     reviews: [
       {
-        author: "Coffee Lover",
-        rating: 4,
-        comment: "Brews perfect coffee every morning."
+        rating: 4
       }
     ]
   },
@@ -307,9 +285,7 @@ const products = [
     },
     reviews: [
       {
-        author: "Adventure Videographer",
-        rating: 5,
-        comment: "Incredible video quality even in challenging conditions."
+        rating: 5
       }
     ]
   }
@@ -361,4 +337,4 @@ export const getProducts = (filter = 'all', sort = 'random', searchQuery = '') =
 
 export const getProductById = (id) => {
   return products.find(product => product.id === id)
-}
+  }
