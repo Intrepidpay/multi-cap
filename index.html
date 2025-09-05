@@ -135,21 +135,5 @@
       </div>
     </div>
     <script type="module" src="/src/main.jsx"></script>
-    
-    <!-- Simple popup example that would work with React -->
-    <div id="newsletter-popup" style="display: none; position: fixed; bottom: 20px; right: 20px; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); z-index: 1000; max-width: 300px;">
-      <h3 style="margin-top: 0;">Stay Updated!</h3>
-      <p>Subscribe to our newsletter for exclusive deals.</p>
-      <input type="email" placeholder="Your email" style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 4px;">
-      <button style="background: #3498db; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Subscribe</button>
-      <button onclick="document.getElementById('newsletter-popup').style.display = 'none'" style="position: absolute; top: 5px; right: 5px; background: none; border: none; font-size: 16px; cursor: pointer;">×</button>
-    </div>
-    
-    <script>
-      // Simple script to show popup after delay
-      setTimeout(function() {
-        document.getElementById('newsletter-popup').style.display = 'block';
-      }, 5000);
-    </script>
   </body>
   </html>
