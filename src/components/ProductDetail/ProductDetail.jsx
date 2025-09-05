@@ -64,7 +64,7 @@ const ProductDetail = () => {
     // Add structured data to the page
     const script = document.createElement('script');
     script.type = 'application/ld+json';
-    script.text = JSON.stringify(structructuredData);
+    script.text = JSON.stringify(structuredData);
     document.head.appendChild(script);
 
     return () => {
