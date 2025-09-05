@@ -1,4 +1,4 @@
-// Mock product data
+// Mock product data with enhanced SEO properties
 const products = [
   {
     id: 1,
@@ -13,7 +13,19 @@ const products = [
     highDemand: true,
     sold: false,
     quantity: 5,
-    sku: "LAP-GM-001"
+    sku: "LAP-GM-001",
+    brand: "Multicapital",
+    rating: {
+      value: 4.8,
+      count: 24
+    },
+    reviews: [
+      {
+        author: "Satisfied Customer",
+        rating: 5,
+        comment: "Excellent product, fast shipping!"
+      }
+    ]
   },
   {
     id: 2,
@@ -27,7 +39,19 @@ const products = [
     highDemand: false,
     sold: false,
     quantity: 8,
-    sku: "TV-SM-055"
+    sku: "TV-SM-055",
+    brand: "Multicapital",
+    rating: {
+      value: 4.5,
+      count: 18
+    },
+    reviews: [
+      {
+        author: "Happy Viewer",
+        rating: 4,
+        comment: "Great picture quality, easy setup."
+      }
+    ]
   },
   {
     id: 3,
@@ -41,7 +65,19 @@ const products = [
     highDemand: true,
     sold: true,
     quantity: 0,
-    sku: "BIC-MT-001"
+    sku: "BIC-MT-001",
+    brand: "Multicapital",
+    rating: {
+      value: 4.7,
+      count: 32
+    },
+    reviews: [
+      {
+        author: "Adventure Seeker",
+        rating: 5,
+        comment: "Handles rough trails like a champ!"
+      }
+    ]
   },
   {
     id: 4,
@@ -55,7 +91,19 @@ const products = [
     highDemand: true,
     sold: false,
     quantity: 3,
-    sku: "CON-GM-001"
+    sku: "CON-GM-001",
+    brand: "Multicapital",
+    rating: {
+      value: 4.9,
+      count: 45
+    },
+    reviews: [
+      {
+        author: "Gaming Enthusiast",
+        rating: 5,
+        comment: "Best gaming experience I've ever had!"
+      }
+    ]
   },
   {
     id: 5,
@@ -69,7 +117,19 @@ const products = [
     highDemand: false,
     sold: false,
     quantity: 7,
-    sku: "CAM-PR-001"
+    sku: "CAM-PR-001",
+    brand: "Multicapital",
+    rating: {
+      value: 4.6,
+      count: 29
+    },
+    reviews: [
+      {
+        author: "Professional Photographer",
+        rating: 5,
+        comment: "Crystal clear images and excellent low-light performance."
+      }
+    ]
   },
   {
     id: 6,
@@ -83,7 +143,19 @@ const products = [
     highDemand: false,
     sold: false,
     quantity: 4,
-    sku: "APP-RF-001"
+    sku: "APP-RF-001",
+    brand: "Multicapital",
+    rating: {
+      value: 4.4,
+      count: 16
+    },
+    reviews: [
+      {
+        author: "Home Chef",
+        rating: 4,
+        comment: "Spacious and keeps everything perfectly chilled."
+      }
+    ]
   },
   {
     id: 7,
@@ -97,7 +169,19 @@ const products = [
     highDemand: true,
     sold: false,
     quantity: 12,
-    sku: "AUD-HP-001"
+    sku: "AUD-HP-001",
+    brand: "Multicapital",
+    rating: {
+      value: 4.8,
+      count: 37
+    },
+    reviews: [
+      {
+        author: "Audio Enthusiast",
+        rating: 5,
+        comment: "Amazing sound quality and battery life!"
+      }
+    ]
   },
   {
     id: 8,
@@ -111,7 +195,19 @@ const products = [
     highDemand: false,
     sold: false,
     quantity: 6,
-    sku: "ACC-SW-001"
+    sku: "ACC-SW-001",
+    brand: "Multicapital",
+    rating: {
+      value: 4.3,
+      count: 22
+    },
+    reviews: [
+      {
+        author: "Fitness Enthusiast",
+        rating: 4,
+        comment: "Great for tracking workouts and daily activity."
+      }
+    ]
   },
   {
     id: 9,
@@ -125,7 +221,19 @@ const products = [
     highDemand: true,
     sold: false,
     quantity: 2,
-    sku: "TRN-ES-001"
+    sku: "TRN-ES-001",
+    brand: "Multicapital",
+    rating: {
+      value: 4.5,
+      count: 19
+    },
+    reviews: [
+      {
+        author: "City Commuter",
+        rating: 5,
+        comment: "Perfect for my daily commute, folds up easily."
+      }
+    ]
   },
   {
     id: 10,
@@ -139,7 +247,19 @@ const products = [
     highDemand: false,
     sold: false,
     quantity: 5,
-    sku: "COM-DT-001"
+    sku: "COM-DT-001",
+    brand: "Multicapital",
+    rating: {
+      value: 4.7,
+      count: 28
+    },
+    reviews: [
+      {
+        author: "Power User",
+        rating: 5,
+        comment: "Handles all my demanding applications with ease."
+      }
+    ]
   },
   {
     id: 11,
@@ -153,7 +273,19 @@ const products = [
     highDemand: false,
     sold: false,
     quantity: 10,
-    sku: "APP-CM-001"
+    sku: "APP-CM-001",
+    brand: "Multicapital",
+    rating: {
+      value: 4.2,
+      count: 14
+    },
+    reviews: [
+      {
+        author: "Coffee Lover",
+        rating: 4,
+        comment: "Brews perfect coffee every morning."
+      }
+    ]
   },
   {
     id: 12,
@@ -167,7 +299,19 @@ const products = [
     highDemand: true,
     sold: false,
     quantity: 3,
-    sku: "CAM-AC-001"
+    sku: "CAM-AC-001",
+    brand: "Multicapital",
+    rating: {
+      value: 4.9,
+      count: 41
+    },
+    reviews: [
+      {
+        author: "Adventure Videographer",
+        rating: 5,
+        comment: "Incredible video quality even in challenging conditions."
+      }
+    ]
   }
 ]
 
