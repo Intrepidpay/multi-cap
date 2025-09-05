@@ -1,0 +1,55 @@
+name: Deploy Vite App to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main   # change if your default branch is "master"
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build the project
+        run: npm run build
+
+      # Preserve CNAME from root directory
+      - name: Copy CNAME to dist
+        run: |
+          if [ -f "./CNAME" ]; then
+            cp ./CNAME ./dist/CNAME
+            echo "CNAME copied to dist directory."
+          else
+            echo "Error: CNAME file missing in root!"
+            exit 1
+          fi
+
+      # Create 404.html from index.html (for SPA routing)
+      - name: Generate 404.html
+        run: |
+          cp ./dist/index.html ./dist/404.html
+          echo "Created 404.html from index.html"
+
+      # Deploy to GitHub Pages
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          keep_files: false
+          force_orphan: true
