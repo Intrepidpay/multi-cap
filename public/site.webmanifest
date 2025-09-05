@@ -1,0 +1,49 @@
+{
+  "name": "Multicapital Warehouse - Your Premium Shopping Destination",
+  "short_name": "Multicapital Warehouse",
+  "description": "Discover premium products at unbeatable prices. Shop electronics, rare arts, home goods and more with fast shipping and exceptional customer service.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3498db",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "categories": ["shopping", "ecommerce", "retail"],
+  "screenshots": [
+    {
+      "src": "/screenshot-mobile.jpg",
+      "sizes": "375x812",
+      "type": "image/jpeg",
+      "form_factor": "narrow",
+      "label": "Multicapital Warehouse mobile shopping experience"
+    },
+    {
+      "src": "/screenshot-desktop.jpg",
+      "sizes": "1920x1080",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "Multicapital Warehouse desktop shopping experience"
+    }
+  ]
+}
