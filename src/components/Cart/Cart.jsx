@@ -8,7 +8,7 @@ const Cart = () => {
     // Format message for WhatsApp
     const message = `Hello! I would like to purchase the following items:%0A%0A${items.map(item => 
       `- ${item.name} (Qty: ${item.quantity}) - $${(item.price * item.quantity).toFixed(2)}`
-    ).join('%0A')}%0A%0ATotal: $${getCartTotal().toFixed(2)}%0A%0APlease let me know how to proceed with the payment.`
+    ).join('%0A')}%0A%0ATotal: $${getCartTotal().toFixed(2)}%0A%0APlease let me know how to proceed.`
     
     // Open WhatsApp with pre-filled message
     window.open(`https://wa.me/18257468686?text=${message}`, '_blank')
