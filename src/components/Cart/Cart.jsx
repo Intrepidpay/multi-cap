@@ -11,7 +11,7 @@ const Cart = () => {
     ).join('%0A')}%0A%0ATotal: $${getCartTotal().toFixed(2)}%0A%0APlease let me know how to proceed with the payment.`
     
     // Open WhatsApp with pre-filled message
-    window.open(`https://wa.me/1234567890?text=${message}`, '_blank')
+    window.open(`https://wa.me/18257468686?text=${message}`, '_blank')
   }
 
   if (items.length === 0) {
@@ -106,7 +106,7 @@ const Cart = () => {
             </div>
             
             <button className="checkout-btn" onClick={handleCheckout}>
-              Checkout via WhatsApp
+              Checkout
             </button>
             
             <button className="clear-cart" onClick={clearCart}>
