@@ -97,7 +97,7 @@ const Cart = () => {
             
             <div className="summary-row">
               <span>Shipping</span>
-              <span>$0.00</span>
+              <span>$TBD</span>
             </div>
             
             <div className="summary-row total">
