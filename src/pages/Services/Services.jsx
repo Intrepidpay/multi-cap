@@ -11,12 +11,12 @@ const Services = () => {
     },
     {
       title: "Fast Shipping",
-      description: "Enjoy quick delivery with our efficient shipping partners across the country.",
+      description: "Enjoy quick delivery with our efficient shipping partners across The United Starts and Canada.",
       icon: "🚚"
     },
     {
       title: "Secure Payment",
-      description: "Your transactions are protected with advanced encryption technology.",
+      description: "Your transactions are protected and confidential for your privacy.",
       icon: "🔒"
     },
     {
@@ -31,7 +31,7 @@ const Services = () => {
     },
     {
       title: "Warranty Protection",
-      description: "All products come with manufacturer warranty for your peace of mind.",
+      description: "All products are covered by a company-funded full refund guarantee for one year, provided the warranty policy is maintained.",
       icon: "🛡️"
     }
   ];
@@ -52,7 +52,7 @@ const Services = () => {
   // Function to shuffle and select 5 reviews
   const shuffleAndSelectReviews = () => {
     const shuffled = [...serviceReviews].sort(() => 0.5 - Math.random());
-    setDisplayedReviews(shuffled.slice(0, 5));
+    setDisplayedReviews(shuffled.slice(0, 10));
   };
 
   // Handle input changes for new review
@@ -105,9 +105,9 @@ const Services = () => {
   return (
     <div className="services">
       <div className="container">
-        <h2>Our Services</h2>
+        <h2>Services</h2>
         <p className="services-intro">
-          At PremiumRetail, we're committed to providing exceptional service at every step of your shopping journey.
+          At Multicaptal Warehouse, we're committed to providing exceptional service at every step of your shopping journey.
         </p>
         
         <div className="services-grid">
@@ -124,15 +124,15 @@ const Services = () => {
         <div className="reviews-section">
           <h2>Customer Reviews</h2>
           <p className="reviews-intro">
-            See what our customers are saying about our services
+            Client Experiences with Our Services
           </p>
 
           {/* Review Form */}
           <div className="review-form-card">
-            <h3>Add Your Review</h3>
+            <h3>Share Your Experience</h3>
             <form onSubmit={handleSubmitReview}>
               <div className="form-group">
-                <label htmlFor="author">Your Name</label>
+                <label htmlFor="author">Name</label>
                 <input
                   type="text"
                   id="author"
@@ -144,7 +144,7 @@ const Services = () => {
               </div>
               
               <div className="form-group">
-                <label>Your Rating</label>
+                <label>Rating</label>
                 <StarRating 
                   rating={newReview.rating} 
                   onRatingChange={handleRatingChange} 
@@ -153,7 +153,7 @@ const Services = () => {
               </div>
               
               <div className="form-group">
-                <label htmlFor="comment">Your Review</label>
+                <label htmlFor="comment">Review</label>
                 <textarea
                   id="comment"
                   name="comment"
