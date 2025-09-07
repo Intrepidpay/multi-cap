@@ -11,7 +11,7 @@ const Support = () => {
     },
     {
       question: "What payment methods do you accept?",
-      answer: "We accept various payment methods including bank transfers, mobile money, and credit/debit cards. Details will be provided during the WhatsApp checkout process."
+      answer: "We accept various payment methods including bank transfers, mobile money, and bitcoin. Details will be provided during the WhatsApp checkout process."
     },
     {
       question: "How long does shipping take?",
@@ -29,19 +29,14 @@ const Support = () => {
 
   const contactMethods = [
     {
-      method: "WhatsApp",
-      details: "+1 (555) 123-4567",
+      method: "WhatsApp business",
+      details: "+1 (825) 746-8686",
       description: "Message us directly for quick assistance with orders and inquiries."
     },
     {
       method: "Email",
-      details: "support@premiumretail.com",
+      details: "support@multicapital.online",
       description: "Send us an email and we'll respond within 24 hours."
-    },
-    {
-      method: "Phone",
-      details: "+1 (555) 123-HELP",
-      description: "Call us during business hours (9AM-6PM EST, Monday-Friday)."
     }
   ]
 
