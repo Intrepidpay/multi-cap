@@ -5,7 +5,7 @@ import './Services.css';
 const Services = () => {
   const services = [
     {
-      title: "Premium Products",
+      title: "Products",
       description: "We offer only the highest quality products from trusted brands and suppliers.",
       icon: "⭐"
     },
