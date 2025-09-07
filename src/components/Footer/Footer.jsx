@@ -7,35 +7,48 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
           <div className="footer-section">
-            <h3>PremiumRetail</h3>
+            <Link to="/" className="footer-brand" aria-label="MultiCapital home">
+              <div className="footer-brand-text">
+                <span className="footer-brand-name">MULTICAPITAL</span>
+                <span className="footer-brand-tagline">WAREHOUSE</span>
+              </div>
+            </Link>
             <p>Your one-stop shop for premium products at competitive prices.</p>
           </div>
           
           <div className="footer-section">
-            <h4>Company policy</h4>
+            <h4>Company Policies</h4>
             <ul>
-              <li><Link to="/policy">Privacy Policy</Link></li>
+              <li><Link to="/policy">Policy</Link></li>
             </ul>
           </div>
           
           <div className="footer-section">
-            <h4>Contact Us</h4>
-            <p>Email: support@premiumretail.com</p>
-            <p>Phone: +1 (555) 123-4567</p>
+            <h4>Contacts</h4>
+            <p>
+              Address: <a href="https://maps.google.com/?q=1918+Collingsworth+St,+Houston,+TX,+USA" target="_blank" rel="noopener noreferrer">1918 Collingsworth St, Houston, TX, USA</a>
+            </p>
+            
+            <p>
+              Address: <a href="https://maps.google.com/?q=509+Richards+St,+Vancouver,+BC,+Canada" target="_blank" rel="noopener noreferrer">509 Richards St, Vancouver, BC, Canada</a>
+            </p>
+            
+            <p>Email: <a href="mailto:support@multicapital.online">support@multicapital.online</a></p>
+            <p><a href="https://wa.me/18257468686" target="_blank" rel="noopener noreferrer">WhatsApp Business</a></p>
+          
           </div>
           
           <div className="footer-section">
-            <h4>Follow Us</h4>
+            <h4>Socials</h4>
             <div className="social-links">
               <a href="#">Facebook</a>
               <a href="#">Instagram</a>
-              <a href="#">Twitter</a>
             </div>
           </div>
         </div>
         
         <div className="footer-bottom">
-          <p>&copy; 2023 PremiumRetail. All rights reserved.</p>
+          <p>&copy;2025 Multicapital Warehouse. All rights reserved.</p>
         </div>
       </div>
     </footer>
