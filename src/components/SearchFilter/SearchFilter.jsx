@@ -3,7 +3,7 @@ import './SearchFilter.css'
 const SearchFilter = ({ filter, setFilter, sort, setSort, searchQuery, setSearchQuery }) => {
   const categories = [
     'all', 'cars', 'motorcycles', 'bicycles', 'tvs', 
-    'game consoles', 'laptops', 'computers', 'home appliances', 'special devices'
+    'game consoles', 'laptops', 'computers', 'home appliances', 'arts' , 'accessories', 'rare' , 'special devices' , 'other'
   ]
 
   return (
