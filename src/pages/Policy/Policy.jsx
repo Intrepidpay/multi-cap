@@ -9,18 +9,17 @@ const Policy = () => {
         <div className="policy-content">
           <section className="policy-section">
             <h2>Privacy Policy</h2>
-            <p className="last-updated">Last Updated: January 1, 2024</p>
+            <p className="last-updated">Last Updated: April 27, 2025</p>
             
             <h3>1. Introduction</h3>
             <p>
-              Welcome to PremiumRetail. We are committed to protecting your personal information and your right to privacy. 
+              Welcome to Multicapital Warehouse. We are committed to protecting your personal information and your right to privacy. 
               This Privacy Policy explains how we collect, use, and share your personal information when you use our services.
             </p>
             
             <h3>2. Information We Collect</h3>
             <p>We may collect the following types of information:</p>
             <ul>
-              <li>Personal identification information (Name, email address, phone number, etc.)</li>
               <li>Payment information</li>
               <li>Browser and device information</li>
               <li>Usage data and analytics</li>
@@ -78,8 +77,7 @@ const Policy = () => {
             
             <h3>2. Product Information</h3>
             <p>
-              We strive to ensure that product descriptions are accurate. However, we do not warrant that product descriptions 
-              or other content is accurate, complete, reliable, current, or error-free.
+              We are committed to providing clear, accurate, and reliable product descriptions to help our customers make informed decisions.
             </p>
             
             <h3>3. Pricing and Payment</h3>
@@ -89,7 +87,7 @@ const Policy = () => {
             
             <h3>4. Returns and Refunds</h3>
             <p>
-              Our return policy is detailed on our Returns page. Please review it carefully before making a purchase.
+              We offer a 30-day return policy on all eligible products, provided they are unused, in original condition, and accompanied by proof of purchase. In addition, every item is backed by a one-year company-funded warranty, ensuring a full refund or replacement in the event of defects in material or workmanship. Please note that misuse, normal wear and tear, or unauthorized repairs are not covered.
             </p>
           </section>
           
@@ -99,8 +97,13 @@ const Policy = () => {
               If you have any questions about these policies, please contact us at:
             </p>
             <p>
-              <strong>Email:</strong> privacy@premiumretail.com<br />
-              <strong>Address:</strong> 123 Commerce Street, Business District, City, Country
+              <strong>Email:</strong> support@multicapital.onlin<br />
+              <br></br>
+              <strong>Address:</strong> 1918 Collingsworth St, Houston, TX, USA
+              <br></br>
+              <strong>Address:</strong>: 509 Richards St, Vancouver, BC, Canada
+              <br></br>
+               <strong>Whatsapp Business</strong> +1 (825) 746-8686
             </p>
           </section>
         </div>
