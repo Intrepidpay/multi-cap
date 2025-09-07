@@ -158,17 +158,58 @@
         0% { transform: rotate(0deg); }
         100% { transform: rotate(360deg); }
       }
+      
+      /* Added style for the loading text */
+      .loading-container p {
+        font-weight: bold;
+        color: #133B5F; /* Using the website color from the mask-icon */
+        margin-top: 15px;
+        font-size: 18px;
+      }
     </style>
   </head>
   <body>
     <div id="root">
       <!-- Loading state until React hydrates -->
-      <div class="loading-container">
+      <div class="loading-container" id="loading-container">
         <div class="loading-spinner"></div>
         <p>Multicapital Warehouse...</p>
       </div>
     </div>
     <script type="module" src="/src/main.jsx"></script>
+    
+    <!-- Script to handle loading animation removal -->
+    <script>
+      // This script will remove the loading container once React app is hydrated
+      document.addEventListener('DOMContentLoaded', function() {
+        // Check if React has loaded by monitoring the root element changes
+        const observer = new MutationObserver(function(mutations) {
+          mutations.forEach(function(mutation) {
+            // If React has added content to the root, remove the loading container
+            if (mutation.addedNodes.length > 0 && document.getElementById('loading-container')) {
+              document.getElementById('loading-container').style.display = 'none';
+              observer.disconnect();
+            }
+          });
+        });
+        
+        // Start observing the root element for changes
+        const rootElement = document.getElementById('root');
+        if (rootElement) {
+          observer.observe(rootElement, { childList: true, subtree: true });
+        }
+        
+        // Fallback: hide loading container after 5 seconds if React doesn't load
+        setTimeout(function() {
+          const loadingContainer = document.getElementById('loading-container');
+          if (loadingContainer) {
+            loadingContainer.style.display = 'none';
+          }
+          observer.disconnect();
+        }, 5000);
+      });
+    </script>
+    
     <noscript>
 Multicapital Warehouse delivers a premium online retail experience, offering trusted service, secure checkout, and reliable delivery of quality products.
     </noscript>
