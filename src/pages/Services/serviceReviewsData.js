@@ -389,7 +389,7 @@ export const serviceReviews = [
     "id": 35,
     "author": "Dylan Parker",
     "rating": 4.5,
-    "comment": "Solid kettle. Temperature control is accurate.",
+    "comment": "Solid Oven, Temperature control is accurate",
     "date": "2025-06-09T15:40:00Z",
     "replies": []
   },
@@ -402,7 +402,7 @@ export const serviceReviews = [
     "replies": [
       {
         "id": 17,
-        "text": "We’ve updated your account to combine shipments when possible. Thanks for the heads-up!",
+        "text": "We’ve updated your account to combine shipments when possible. Thanks for the heads up",
         "date": "2025-06-13T15:00:00Z",
         "isAdmin": true
       }
@@ -428,12 +428,12 @@ export const serviceReviews = [
     "id": 39,
     "author": "HardwareHank",
     "rating": 4.5,
-    "comment": "Tool set is hefty and well-machined. One socket had oil residue.",
+    "comment": "Tool set is hefty and well machined. One socket had oil residue.",
     "date": "2025-07-01T09:02:00Z",
     "replies": [
       {
         "id": 18,
-        "text": "Thanks for calling that out. We’ve alerted QC and issued a small credit to your account.",
+        "text": "Thanks for calling that out. We’ve alerted QC.",
         "date": "2025-07-01T12:22:00Z",
         "isAdmin": true
       }
@@ -460,14 +460,14 @@ export const serviceReviews = [
         "text": "Thanks, Sean. We’ve updated the product photos for more accurate color under natural light.",
         "date": "2025-07-09T16:45:00Z",
         "isAdmin": true
-      }
+    }
     ]
   },
   {
     "id": 42,
     "author": "Mason",
     "rating": 4,
-    "comment": "Great speaker, bass-heavy out of the box but adjustable with EQ.",
+    "comment": "Great speaker, bass heavy out of the box but adjustable with EQ.",
     "date": "2025-07-13T10:05:00Z",
     "replies": []
   },
@@ -477,14 +477,7 @@ export const serviceReviews = [
     "rating": 4,
     "comment": "Frame quality is solid; matting arrived with a small wrinkle.",
     "date": "2025-07-17T09:55:00Z",
-    "replies": [
-      {
-        "id": 20,
-        "text": "We’ll rush a replacement mat—no need to return the wrinkled one. Thanks for your patience!",
-        "date": "2025-07-17T12:05:00Z",
-        "isAdmin": true
-      }
-    ]
+    "replies": []
   },
   {
     "id": 44,
@@ -498,7 +491,7 @@ export const serviceReviews = [
     "id": 45,
     "author": "Nicole",
     "rating": 4,
-    "comment": "The toaster works as described. Exterior gets warm—keep space around it.",
+    "comment": "The toaster works as described. Exterior gets warm keep space around it.",
     "date": "2025-08-01T08:20:00Z",
     "replies": []
   },
@@ -507,16 +500,9 @@ export const serviceReviews = [
     "id": 46,
     "author": "LoneStar_Larry",
     "rating": 3.8,
-    "comment": "Car jack does the job, but the handle had a minor paint chip.",
+    "comment": "The modified PC does the job, but the handle had a minor paint chip.",
     "date": "2025-08-05T10:18:00Z",
-    "replies": [
-      {
-        "id": 21,
-        "text": "Thanks, Larry. We’ve issued a small cosmetic credit and reported the finish issue to our supplier.",
-        "date": "2025-08-05T13:00:00Z",
-        "isAdmin": true
-      }
-    ]
+    "replies": []
   },
   {
     "id": 47,
@@ -535,7 +521,7 @@ export const serviceReviews = [
     "replies": [
       {
         "id": 22,
-        "text": "We’ve sent a lubricant kit and a quick adjustment guide. If it persists, we’ll swap the slide.",
+        "text": " please contact support We'll send a lubricant kit and a quick adjustment guide. If it persists, we’ll swap the slide.",
         "date": "2025-08-13T12:18:00Z",
         "isAdmin": true
       }
@@ -574,7 +560,7 @@ export const serviceReviews = [
     "replies": [
       {
         "id": 23,
-        "text": "We’ll send a replacement scraper head right away. Thanks for the honest feedback!",
+        "text": " Sorry about that, contact support We’ll send a replacement scraper head right away. Thanks for the honest feedback",
         "date": "2025-08-28T14:00:00Z",
         "isAdmin": true
       }
@@ -584,7 +570,7 @@ export const serviceReviews = [
     "id": 53,
     "author": "Zach",
     "rating": 3.0,
-    "comment": "Coffee grinder is okay—doesn’t grind as fine as I hoped.",
+    "comment": "Coffee grinder is okay doesn’t grind as fine as I hoped.",
     "date": "2025-08-30T10:36:00Z",
     "replies": []
   },
@@ -592,7 +578,7 @@ export const serviceReviews = [
     "id": 54,
     "author": "Brooke",
     "rating": 3.3,
-    "comment": "Wall clock is pretty, second hand clicks louder than expected.",
+    "comment": "The DYI wall clock is pretty, second hand clicks louder than expected.",
     "date": "2025-08-31T08:55:00Z",
     "replies": []
   },
@@ -600,12 +586,12 @@ export const serviceReviews = [
     "id": 55,
     "author": "PrairiePicker",
     "rating": 3.9,
-    "comment": "Great deal on a used lawnmower. Needed a spark plug tweak out of the box.",
+    "comment": "Great deal on a used lawnmower, Needed a spark plug tweak out of the box.",
     "date": "2025-08-31T15:20:00Z",
     "replies": [
       {
         "id": 24,
-        "text": "Thanks! We’ve added a tune-up credit and shared a quick-start checklist for future refurbs.",
+        "text": "Thanks! We’ve added a tune-up credit and shared a quick start checklist for future refurbs.",
         "date": "2025-08-31T18:05:00Z",
         "isAdmin": true
       }
@@ -616,7 +602,7 @@ export const serviceReviews = [
     "id": 56,
     "author": "Deejay bee",
     "rating": 2.8,
-    "comment": "The monitor is fine for office work, not great for gaming—more ghosting than expected.",
+    "comment": "The monitor is fine for office work, not great for gaming more ghosting than expected",
     "date": "2025-09-01T09:40:00Z",
     "replies": []
   },
@@ -624,7 +610,7 @@ export const serviceReviews = [
     "id": 57,
     "author": "Ella",
     "rating": 2.5,
-    "comment": "Shoes were the right size but the insole feels stiff.",
+    "comment": "Jordans were the right size but the insole feels stiff.",
     "date": "2025-09-02T11:00:00Z",
     "replies": []
   },
@@ -637,7 +623,7 @@ export const serviceReviews = [
     "replies": [
       {
         "id": 25,
-        "text": "We’re sending a new cord lock and a spare. Sorry for the inconvenience!",
+        "text": " Please contact support, We’ll send a new cord lock and a spare. Sorry for the inconvenience!",
         "date": "2025-09-03T16:35:00Z",
         "isAdmin": true
       }
@@ -690,3 +676,4 @@ export const addAdminReply = (reviewId, replyText) => {
   }
   return null;
 };
+  
