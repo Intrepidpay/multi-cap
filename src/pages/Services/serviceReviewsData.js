@@ -4,7 +4,7 @@ export const serviceReviews = [
     "id": 1,
     "author": "Michael Johnson",
     "rating": 5,
-    "comment": "Smooth purchase from start to finish. The vintage record player is flawless.",
+    "comment": "Smooth purchase from start to finish, can't believe i got Micheal's Beat it stage mic",
     "date": "2025-01-04T10:15:00Z",
     "replies": []
   },
@@ -17,7 +17,7 @@ export const serviceReviews = [
     "replies": [
       {
         "id": 1,
-        "text": "Thanks for the review! Shipping insurance is included on all orders over $500. We’ve also emailed you the policy details.",
+        "text": "Thanks for the review! Shipping insurance is included on all orders over $500. We can also email you the policy details if you want.",
         "date": "2025-01-08T18:45:00Z",
         "isAdmin": true
       }
@@ -35,12 +35,12 @@ export const serviceReviews = [
     "id": 4,
     "author": "David Anderson",
     "rating": 5,
-    "comment": "Bought a used sedan—clean title, honest listing, and hassle-free pickup.",
+    "comment": "Bought a used sedan clean title, honest listing, and hassle-free pickup.",
     "date": "2025-01-15T13:40:00Z",
     "replies": [
       {
         "id": 2,
-        "text": "Appreciate the trust, David! We’ve sent your full inspection report for your records.",
+        "text": "Appreciate the trust, David make sure to request for your full inspection report for your records.",
         "date": "2025-01-15T16:10:00Z",
         "isAdmin": true
       }
@@ -50,7 +50,7 @@ export const serviceReviews = [
     "id": 5,
     "author": "Sophia",
     "rating": 5,
-    "comment": "Love the rare art print. Minor scuff on the outer tube though.",
+    "comment": "Love the art print. Minor scuff on the outer tube though.",
     "date": "2025-01-19T11:18:00Z",
     "replies": [
       {
@@ -73,12 +73,12 @@ export const serviceReviews = [
     "id": 7,
     "author": "Rachel Cohen",
     "rating": 5,
-    "comment": "Customer service confirmed compatibility before I bought—saved me time.",
+    "comment": "Customer service confirmed compatibility before I bought, saved me time.",
     "date": "2025-01-28T08:40:00Z",
     "replies": [
       {
         "id": 4,
-        "text": "Happy to help, Rachel! We’re here anytime you need specs or fit checks.",
+        "text": "Happy to help, Rachel We’re here anytime you need specs or fit checks.",
         "date": "2025-01-28T11:05:00Z",
         "isAdmin": true
       }
@@ -96,12 +96,12 @@ export const serviceReviews = [
     "id": 9,
     "author": "WestCoastWheels",
     "rating": 5,
-    "comment": "Car detail photos matched reality (rare!). Question about extended warranty.",
+    "comment": "The Mustang detail photos matched reality, very rare. Question about extended warranty.",
     "date": "2025-02-06T15:20:00Z",
     "replies": [
       {
         "id": 5,
-        "text": "Great to hear! We’ve sent extended warranty options to your email with coverage and pricing.",
+        "text": "Great to hear!, please provide an email we'll send you an extended warranty options to your email with coverage and pricing.",
         "date": "2025-02-06T17:10:00Z",
         "isAdmin": true
       }
@@ -116,7 +116,7 @@ export const serviceReviews = [
     "replies": [
       {
         "id": 6,
-        "text": "Thanks, Emma! We’ve shipped the missing filter today and added a spare for the inconvenience.",
+        "text": "Thanks, Emma please contact support we'll ship the missing filter today and add a spare for the inconvenience.",
         "date": "2025-02-10T12:15:00Z",
         "isAdmin": true
       }
@@ -126,7 +126,7 @@ export const serviceReviews = [
     "id": 11,
     "author": "Logan Bennett",
     "rating": 5,
-    "comment": "Authentic vintage watch, verified with paperwork. Very pleased.",
+    "comment": "Authentic vintage Richard Mille, Tourbillon, verified with paperwork. Very pleased.",
     "date": "2025-02-14T13:48:00Z",
     "replies": []
   },
@@ -139,7 +139,7 @@ export const serviceReviews = [
     "replies": [
       {
         "id": 7,
-        "text": "Hi Mia—just emailed step-by-step setup tips and a short video guide. Ping us if anything’s unclear!",
+        "text": "Hi Mia, provide an email address we'll email step-by-step setup tips and a short video guide. Ping us if anything’s unclear!",
         "date": "2025-02-18T20:02:00Z",
         "isAdmin": true
       }
@@ -157,7 +157,7 @@ export const serviceReviews = [
     "id": 14,
     "author": "VanCityVibes",
     "rating": 5,
-    "comment": "Secure packaging on a fragile sculpture—arrived pristine.",
+    "comment": "Secure packaging on a fragile sculpture arrived pristine",
     "date": "2025-03-02T12:30:00Z",
     "replies": []
   },
@@ -165,12 +165,12 @@ export const serviceReviews = [
     "id": 15,
     "author": "Liam",
     "rating": 5,
-    "comment": "Got the bike accessory set—solid build and quick install. Confused about warranty registration.",
+    "comment": "Got the bike accessory set solid build and quick install, Confused about warranty registration.",
     "date": "2025-03-06T09:00:00Z",
     "replies": [
       {
         "id": 8,
-        "text": "Thanks, Liam! We registered your warranty on our end and sent your certificate by email.",
+        "text": "Thanks, Liam We registered your warranty on our end and sent your certificate by email",
         "date": "2025-03-06T11:40:00Z",
         "isAdmin": true
       }
@@ -180,7 +180,7 @@ export const serviceReviews = [
     "id": 16,
     "author": "Kayla Martinez",
     "rating": 5,
-    "comment": "Checkout was seamless and pickup was well-organized.",
+    "comment": "Checkout was seamless and pickup was well organized",
     "date": "2025-03-10T14:44:00Z",
     "replies": []
   },
@@ -188,12 +188,12 @@ export const serviceReviews = [
     "id": 17,
     "author": "CityDweller007",
     "rating": 5,
-    "comment": "Rare comic arrived with a slight corner bend—still thrilled overall.",
+    "comment": "Rare comics arrived with a slight corner bend still thrilled overall.",
     "date": "2025-03-14T08:20:00Z",
     "replies": [
       {
         "id": 9,
-        "text": "Thanks for letting us know. We’ve issued a grade-adjustment refund and updated your order notes.",
+        "text": "Thanks for letting us know. you can issue a grade adjustment refund and updated your order notes.",
         "date": "2025-03-14T12:05:00Z",
         "isAdmin": true
       }
@@ -216,7 +216,7 @@ export const serviceReviews = [
     "replies": [
       {
         "id": 10,
-        "text": "Apologies for that, Nathan. A OEM lens cap is on the way with complimentary cleaning cloths.",
+        "text": "Apologies for that, Nathan. please contact support, you will get A OEM lens cap with complimentary cleaning cloths.",
         "date": "2025-03-22T14:12:00Z",
         "isAdmin": true
       }
@@ -226,7 +226,7 @@ export const serviceReviews = [
     "id": 20,
     "author": "Chloe",
     "rating": 5,
-    "comment": "Love the curated selection—felt like shopping a boutique.",
+    "comment": "Love the selections felt like shopping a boutique",
     "date": "2025-03-28T09:28:00Z",
     "replies": []
   },
@@ -248,7 +248,7 @@ export const serviceReviews = [
     "replies": [
       {
         "id": 11,
-        "text": "Sorry about the delay. We’ve credited your shipping fee and escalated with the carrier.",
+        "text": "Sorry about the delay. We'll credit your shipping fee and escalate with the carrier.",
         "date": "2025-04-07T17:05:00Z",
         "isAdmin": true
       }
@@ -258,7 +258,7 @@ export const serviceReviews = [
     "id": 23,
     "author": "Ashley Nguyen",
     "rating": 4.5,
-    "comment": "Accessory set fits perfectly. Instructions could be clearer.",
+    "comment": "The leather accessory set fits perfectly. Instructions could be clearer.",
     "date": "2025-04-11T09:03:00Z",
     "replies": []
   },
@@ -266,12 +266,12 @@ export const serviceReviews = [
     "id": 24,
     "author": "Ethan",
     "rating": 4.5,
-    "comment": "Happy with my purchase. Tracking link was delayed for a few hours.",
+    "comment": "Happy with my purchase, Tracking link was delayed for a few hours.",
     "date": "2025-04-15T13:41:00Z",
     "replies": [
       {
         "id": 12,
-        "text": "Thanks, Ethan. We’ve improved our tracking sync so updates post in real-time.",
+        "text": "Thanks, Ethan. our shipping partners are improving their tracking sync so updates post in real time.",
         "date": "2025-04-15T16:12:00Z",
         "isAdmin": true
       }
@@ -281,7 +281,7 @@ export const serviceReviews = [
     "id": 25,
     "author": "Nicole Adams",
     "rating": 4.5,
-    "comment": "Car mats were premium quality and odor-free. Would buy again.",
+    "comment": "Car mats were premium quality and odor free, Would buy again.",
     "date": "2025-04-20T10:25:00Z",
     "replies": []
   },
@@ -289,12 +289,12 @@ export const serviceReviews = [
     "id": 26,
     "author": "GulfCoastDad",
     "rating": 4.5,
-    "comment": "TV arrived perfect; remote had a sticky button.",
+    "comment": "TV arrived perfect, remote had a sticky button",
     "date": "2025-04-26T08:55:00Z",
     "replies": [
       {
         "id": 13,
-        "text": "Thanks for the heads-up. We’ve shipped a replacement remote and logged a QA check with our team.",
+        "text": "Thanks for the heads up. please contact support we'll ship a replacement remote and log a QA check with our team.",
         "date": "2025-04-26T12:20:00Z",
         "isAdmin": true
       }
@@ -312,7 +312,7 @@ export const serviceReviews = [
     "id": 28,
     "author": "CoastalCollector",
     "rating": 4.5,
-    "comment": "Rare poster came with good provenance docs; tube had a small dent.",
+    "comment": "Rare Mistry box came with good provenance docs; tube had a small dent.",
     "date": "2025-05-06T09:35:00Z",
     "replies": [
       {
@@ -335,7 +335,7 @@ export const serviceReviews = [
     "id": 30,
     "author": "Jasmine Patel",
     "rating": 4.5,
-    "comment": "Blender is powerful. Minor cosmetic blemish on the base.",
+    "comment": "Blender is powerful, Minor cosmetic blemish on the base",
     "date": "2025-05-14T16:33:00Z",
     "replies": []
   },
@@ -348,7 +348,7 @@ export const serviceReviews = [
     "replies": [
       {
         "id": 15,
-        "text": "Sorry about that! Replacement screws shipped today with a small accessory bonus.",
+        "text": "Sorry about that, please contact support Replacement screws will be shipped today with a small accessory bonus.",
         "date": "2025-05-18T12:00:00Z",
         "isAdmin": true
       }
@@ -358,7 +358,7 @@ export const serviceReviews = [
     "id": 32,
     "author": "Ian Foster",
     "rating": 4.5,
-    "comment": "Car wax kit performs as advertised. Packaging was neat.",
+    "comment": "Car wax kit performs as advertised, Packaging was neat.",
     "date": "2025-05-24T10:45:00Z",
     "replies": []
   },
@@ -366,7 +366,7 @@ export const serviceReviews = [
     "id": 33,
     "author": "Zoe",
     "rating": 4.5,
-    "comment": "Air purifier is quiet and effective. Setup took five minutes.",
+    "comment": "Air purifier is quiet and effective, Setup took five minutes",
     "date": "2025-06-01T13:05:00Z",
     "replies": []
   },
