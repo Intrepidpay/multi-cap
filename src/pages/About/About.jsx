@@ -34,7 +34,7 @@ const About = () => {
           </div>
           
           <div className="about-image">
-        <img src="/about-store.jpg" alt="Multicapital Warehouse" />
+        <img src="/about-image.jpg" alt="Multicapital Warehouse" />
       </div>
         </div>
         
@@ -43,7 +43,7 @@ const About = () => {
           <div className="team-grid">
             <div className="team-member">
               <div className="member-image">
-             <img src="/images/team-member1.jpg" alt="Robert Tooley" />
+             <img src="/team-member1.jpg" alt="Robert Tooley" />
              </div>
               <h4>Robert Tooley</h4>
               <p>Founder & CEO</p>
