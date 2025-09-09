@@ -34,8 +34,8 @@ const About = () => {
           </div>
           
           <div className="about-image">
-            <img src="https://images.unsplash.com/photo-1560472355-536de3962603?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Premium Retail Store" />
-          </div>
+        <img src="/images/about-store.jpg" alt="Multicapital Warehouse" />
+      </div>
         </div>
         
         <div className="team-section">
@@ -43,25 +43,25 @@ const About = () => {
           <div className="team-grid">
             <div className="team-member">
               <div className="member-image">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="Team Member" />
-              </div>
+             <img src="/images/team-member1.jpg" alt="Robert Tooley" />
+             </div>
               <h4>Robert Tooley</h4>
               <p>Founder & CEO</p>
             </div>
             
             <div className="team-member">
-              <div className="member-image">
-                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80" alt="Team Member" />
-              </div>
+            <div className="member-image">
+            <img src="/images/team-member2.jpg" alt="Emily Coleman" />
+            </div>
               <h4>Emily Coleman</h4>
               <p>Head of Operations</p>
             </div>
             
             <div className="team-member">
               <div className="member-image">
-                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="Team Member" />
+              <img src="/images/team-member3.jpg" alt="Andrew Tooley" />
               </div>
-              <h4>Oliver Tooley</h4>
+              <h4>Andrew Tooley</h4>
               <p>Sales/Customer Experience Manager</p>
             </div>
           </div>
