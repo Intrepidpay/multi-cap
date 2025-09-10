@@ -1,6 +1,6 @@
 export const CATEGORIES = [
   'all', 'cars', 'motorcycles', 'bicycles', 'tvs', 
-  'game consoles', 'laptops', 'computers', 'home appliances', 'arts' , 'accessories', 'rare'  'special devices' , 'other'
+  'game consoles', 'laptops', 'computers', 'home appliances', 'collectables' , 'arts' , 'fashion' , 'accessories', 'rare' , 'special devices' , 'other'
 ]
 
 export const SORT_OPTIONS = [
