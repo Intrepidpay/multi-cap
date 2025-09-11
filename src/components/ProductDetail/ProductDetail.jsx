@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { useCart } from '../../contexts/CartContext'
 import { getProductById } from '../../data/mockProducts'
@@ -9,6 +9,9 @@ const ProductDetail = () => {
   const { addToCart, getItemQuantity } = useCart()
   const [product, setProduct] = useState(null)
   const [currentImage, setCurrentImage] = useState(0)
+  const [touchStart, setTouchStart] = useState(0)
+  const [touchEnd, setTouchEnd] = useState(0)
+  const thumbnailsRef = useRef(null)
 
   useEffect(() => {
     const productData = getProductById(parseInt(id))
@@ -72,6 +75,40 @@ const ProductDetail = () => {
     };
   }, [product]);
 
+  const handleThumbnailScroll = (direction) => {
+    if (thumbnailsRef.current) {
+      const scrollAmount = 200;
+      thumbnailsRef.current.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  const handleTouchStart = (e) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStart - touchEnd > 50) {
+      // Swipe left
+      setCurrentImage(prev => 
+        prev === product.images.length - 1 ? 0 : prev + 1
+      );
+    }
+
+    if (touchEnd - touchStart > 50) {
+      // Swipe right
+      setCurrentImage(prev => 
+        prev === 0 ? product.images.length - 1 : prev - 1
+      );
+    }
+  };
+
   if (!product) {
     return (
       <div className="product-detail-page">
@@ -95,21 +132,47 @@ const ProductDetail = () => {
         
         <div className="product-detail-content">
           <div className="product-detail-gallery">
-            <div className="product-detail-main-image">
+            <div 
+              className="product-detail-main-image"
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
+            >
               <img src={product.images[currentImage]} alt={product.name} />
             </div>
             
             {product.images.length > 1 && (
-              <div className="product-detail-thumbnails">
-                {product.images.map((image, index) => (
-                  <img 
-                    key={index} 
-                    src={image} 
-                    alt={`${product.name} ${index + 1}`}
-                    className={index === currentImage ? 'product-detail-active' : ''}
-                    onClick={() => setCurrentImage(index)}
-                  />
-                ))}
+              <div className="product-detail-thumbnails-container">
+                {product.images.length > 4 && (
+                  <button 
+                    className="product-detail-thumbnail-scroll-btn left"
+                    onClick={() => handleThumbnailScroll('left')}
+                  >
+                    &lt;
+                  </button>
+                )}
+                <div 
+                  className="product-detail-thumbnails"
+                  ref={thumbnailsRef}
+                >
+                  {product.images.map((image, index) => (
+                    <img 
+                      key={index} 
+                      src={image} 
+                      alt={`${product.name} ${index + 1}`}
+                      className={index === currentImage ? 'product-detail-active' : ''}
+                      onClick={() => setCurrentImage(index)}
+                    />
+                  ))}
+                </div>
+                {product.images.length > 4 && (
+                  <button 
+                    className="product-detail-thumbnail-scroll-btn right"
+                    onClick={() => handleThumbnailScroll('right')}
+                  >
+                    &gt;
+                  </button>
+                )}
               </div>
             )}
           </div>
