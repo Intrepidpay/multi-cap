@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { useCart } from '../../contexts/CartContext'
 import { getProductById } from '../../data/mockProducts'
-import { formatPrice } from '../../utils/formatPrice' // Import the formatPrice function
+import { formatPrice } from '../../utils/helpers'
 import './ProductDetail.css'
 
 const ProductDetail = () => {
