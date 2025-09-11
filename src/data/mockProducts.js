@@ -2,26 +2,35 @@
 const products = [
   {
     id: 1,
-    name: "Premium Gaming Laptop",
-    price: 1499.99,
-    category: "laptops",
-    description: "High-performance gaming laptop with RTX graphics and fast processor.",
+    name: "2025 Polo 2.0 GTI DSG",
+    price: 23599.99,
+    category: "cars",
+    description: "2.0 GTI DSG (147 KW), White, SIL E044: Vehicle has no roadworthy-relevant faults, has passed (or will pass) an official roadworthy inspection, and has a complete and up-to-date service history.",
     images: [
-      "https://images.unsplash.com/photo-1603302576837-37561b2e2302?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=868&q=80",
-      "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=842&q=80"
+      "/images/Vk1.jpg",
+      "/images/Vk2.jpg",
+      "/images/Vk3.jpg",
+      "/images/Vk4.jpg",
+      "/images/Vk5.jpg",
+      "/images/Vk6.jpg",
+      "/images/Vk3.jpg",
+      "/images/Vk4.jpg",
+      "/images/Vk5.jpg",
+      "/images/Vk6.jpg"
+      
     ],
-    highDemand: true,
+    highDemand: false,
     sold: false,
-    quantity: 5,
-    sku: "LAP-GM-001",
-    brand: "Multicapital",
+    quantity: 1,
+    sku: "CAR-VK-051",
+    brand: "Volkswagen",
     rating: {
-      value: 4.8,
-      count: 24
+      value: 4.5,
+      count: 14
     },
     reviews: [
       {
-        rating: 5
+        rating: 4
       }
     ]
   },
@@ -337,4 +346,4 @@ export const getProducts = (filter = 'all', sort = 'random', searchQuery = '') =
 
 export const getProductById = (id) => {
   return products.find(product => product.id === id)
-  }
+    }
