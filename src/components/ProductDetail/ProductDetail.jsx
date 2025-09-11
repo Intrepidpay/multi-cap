@@ -12,29 +12,10 @@ const ProductDetail = () => {
   const [touchStart, setTouchStart] = useState(0)
   const [touchEnd, setTouchEnd] = useState(0)
   const thumbnailsRef = useRef(null)
-  const [visibleThumbnails, setVisibleThumbnails] = useState(4)
 
   useEffect(() => {
     const productData = getProductById(parseInt(id))
     setProduct(productData)
-    
-    // Calculate how many thumbnails can fit based on screen width
-    const calculateVisibleThumbnails = () => {
-      if (window.innerWidth < 768) {
-        setVisibleThumbnails(4) // 4 thumbnails on mobile
-      } else if (window.innerWidth < 1024) {
-        setVisibleThumbnails(5) // 5 thumbnails on tablet
-      } else {
-        setVisibleThumbnails(6) // 6 thumbnails on desktop
-      }
-    }
-    
-    calculateVisibleThumbnails()
-    window.addEventListener('resize', calculateVisibleThumbnails)
-    
-    return () => {
-      window.removeEventListener('resize', calculateVisibleThumbnails)
-    }
   }, [id])
 
   useEffect(() => {
@@ -143,7 +124,7 @@ const ProductDetail = () => {
   const cartQuantity = getItemQuantity(product.id)
   const isOutOfStock = product.quantity <= 0 || product.sold
   const isMaxQuantity = cartQuantity >= product.quantity
-  const showScrollButtons = product.images.length > visibleThumbnails
+  const showScrollButtons = product.images.length > 4
 
   return (
     <div className="product-detail-page">
