@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useCart } from '../../contexts/CartContext'
+import { formatPrice } from '../../utils/formatPrice' // Import the formatPrice function
 import './ProductCard.css'
 
 const ProductCard = ({ product }) => {
@@ -37,8 +38,10 @@ const ProductCard = ({ product }) => {
           <h3 itemProp="name">{product.name}</h3>
           <p className="product-card-category" itemProp="category">{product.category}</p>
           <p className="product-card-price" itemProp="offers" itemScope itemType="https://schema.org/Offer">
-            <span itemProp="priceCurrency" content="USD">$</span>
-            <span itemProp="price" content={product.price.toFixed(2)}>{product.price.toFixed(2)}</span>
+            <span itemProp="priceCurrency" content="USD">USD </span>
+            <span itemProp="price" content={product.price.toFixed(2)}>
+              {formatPrice(product.price)} {/* Use formatPrice here */}
+            </span>
           </p>
           <div className="product-card-meta">
             <p className={`product-card-status ${isOutOfStock ? 'product-card-sold' : 'product-card-available'}`}>
