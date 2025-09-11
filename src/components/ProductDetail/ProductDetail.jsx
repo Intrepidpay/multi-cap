@@ -21,11 +21,11 @@ const ProductDetail = () => {
     // Calculate how many thumbnails can fit based on screen width
     const calculateVisibleThumbnails = () => {
       if (window.innerWidth < 768) {
-        setVisibleThumbnails(3)
+        setVisibleThumbnails(4) // 4 thumbnails on mobile
       } else if (window.innerWidth < 1024) {
-        setVisibleThumbnails(4)
+        setVisibleThumbnails(5) // 5 thumbnails on tablet
       } else {
-        setVisibleThumbnails(5)
+        setVisibleThumbnails(6) // 6 thumbnails on desktop
       }
     }
     
@@ -176,9 +176,6 @@ const ProductDetail = () => {
                 <div 
                   className="product-detail-thumbnails"
                   ref={thumbnailsRef}
-                  style={{ 
-                    width: `${visibleThumbnails * 90}px`
-                  }}
                 >
                   {product.images.map((image, index) => (
                     <img 
