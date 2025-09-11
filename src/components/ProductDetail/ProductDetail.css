@@ -141,7 +141,7 @@
   font-size: 1.8rem;
   font-weight: bold;
   color: #133B5F;
-  margin: 0 0 20px;
+  margin: 0 极 20px;
 }
 
 .product-detail-stock-info {
@@ -305,11 +305,6 @@
     font-size: 1.5rem;
   }
   
-  .product-detail-thumbnails {
-    width: 100%;
-    max-width: 360px; /* 4 thumbnails * 80px + 3 gaps * 10px */
-  }
-  
   .product-detail-thumbnail-scroll-btn {
     display: none;
   }
@@ -330,12 +325,8 @@
   }
   
   .product-detail-thumbnails img {
-    width: 75px;
-    height: 75px;
-  }
-  
-  .product-detail-thumbnails {
-    max-width: 330px; /* 4 thumbnails * 75px + 3 gaps * 10px */
+    width: 70px;
+    height: 70px;
   }
   
   .product-detail-rating {
@@ -343,10 +334,4 @@
     align-items: flex-start;
     gap: 5px;
   }
-}
-
-@media (min-width: 1024px) {
-  .product-detail-thumbnails {
-    max-width: 540px; /* 6 thumbnails * 80px + 5 gaps * 10px */
   }
-}
