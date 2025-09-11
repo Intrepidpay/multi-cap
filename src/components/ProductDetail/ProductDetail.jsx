@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { useCart } from '../../contexts/CartContext'
 import { getProductById } from '../../data/mockProducts'
+import { formatPrice } from '../../utils/formatPrice' // Import the formatPrice function
 import './ProductDetail.css'
 
 const ProductDetail = () => {
@@ -183,7 +184,7 @@ const ProductDetail = () => {
           <div className="product-detail-info">
             <h1>{product.name}</h1>
             <p className="product-detail-category">{product.category}</p>
-            <p className="product-detail-price">${product.price.toFixed(2)}</p>
+            <p className="product-detail-price">{formatPrice(product.price)}</p> {/* Updated this line */}
             
             <div className="product-detail-stock-info">
               <div className={`product-detail-status ${isOutOfStock ? 'product-detail-sold' : 'product-detail-available'}`}>
