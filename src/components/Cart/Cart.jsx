@@ -1,4 +1,5 @@
 import { useCart } from '../../contexts/CartContext'
+import { formatPrice } from '../../utils/formatPrice' // Import the formatPrice function
 import './Cart.css'
 
 const Cart = () => {
@@ -7,8 +8,8 @@ const Cart = () => {
   const handleCheckout = () => {
     // Format message for WhatsApp
     const message = `Hello! I would like to purchase the following items:%0A%0A${items.map(item => 
-      `- ${item.name} (Qty: ${item.quantity}) - $${(item.price * item.quantity).toFixed(2)}`
-    ).join('%0A')}%0A%0ATotal: $${getCartTotal().toFixed(2)}%0A%0APlease let me know how to proceed.`
+      `- ${item.name} (Qty: ${item.quantity}) - ${formatPrice(item.price * item.quantity)}`
+    ).join('%0A')}%0A%0ATotal: ${formatPrice(getCartTotal())}%0A%0APlease let me know how to proceed.`
     
     // Open WhatsApp with pre-filled message
     window.open(`https://wa.me/18257468686?text=${message}`, '_blank')
@@ -50,7 +51,7 @@ const Cart = () => {
                   <div className="item-details">
                     <h3>{item.name}</h3>
                     <p className="item-category">{item.category}</p>
-                    <p className="item-price">${item.price.toFixed(2)}</p>
+                    <p className="item-price">{formatPrice(item.price)}</p> {/* Updated */}
                     {item.availableQuantity && (
                       <p className="item-stock">
                         {item.availableQuantity} available
@@ -72,7 +73,7 @@ const Cart = () => {
                   </div>
                   
                   <div className="item-total">
-                    ${(item.price * item.quantity).toFixed(2)}
+                    {formatPrice(item.price * item.quantity)} {/* Updated */}
                   </div>
                   
                   <button 
@@ -92,7 +93,7 @@ const Cart = () => {
             
             <div className="summary-row">
               <span>Subtotal ({items.reduce((total, item) => total + item.quantity, 0)} items)</span>
-              <span>${getCartTotal().toFixed(2)}</span>
+              <span>{formatPrice(getCartTotal())}</span> {/* Updated */}
             </div>
             
             <div className="summary-row">
@@ -102,7 +103,7 @@ const Cart = () => {
             
             <div className="summary-row total">
               <span>Total</span>
-              <span>${getCartTotal().toFixed(2)}</span>
+              <span>{formatPrice(getCartTotal())}</span> {/* Updated */}
             </div>
             
             <button className="checkout-btn" onClick={handleCheckout}>
