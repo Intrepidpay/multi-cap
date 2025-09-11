@@ -12,10 +12,29 @@ const ProductDetail = () => {
   const [touchStart, setTouchStart] = useState(0)
   const [touchEnd, setTouchEnd] = useState(0)
   const thumbnailsRef = useRef(null)
+  const [visibleThumbnails, setVisibleThumbnails] = useState(4)
 
   useEffect(() => {
     const productData = getProductById(parseInt(id))
     setProduct(productData)
+    
+    // Calculate how many thumbnails can fit based on screen width
+    const calculateVisibleThumbnails = () => {
+      if (window.innerWidth < 768) {
+        setVisibleThumbnails(3)
+      } else if (window.innerWidth < 1024) {
+        setVisibleThumbnails(4)
+      } else {
+        setVisibleThumbnails(5)
+      }
+    }
+    
+    calculateVisibleThumbnails()
+    window.addEventListener('resize', calculateVisibleThumbnails)
+    
+    return () => {
+      window.removeEventListener('resize', calculateVisibleThumbnails)
+    }
   }, [id])
 
   useEffect(() => {
@@ -77,7 +96,7 @@ const ProductDetail = () => {
 
   const handleThumbnailScroll = (direction) => {
     if (thumbnailsRef.current) {
-      const scrollAmount = 200;
+      const scrollAmount = 90; // Width of thumbnail + gap
       thumbnailsRef.current.scrollBy({
         left: direction === 'left' ? -scrollAmount : scrollAmount,
         behavior: 'smooth'
@@ -94,15 +113,17 @@ const ProductDetail = () => {
   };
 
   const handleTouchEnd = () => {
+    if (!product) return;
+    
     if (touchStart - touchEnd > 50) {
-      // Swipe left
+      // Swipe left - next image
       setCurrentImage(prev => 
         prev === product.images.length - 1 ? 0 : prev + 1
       );
     }
 
     if (touchEnd - touchStart > 50) {
-      // Swipe right
+      // Swipe right - previous image
       setCurrentImage(prev => 
         prev === 0 ? product.images.length - 1 : prev - 1
       );
@@ -122,6 +143,7 @@ const ProductDetail = () => {
   const cartQuantity = getItemQuantity(product.id)
   const isOutOfStock = product.quantity <= 0 || product.sold
   const isMaxQuantity = cartQuantity >= product.quantity
+  const showScrollButtons = product.images.length > visibleThumbnails
 
   return (
     <div className="product-detail-page">
@@ -143,7 +165,7 @@ const ProductDetail = () => {
             
             {product.images.length > 1 && (
               <div className="product-detail-thumbnails-container">
-                {product.images.length > 4 && (
+                {showScrollButtons && (
                   <button 
                     className="product-detail-thumbnail-scroll-btn left"
                     onClick={() => handleThumbnailScroll('left')}
@@ -154,6 +176,9 @@ const ProductDetail = () => {
                 <div 
                   className="product-detail-thumbnails"
                   ref={thumbnailsRef}
+                  style={{ 
+                    width: `${visibleThumbnails * 90}px`
+                  }}
                 >
                   {product.images.map((image, index) => (
                     <img 
@@ -165,7 +190,7 @@ const ProductDetail = () => {
                     />
                   ))}
                 </div>
-                {product.images.length > 4 && (
+                {showScrollButtons && (
                   <button 
                     className="product-detail-thumbnail-scroll-btn right"
                     onClick={() => handleThumbnailScroll('right')}
