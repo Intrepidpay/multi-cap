@@ -1,5 +1,5 @@
 import { useCart } from '../../contexts/CartContext'
-import { formatPrice } from '../../utils/formatPrice' // Import the formatPrice function
+import { formatPrice } from '../../utils/helpers'
 import './Cart.css'
 
 const Cart = () => {
