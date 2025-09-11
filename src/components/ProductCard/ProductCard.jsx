@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useCart } from '../../contexts/CartContext'
-import { formatPrice } from '../../utils/formatPrice' // Import the formatPrice function
+import { formatPrice } from '../../utils/helpers'
 import './ProductCard.css'
 
 const ProductCard = ({ product }) => {
