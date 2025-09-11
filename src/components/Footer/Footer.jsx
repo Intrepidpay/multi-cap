@@ -34,15 +34,15 @@ const Footer = () => {
             </p>
             
             <p>Email: <a href="mailto:support@multicapital.online">support@multicapital.online</a></p>
-            <p><a href="https://wa.me/18257468686" target="_blank" rel="noopener noreferrer">WhatsApp Business</a></p>
+        
           
           </div>
           
           <div className="footer-section">
             <h4>Socials</h4>
             <div className="social-links">
-              <a href="#">Facebook</a>
-              <a href="#">Instagram</a>
+              <a href="https://www.facebook.com/multicapital.warehouse">Facebook</a>
+              <a href="https://wa.me/18257468686">Whatsapp</a>
             </div>
           </div>
         </div>
