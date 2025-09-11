@@ -67,7 +67,7 @@
   scroll-behavior: smooth;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  padding: 5px 0 5px 35px;
+  padding: 5px 0 5px 5px;
   width: 100%;
 }
 
