@@ -5,7 +5,7 @@ const products = [
     name: "Ferrari Roma Spider",
     price: 215599.99,
     category: "cars",
-    description: "Ferrari Roma Spider Karbon, Purple Metallic Color, Used, Accident-free, Petrol, Automatic, Emission Class: Euro6d-4(Green), 8 Cylinders, Heated seats/steering wheel, On-board computer, Warranty: Contact for more info ",
+    description: "Ferrari Roma Spider Karbon | Purple Metallic Color | Used | Accident-free | Petrol | Automatic | Emission Class: Euro6d-4(Green) | 8 Cylinders | Heated seats/steering wheel | On-board computer | Warranty: Contact for more info ",
     images: [
       "/images/Vk1.jpg",
       "/images/Vk2.jpg",
