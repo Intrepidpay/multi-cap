@@ -42,6 +42,125 @@ const products = [
     ]
   },
   {
+    id: 15,
+    name: "BMW 535",
+    price: 16999.99,
+    category: "cars",
+    description: "i xDrive M Sport Performance Exclusive Edition | Black Metallic Color | Used | Accident-free | Petrol | Automatic | Emission Class: Euro6d-4(Green) | 6 Cylinders | Heated seats/steering wheel | combustion engine | Warranty: Contact for more info ",
+    images: [
+      "/images/Bm1.jpg",
+      "/images/Bm2.jpg",
+      "/images/Bm3.jpg",
+      "/images/Bm4.jpg",
+      "/images/Bm5.jpg",
+      "/images/Bm6.jpg",
+      "/images/Bm7.jpg",
+      "/images/Bm8.jpg",
+      "/images/Bm9.jpg",
+      "/images/Bm10.jpg",
+      "/images/Bm11.jpg",
+      "/images/Bm12.jpg",
+      "/images/Bm13.jpg",
+      "/images/Bm14.jpg",
+      "/images/Bm15.jpg",
+      "/images/Bm16.jpg",
+      "/images/Bm17.jpg",
+      "/images/Bm18.jpg"
+      
+    ],
+    highDemand: false,
+    sold: false,
+    quantity: 1,
+    sku: "BW-SPT-014",
+    brand: "BMW",
+    rating: {
+      value: 4.2,
+      count: 4
+    },
+    reviews: [
+      {
+        rating: 5
+      }
+    ]
+  },
+   {
+    id: 14,
+    name: "Mercedes-Benz S 560",
+    price: 49899.99,
+    category: "cars",
+    description: "4Matic AMG-Plus | Obsidian Black Metallic Color | Used | Accident-free | Petrol | Automatic | Emission Class: Euro6d-4(Green) | combustion engine | Heated seats/steering wheel | On-board computer | Winter package | Warranty: Contact for more info ",
+    images: [
+      "/images/Mb1.jpg",
+      "/images/Mb2.jpg",
+      "/images/Mb3.jpg",
+      "/images/Mb4.jpg",
+      "/images/Mb5.jpg",
+      "/images/Mb6.jpg",
+      "/images/Mb7.jpg",
+      "/images/Mb8.jpg",
+      "/images/Mb9.jpg",
+      "/images/Mb10.jpg",
+      "/images/Mb11.jpg",
+      "/images/Mb12.jpg",
+      "/images/Mb13.jpg",
+      "/images/Mb14.jpg",
+      "/images/Mb15.jpg",
+      "/images/Mb16.jpg"
+      
+    ],
+    highDemand: false,
+    sold: false,
+    quantity: 1,
+    sku: "MB-SS-090",
+    brand: "Mercedes-Benz",
+    rating: {
+      value: 4.5,
+      count: 11
+    },
+    reviews: [
+      {
+        rating: 5
+      }
+    ]
+  },
+  {
+    id: 13,
+    name: "Nissan Primastar",
+    price: 19089.99,
+    category: "cars",
+    description: "Kombi L1H1 2,8t dCi170 Tekna Auto | Black Metallic Color | Used | Accident-free | Diesel | Automatic | Emission Class: Euro6d-4(Green) | Internal combustion engine | Heated seats/steering wheel | On-board computer | 4 Cylinders | Warranty: Contact for more info ",
+    images: [
+      "/images/Np1.jpg",
+      "/images/Np2.jpg",
+      "/images/Np3.jpg",
+      "/images/Np4.jpg",
+      "/images/Np5.jpg",
+      "/images/Np6.jpg",
+      "/images/Np7.jpg",
+      "/images/Np8.jpg",
+      "/images/Np9.jpg",
+      "/images/Np10.jpg",
+      "/images/Np11.jpg",
+      "/images/Np12.jpg",
+      "/images/Np13.jpg"
+      
+    ],
+    highDemand: false,
+    sold: false,
+    quantity: 1,
+    sku: "NP-PS-190",
+    brand: "Nissan",
+    rating: {
+      value: 4.9,
+      count: 19
+    },
+    reviews: [
+      {
+        rating: 5
+      }
+    ]
+  },
+  {
     id: 2,
     name: "Smart TV 55 inch",
     price: 799.99,
@@ -353,4 +472,4 @@ export const getProducts = (filter = 'all', sort = 'random', searchQuery = '') =
 
 export const getProductById = (id) => {
   return products.find(product => product.id === id)
-}
+      }
