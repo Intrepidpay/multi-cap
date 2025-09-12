@@ -2,10 +2,10 @@
 const products = [
   {
     id: 1,
-    name: "2025 Polo 2.0 GTI DSG",
-    price: 23599.99,
+    name: "Ferrari Roma Spider",
+    price: 215599.99,
     category: "cars",
-    description: "2.0 GTI DSG (147 KW), White, SIL E044: Vehicle has no roadworthy-relevant faults, has passed (or will pass) an official roadworthy inspection, and has a complete and up-to-date service history.",
+    description: "Ferrari Roma Spider Karbon, Purple Metallic Color, Used, Accident-free, Petrol, Automatic, Emission Class: Euro6d-4(Green), 8 Cylinders, Heated seats/steering wheel, On-board computer, Warranty: Contact for more info ",
     images: [
       "/images/Vk1.jpg",
       "/images/Vk2.jpg",
@@ -13,24 +13,31 @@ const products = [
       "/images/Vk4.jpg",
       "/images/Vk5.jpg",
       "/images/Vk6.jpg",
-      "/images/Vk3.jpg",
-      "/images/Vk4.jpg",
-      "/images/Vk5.jpg",
-      "/images/Vk6.jpg"
+      "/images/Vk7.jpg",
+      "/images/Vk8.jpg",
+      "/images/Vk9.jpg",
+      "/images/Vk10.jpg",
+      "/images/Vk11.jpg",
+      "/images/Vk12.jpg",
+      "/images/Vk13.jpg",
+      "/images/Vk14.jpg",
+      "/images/Vk15.jpg",
+      "/images/Vk16.jpg",
+      "/images/Vk17.jpg"
       
     ],
-    highDemand: false,
+    highDemand: true,
     sold: false,
     quantity: 1,
-    sku: "CAR-VK-051",
-    brand: "Volkswagen",
+    sku: "FR-RM-051",
+    brand: "Ferrari",
     rating: {
-      value: 4.5,
+      value: 4.8,
       count: 14
     },
     reviews: [
       {
-        rating: 4
+        rating: 5
       }
     ]
   },
@@ -346,4 +353,4 @@ export const getProducts = (filter = 'all', sort = 'random', searchQuery = '') =
 
 export const getProductById = (id) => {
   return products.find(product => product.id === id)
-    }
+}
