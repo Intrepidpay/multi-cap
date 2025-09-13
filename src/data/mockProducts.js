@@ -34,12 +34,7 @@ const products = [
     rating: {
       value: 4.8,
       count: 14
-    },
-    reviews: [
-      {
-        rating: 5
-      }
-    ]
+    }
   },
   {
     id: 15,
@@ -153,12 +148,7 @@ const products = [
     rating: {
       value: 4.9,
       count: 19
-    },
-    reviews: [
-      {
-        rating: 5
-      }
-    ]
+    }
   },
   {
     id: 2,
@@ -177,12 +167,7 @@ const products = [
     rating: {
       value: 4.5,
       count: 18
-    },
-    reviews: [
-      {
-        rating: 4
-      }
-    ]
+    }
   },
   {
     id: 3,
