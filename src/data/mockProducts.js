@@ -21867,7 +21867,7 @@ const products = [
 },
 {
   id: 837,
-  name: "Blomberg 24" Built-In Dishwasher",
+  name: "Blomberg 24 inches Built-In Dishwasher",
   price: 999.99,
   category: "appliances",
   description: "Panel Ready | 44 dBA | VarioSpeed | 3rd Rack | Stainless Steel Interior | European Design | Used | Excellent Condition ",
