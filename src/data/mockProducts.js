@@ -21919,7 +21919,7 @@ const products = [
 },
 {
   id: 839,
-  name: "Sub-Zero 36" Built-In Refrigerator",
+  name: "Sub-Zero Built-In Refrigerator",
   price: 8999.99,
   category: "appliances",
   description: "Integrated Design | Dual Refrigeration | Air Purification | Stainless Steel | Panel Ready | Used | Excellent Condition | Professional Grade ",
@@ -21945,7 +21945,7 @@ const products = [
 },
 {
   id: 840,
-  name: "Wolf 30" Dual Fuel Range",
+  name: "Wolf Dual Fuel Range",
   price: 6499.99,
   category: "appliances",
   description: "Gas Cooktop | Electric Convection Oven | Dual Stacked Burners | Infrared Griddle | Stainless Steel | Used | Excellent Condition | Restaurant Grade ",
@@ -21971,7 +21971,7 @@ const products = [
 },
 {
   id: 841,
-  name: "Miele 30" Speed Oven",
+  name: "Miele Speed Oven",
   price: 3299.99,
   category: "appliances",
   description: "Built-In Combination Oven | Convection | Microwave | Brown & Crisp Function | Stainless Steel | Used | Excellent Condition ",
@@ -21997,7 +21997,7 @@ const products = [
 },
 {
   id: 842,
-  name: "Asko 24" Professional Dishwasher",
+  name: "Asko Professional Dishwasher",
   price: 1399.99,
   category: "appliances",
   description: "44 dBA | 3rd Rack | TopFlex Spray Arm | Stainless Steel Interior | Super Dry | Used | Excellent Condition | Scandinavian Design ",
@@ -22023,7 +22023,7 @@ const products = [
 },
 {
   id: 843,
-  name: "Fisher & Paykel 36" French Door Refrigerator",
+  name: "Fisher & Paykel French Door Refrigerator",
   price: 3899.99,
   category: "appliances",
   description: "ActiveSmart Food Care | Dual Cooling | External Water Dispenser | Glass Shelves | Stainless Steel | Used | Excellent Condition ",
@@ -22049,7 +22049,7 @@ const products = [
 },
 {
   id: 844,
-  name: "Viking 5 Series 30" Gas Range",
+  name: "Viking 5 Series Gas Range",
   price: 4499.99,
   category: "appliances",
   description: "Professional Grade | 4 Sealed Burners | Convection Oven | Cast Iron Grates | Stainless Steel | Used | Excellent Condition ",
@@ -22075,7 +22075,7 @@ const products = [
 },
 {
   id: 845,
-  name: "Jenn-Air 30" Down-Draft Ventilation Range",
+  name: "Jenn-Air Down-Draft Ventilation Range",
   price: 3299.99,
   category: "appliances",
   description: "Gas Cooktop | Electric Oven | Downdraft Vent | Satin Black Finish | Pro-Style | Used | Excellent Condition ",
