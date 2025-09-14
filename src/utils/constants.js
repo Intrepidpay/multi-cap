@@ -1,5 +1,5 @@
 export const CATEGORIES = [
-  'all', 'trucks', 'cars', 'motorcycles', 'bicycles', 'tvs', 
+  'all', 'trucks', 'cars', 'motorcycles', 'bicycles', 'tv', 
   'home appliances', 'laptops', 'desktops', 'game consoles', 'collectable' , 'art' , 'fashion' , 'accessories', 'rare'  , 'other'
 ]
 
