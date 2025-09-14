@@ -21766,7 +21766,7 @@ const products = [
   name: "Samsung Bespoke Induction Range",
   price: 1799.99,
   category: "appliances",
-  description: "30/" | Wi-Fi Enabled | Air Fry | Virtual Flame | Flexible 5th Element | White Glass Finish | Used | Excellent Condition ",
+  description: "30 inches | Wi-Fi Enabled | Air Fry | Virtual Flame | Flexible 5th Element | White Glass Finish | Used | Excellent Condition ",
   images: [
     "/images/app833_1.jpg",
     "/images/app833_2.jpg",
