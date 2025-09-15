@@ -23,7 +23,8 @@ const Home = () => {
       setScrollY(window.scrollY) // save scroll position
 
       const scrollPosition = window.innerHeight + window.scrollY
-      const triggerPoint = document.documentElement.scrollHeight - 1200
+      const triggerPoint =
+        document.documentElement.scrollHeight - window.innerHeight * 2 // 👈 dynamic preload
 
       if (scrollPosition >= triggerPoint && visible < products.length) {
         setVisible((prev) => prev + 20)
@@ -59,16 +60,25 @@ const Home = () => {
             <p>Loading products...</p>
           </div>
         ) : (
-          <div className="home-products-grid">
-            {products.slice(0, visible).map((product) => (
-              <ProductCard key={product.id} product={product} />
-            ))}
-          </div>
+          <>
+            <div className="home-products-grid">
+              {products.slice(0, visible).map((product) => (
+                <ProductCard key={product.id} product={product} />
+              ))}
+            </div>
+
+            {/* 👇 Smooth "loading more" indicator before footer */}
+            {visible < products.length && (
+              <div className="home-loading-more">
+                <div className="spinner"></div>
+                <p>Loading more...</p>
+              </div>
+            )}
+          </>
         )}
 
         {!loading && products.length === 0 && (
           <div className="home-no-products">
-            {/* empty state */}
             <p>No products found. Try a different search or filter.</p>
           </div>
         )}
