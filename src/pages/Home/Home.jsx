@@ -6,55 +6,30 @@ import { useState, useEffect, useMemo, useRef } from 'react'
 
 const Home = () => {
   const { products, loading, filters, setFilters } = useFeed()
-  const [displayedProducts, setDisplayedProducts] = useState([])
-  const [isInitialLoad, setIsInitialLoad] = useState(true)
   const gridRef = useRef(null)
   const scrollPosition = useRef(0)
 
-  // Memoize the products to prevent unnecessary re-renders
-  const productList = useMemo(() => products, [products])
-
+  // Save scroll position before leaving the page
   useEffect(() => {
-    if (productList.length > 0) {
-      setDisplayedProducts(productList)
-      setIsInitialLoad(false)
-      
-      // Restore scroll position after products are loaded
-      const timer = setTimeout(() => {
-        if (scrollPosition.current > 0) {
-          window.scrollTo(0, scrollPosition.current)
-        }
-      }, 100)
-      
-      return () => clearTimeout(timer)
-    }
-  }, [productList])
-
-  // Save scroll position before navigation
-  useEffect(() => {
-    const saveScrollPosition = () => {
+    const handleScroll = () => {
       scrollPosition.current = window.scrollY
     }
 
-    // Add event listener for beforeunload to save scroll position
-    window.addEventListener('beforeunload', saveScrollPosition)
+    window.addEventListener('scroll', handleScroll)
     
-    // Save scroll position when component unmounts
     return () => {
-      window.removeEventListener('beforeunload', saveScrollPosition)
-      scrollPosition.current = window.scrollY
+      window.removeEventListener('scroll', handleScroll)
     }
   }, [])
 
-  // Show products with a slight delay to prevent flashing
+  // Restore scroll position when component mounts
   useEffect(() => {
-    const gridElement = document.querySelector('.home-products-grid')
-    if (gridElement && displayedProducts.length > 0) {
-      setTimeout(() => {
-        gridElement.classList.add('visible')
-      }, 50)
+    if (scrollPosition.current > 0) {
+      requestAnimationFrame(() => {
+        window.scrollTo(0, scrollPosition.current)
+      })
     }
-  }, [displayedProducts])
+  }, [])
 
   return (
     <div className="home-page">
@@ -71,20 +46,20 @@ const Home = () => {
           />
         </div>
 
-        {loading && isInitialLoad ? (
+        {loading ? (
           <div className="home-loading">
             <div className="home-loading-spinner"></div>
             <p>Loading products...</p>
           </div>
         ) : (
           <div className="home-products-grid" ref={gridRef}>
-            {displayedProducts.map((product) => (
+            {products.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
           </div>
         )}
 
-        {!loading && displayedProducts.length === 0 && (
+        {!loading && products.length === 0 && (
           <div className="home-no-products">
             <svg
               width="64"
