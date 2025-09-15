@@ -7,9 +7,11 @@ import "./Home.css"
 const Home = () => {
   const { products, loading, filters, setFilters } = useFeed()
   const [visible, setVisible] = useState(20)
+  const isInitialLoad = useRef(true)
   const scrollPositionRef = useRef(0)
   const previousScrollHeightRef = useRef(0)
 
+  // 👇 Infinite scroll logic
   useEffect(() => {
     const handleScroll = () => {
       if (
@@ -28,13 +30,21 @@ const Home = () => {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [visible, products.length])
 
-  // Restore scroll position after new items are rendered
+  // 👇 Restore scroll position after new items are rendered
   useEffect(() => {
-    if (visible > 20) {
+    if (!isInitialLoad.current && visible > 20) {
       // Calculate new scroll position to maintain the same view
       const newScrollHeight = document.documentElement.scrollHeight
       const scrollDifference = newScrollHeight - previousScrollHeightRef.current
-      window.scrollTo(0, scrollPositionRef.current + scrollDifference)
+      
+      // Only adjust scroll position if we've actually loaded more items
+      if (scrollDifference > 0) {
+        requestAnimationFrame(() => {
+          window.scrollTo(0, scrollPositionRef.current + scrollDifference)
+        })
+      }
+    } else {
+      isInitialLoad.current = false
     }
   }, [visible])
 
