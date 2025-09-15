@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { useCart } from '../../contexts/CartContext'
 import { formatPrice } from '../../utils/helpers'
 import './ProductCard.css'
+import { memo } from 'react'
 
 const ProductCard = ({ product }) => {
   const { addToCart, getItemQuantity } = useCart()
@@ -40,7 +41,7 @@ const ProductCard = ({ product }) => {
           <p className="product-card-price" itemProp="offers" itemScope itemType="https://schema.org/Offer">
             <span itemProp="priceCurrency" content="USD">USD </span>
             <span itemProp="price" content={product.price.toFixed(2)}>
-              {formatPrice(product.price)} {/* Use formatPrice here */}
+              {formatPrice(product.price)}
             </span>
           </p>
           <div className="product-card-meta">
@@ -74,4 +75,4 @@ const ProductCard = ({ product }) => {
   )
 }
 
-export default ProductCard
+export default memo(ProductCard)
