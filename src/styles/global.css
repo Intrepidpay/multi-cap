@@ -8,6 +8,19 @@
   --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+/* 🌍 Global styles */
+
+/* Remove mobile tap flash highlight */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Improve touch interactions */
+button,
+a {
+  touch-action: manipulation;
+}
+
 * {
   margin: 0;
   padding: 0;
