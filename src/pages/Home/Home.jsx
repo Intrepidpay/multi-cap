@@ -6,22 +6,52 @@ import "./Home.css"
 
 const Home = () => {
   const { products, loading, filters, setFilters } = useFeed()
-  const [visible, setVisible] = useState(20) 
 
-  
+  // 👇 Restore "visible" count from sessionStorage if available
+  const [visible, setVisible] = useState(() => {
+    const saved = sessionStorage.getItem("home-visible")
+    return saved ? parseInt(saved, 10) : 20
+  })
+
+  // 👇 Infinite scroll logic
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.innerHeight + window.scrollY
-      const triggerPoint = document.documentElement.scrollHeight - 600 
+      const triggerPoint = document.documentElement.scrollHeight - 600
 
       if (scrollPosition >= triggerPoint && visible < products.length) {
-        setVisible((prev) => prev + 20) // load 20 more
+        setVisible((prev) => prev + 20)
       }
     }
 
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [visible, products.length])
+
+  // 👇 Save visible count on change
+  useEffect(() => {
+    sessionStorage.setItem("home-visible", visible)
+  }, [visible])
+
+  // 👇 Restore scroll position when mounting
+  useEffect(() => {
+    const savedScroll = sessionStorage.getItem("home-scroll")
+    if (savedScroll) {
+      window.scrollTo(0, parseInt(savedScroll, 10))
+    }
+  }, [])
+
+  // 👇 Save scroll position when unmounting
+  useEffect(() => {
+    const saveScroll = () => {
+      sessionStorage.setItem("home-scroll", window.scrollY.toString())
+    }
+    window.addEventListener("beforeunload", saveScroll)
+    return () => {
+      saveScroll()
+      window.removeEventListener("beforeunload", saveScroll)
+    }
+  }, [])
 
   return (
     <div className="home-page">
