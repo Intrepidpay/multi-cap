@@ -344,6 +344,7 @@ const products = [
         rating: 4
       }
     ]
+    },
     {
       id: 12,
       name: "Jeep Wrangler Sahara",
