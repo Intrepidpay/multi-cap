@@ -2,12 +2,14 @@ import { useFeed } from "../../contexts/FeedContext"
 import ProductCard from "../../components/ProductCard/ProductCard"
 import SearchFilter from "../../components/SearchFilter/SearchFilter"
 import "./Home.css"
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useEffect, useMemo, useRef } from 'react'
 
 const Home = () => {
   const { products, loading, filters, setFilters } = useFeed()
   const [displayedProducts, setDisplayedProducts] = useState([])
   const [isInitialLoad, setIsInitialLoad] = useState(true)
+  const gridRef = useRef(null)
+  const scrollPosition = useRef(0)
 
   // Memoize the products to prevent unnecessary re-renders
   const productList = useMemo(() => products, [products])
@@ -16,25 +18,31 @@ const Home = () => {
     if (productList.length > 0) {
       setDisplayedProducts(productList)
       setIsInitialLoad(false)
+      
+      // Restore scroll position after products are loaded
+      const timer = setTimeout(() => {
+        if (scrollPosition.current > 0) {
+          window.scrollTo(0, scrollPosition.current)
+        }
+      }, 100)
+      
+      return () => clearTimeout(timer)
     }
   }, [productList])
 
-  // Add CSS to prevent flash of unstyled content
+  // Save scroll position before navigation
   useEffect(() => {
-    const style = document.createElement('style')
-    style.textContent = `
-      .home-products-grid {
-        opacity: 0;
-        transition: opacity 0.3s ease;
-      }
-      .home-products-grid.visible {
-        opacity: 1;
-      }
-    `
-    document.head.appendChild(style)
+    const saveScrollPosition = () => {
+      scrollPosition.current = window.scrollY
+    }
 
+    // Add event listener for beforeunload to save scroll position
+    window.addEventListener('beforeunload', saveScrollPosition)
+    
+    // Save scroll position when component unmounts
     return () => {
-      document.head.removeChild(style)
+      window.removeEventListener('beforeunload', saveScrollPosition)
+      scrollPosition.current = window.scrollY
     }
   }, [])
 
@@ -69,7 +77,7 @@ const Home = () => {
             <p>Loading products...</p>
           </div>
         ) : (
-          <div className="home-products-grid">
+          <div className="home-products-grid" ref={gridRef}>
             {displayedProducts.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
