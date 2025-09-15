@@ -8,6 +8,16 @@ const Home = () => {
   const { products, loading, filters, setFilters } = useFeed()
   const [visible, setVisible] = useState(20)
   const isLoadingMore = useRef(false)
+  const prevFiltersRef = useRef(JSON.stringify(filters))
+
+  // Reset visible products only when filters actually change (search, filter, sort)
+  useEffect(() => {
+    const currentFilters = JSON.stringify(filters)
+    if (prevFiltersRef.current !== currentFilters) {
+      setVisible(20)
+      prevFiltersRef.current = currentFilters
+    }
+  }, [filters])
 
   // 👇 Infinite scroll logic
   useEffect(() => {
