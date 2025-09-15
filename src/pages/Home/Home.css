@@ -1,3 +1,29 @@
+.home-loading-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  color: #133B5F; /* brand color */
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid #eee; /* subtle border on white background */
+  border-top-color: #133B5F; /* brand color for the spin highlight */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-right: 8px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .home-page {
   padding: 30px 0;
   min-height: calc(100vh - 100px);
