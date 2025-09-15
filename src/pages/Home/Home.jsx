@@ -8,33 +8,29 @@ const Home = () => {
   const { products, loading, filters, setFilters } = useFeed()
   const [visible, setVisible] = useState(20)
   const isLoadingMore = useRef(false)
-  const hasRestoredScroll = useRef(false)
-  const prevFiltersRef = useRef(JSON.stringify(filters))
-  const isNavigatingBackRef = useRef(false)
+  const prevProductsLength = useRef(products.length)
 
-  // Check if we're navigating back to the page
+  // Reset to 20 products when filters change
   useEffect(() => {
-    const handlePageShow = (event) => {
-      if (event.persisted) {
-        isNavigatingBackRef.current = true
-      }
-    }
-    
-    window.addEventListener('pageshow', handlePageShow)
-    return () => window.removeEventListener('pageshow', handlePageShow)
-  }, [])
+    setVisible(20)
+  }, [filters.filter, filters.sort, filters.searchQuery])
 
-  // Reset visible products only when filters actually change
+  // Handle scroll position when products change
   useEffect(() => {
-    const currentFilters = JSON.stringify(filters)
-    if (prevFiltersRef.current !== currentFilters) {
-      setVisible(20)
-      prevFiltersRef.current = currentFilters
-      hasRestoredScroll.current = false
+    // If products were added (not just initial load)
+    if (products.length > prevProductsLength.current) {
+      // Wait for DOM to update
+      setTimeout(() => {
+        // Maintain scroll position
+        const scrollPosition = window.scrollY
+        const scrollHeight = document.documentElement.scrollHeight
+        window.scrollTo(0, scrollPosition)
+      }, 0)
     }
-  }, [filters])
+    prevProductsLength.current = products.length
+  }, [products.length])
 
-  // 👇 Infinite scroll logic
+  // Infinite scroll logic
   useEffect(() => {
     const handleScroll = () => {
       if (
@@ -45,14 +41,14 @@ const Home = () => {
       ) {
         isLoadingMore.current = true
         
-        // Save current scroll position before loading more
+        // Save current scroll position
         const scrollPosition = window.scrollY
         const scrollHeight = document.documentElement.scrollHeight
         
         setVisible((prev) => {
           const newVisible = prev + 20
           
-          // After state update, restore scroll position
+          // Restore scroll position after update
           setTimeout(() => {
             const newScrollHeight = document.documentElement.scrollHeight
             window.scrollTo(0, scrollPosition + (newScrollHeight - scrollHeight))
@@ -67,35 +63,6 @@ const Home = () => {
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [visible, products.length])
-
-  // Handle scroll restoration when navigating back
-  useEffect(() => {
-    if (isNavigatingBackRef.current && !hasRestoredScroll.current && visible > 20) {
-      // Wait for products to render
-      setTimeout(() => {
-        // Try to restore the previous scroll position
-        const savedScrollPosition = sessionStorage.getItem('homeScrollPosition')
-        if (savedScrollPosition) {
-          window.scrollTo(0, parseInt(savedScrollPosition, 10))
-        }
-        hasRestoredScroll.current = true
-        isNavigatingBackRef.current = false
-      }, 100)
-    }
-  }, [visible, loading])
-
-  // Save scroll position before leaving the page
-  useEffect(() => {
-    const handleBeforeUnload = () => {
-      sessionStorage.setItem('homeScrollPosition', window.scrollY)
-    }
-    
-    window.addEventListener('beforeunload', handleBeforeUnload)
-    return () => {
-      window.removeEventListener('beforeunload', handleBeforeUnload)
-      sessionStorage.setItem('homeScrollPosition', window.scrollY)
-    }
-  }, [])
 
   return (
     <div className="home-page">
