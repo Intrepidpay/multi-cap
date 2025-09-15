@@ -97,7 +97,7 @@ const Policy = () => {
               If you have any questions about these policies, please contact us at:
             </p>
             <p>
-              <strong>Email:</strong> support@multicapital.onlin<br />
+              <strong>Email:</strong> support@multicapital.online<br />
               <br></br>
               <strong>Address:</strong> 1918 Collingsworth St, Houston, TX, USA
               <br></br>
