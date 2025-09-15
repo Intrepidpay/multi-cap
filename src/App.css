@@ -5,6 +5,18 @@
   text-align: center;
 }
 
+/* 🌍 Global styles */
+
+/* Remove mobile tap flash highlight */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Improve touch interactions */
+button,
+a {
+  touch-action: manipulation;
+}
 .logo {
   height: 6em;
   padding: 1.5em;
