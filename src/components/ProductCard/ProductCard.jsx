@@ -1,10 +1,11 @@
+// src/components/ProductCard/ProductCard.jsx - OPTIMIZED
+import React from 'react';
 import { Link } from 'react-router-dom'
 import { useCart } from '../../contexts/CartContext'
 import { formatPrice } from '../../utils/helpers'
 import './ProductCard.css'
-import { memo } from 'react'
 
-const ProductCard = ({ product }) => {
+const ProductCard = React.memo(({ product }) => {
   const { addToCart, getItemQuantity } = useCart()
   const cartQuantity = getItemQuantity(product.id)
 
@@ -18,61 +19,34 @@ const ProductCard = ({ product }) => {
   const isMaxQuantity = cartQuantity >= product.quantity
 
   return (
-    <div 
-      className={`product-card ${product.highDemand ? 'product-card-highlight' : ''}`}
-      itemScope 
-      itemType="https://schema.org/Product"
-    >
+    <div className={`product-card ${product.highDemand ? 'product-card-highlight' : ''}`} itemScope itemType="https://schema.org/Product">
       <Link to={`/product/${product.id}`} itemProp="url">
         <div className="product-card-image">
-          <img 
-            src={product.images[0]} 
-            alt={product.name} 
-            loading="lazy" 
+          <img
+            src={product.images[0]}
+            alt={product.name}
+            loading="lazy"
             itemProp="image"
           />
           {product.highDemand && <span className="product-card-demand-badge">High Demand</span>}
           {isOutOfStock && <span className="product-card-sold-badge">Sold</span>}
         </div>
-        
         <div className="product-card-info">
           <h3 itemProp="name">{product.name}</h3>
-          <p className="product-card-category" itemProp="category">{product.category}</p>
-          <p className="product-card-price" itemProp="offers" itemScope itemType="https://schema.org/Offer">
-            <span itemProp="priceCurrency" content="USD">USD </span>
-            <span itemProp="price" content={product.price.toFixed(2)}>
-              {formatPrice(product.price)}
-            </span>
+          <p itemProp="price" className="product-card-price">
+            {formatPrice(product.price)}
           </p>
-          <div className="product-card-meta">
-            <p className={`product-card-status ${isOutOfStock ? 'product-card-sold' : 'product-card-available'}`}>
-              {isOutOfStock ? 'Sold Out' : 'Available'}
-            </p>
-            {!isOutOfStock && (
-              <p className="product-card-quantity">
-                {product.quantity} left in stock
-              </p>
-            )}
-          </div>
+          <button
+            onClick={handleAddToCart}
+            disabled={isOutOfStock || isMaxQuantity}
+            className={`product-card-add-btn ${isOutOfStock ? 'out-of-stock' : ''}`}
+          >
+            {isOutOfStock ? 'Out of Stock' : isMaxQuantity ? 'Max Quantity' : 'Add to Cart'}
+          </button>
         </div>
       </Link>
-      
-      {!isOutOfStock && (
-        <button 
-          className={`product-card-add-to-cart-btn ${isMaxQuantity ? 'product-card-disabled' : ''}`}
-          onClick={handleAddToCart}
-          disabled={isMaxQuantity}
-        >
-          {isMaxQuantity 
-            ? 'Max Quantity' 
-            : cartQuantity > 0 
-              ? `Add to Cart (${cartQuantity})` 
-              : 'Add to Cart'
-          }
-        </button>
-      )}
     </div>
   )
-}
+})
 
-export default memo(ProductCard)
+export default ProductCard
