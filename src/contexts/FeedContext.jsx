@@ -12,7 +12,9 @@ export function FeedProvider({ children }) {
     sort: "random",
     searchQuery: "",
   })
+
   const [scrollY, setScrollY] = useState(0) // 👈 store scroll position
+  const [visible, setVisible] = useState(20) // 👈 store visible count
 
   // Load filters from sessionStorage on first render
   useEffect(() => {
@@ -39,19 +41,6 @@ export function FeedProvider({ children }) {
     setLoading(false)
   }, [filters])
 
-  // Save scroll on unmount/navigation
-  useEffect(() => {
-    const handleBeforeUnload = () => {
-      sessionStorage.setItem("feedScrollY", window.scrollY.toString())
-    }
-
-    window.addEventListener("beforeunload", handleBeforeUnload)
-    return () => {
-      sessionStorage.setItem("feedScrollY", window.scrollY.toString())
-      window.removeEventListener("beforeunload", handleBeforeUnload)
-    }
-  }, [])
-
   // Restore scroll when coming back to Home
   useEffect(() => {
     const savedY = sessionStorage.getItem("feedScrollY")
@@ -62,7 +51,16 @@ export function FeedProvider({ children }) {
 
   return (
     <FeedContext.Provider
-      value={{ products, loading, filters, setFilters, scrollY, setScrollY }}
+      value={{
+        products,
+        loading,
+        filters,
+        setFilters,
+        scrollY,
+        setScrollY,
+        visible,
+        setVisible, // 👈 expose visible state
+      }}
     >
       {children}
     </FeedContext.Provider>
@@ -71,4 +69,4 @@ export function FeedProvider({ children }) {
 
 export function useFeed() {
   return useContext(FeedContext)
-      }
+}
