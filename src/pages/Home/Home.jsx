@@ -7,9 +7,7 @@ import "./Home.css"
 const Home = () => {
   const { products, loading, filters, setFilters } = useFeed()
   const [visible, setVisible] = useState(20)
-  const isInitialLoad = useRef(true)
-  const scrollPositionRef = useRef(0)
-  const previousScrollHeightRef = useRef(0)
+  const isLoadingMore = useRef(false)
 
   // 👇 Infinite scroll logic
   useEffect(() => {
@@ -17,36 +15,33 @@ const Home = () => {
       if (
         window.innerHeight + window.scrollY >=
           document.documentElement.scrollHeight - 200 &&
-        visible < products.length
+        visible < products.length &&
+        !isLoadingMore.current
       ) {
-        // Save current scroll position and scroll height before loading more items
-        scrollPositionRef.current = window.scrollY
-        previousScrollHeightRef.current = document.documentElement.scrollHeight
-        setVisible((prev) => prev + 20)
+        isLoadingMore.current = true
+        
+        // Save current scroll position before loading more
+        const scrollPosition = window.scrollY
+        const scrollHeight = document.documentElement.scrollHeight
+        
+        setVisible((prev) => {
+          const newVisible = prev + 20
+          
+          // After state update, restore scroll position
+          setTimeout(() => {
+            const newScrollHeight = document.documentElement.scrollHeight
+            window.scrollTo(0, scrollPosition + (newScrollHeight - scrollHeight))
+            isLoadingMore.current = false
+          }, 0)
+          
+          return newVisible
+        })
       }
     }
 
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [visible, products.length])
-
-  // 👇 Restore scroll position after new items are rendered
-  useEffect(() => {
-    if (!isInitialLoad.current && visible > 20) {
-      // Calculate new scroll position to maintain the same view
-      const newScrollHeight = document.documentElement.scrollHeight
-      const scrollDifference = newScrollHeight - previousScrollHeightRef.current
-      
-      // Only adjust scroll position if we've actually loaded more items
-      if (scrollDifference > 0) {
-        requestAnimationFrame(() => {
-          window.scrollTo(0, scrollPositionRef.current + scrollDifference)
-        })
-      }
-    } else {
-      isInitialLoad.current = false
-    }
-  }, [visible])
 
   return (
     <div className="home-page">
