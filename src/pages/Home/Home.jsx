@@ -8,14 +8,29 @@ const Home = () => {
   const { products, loading, filters, setFilters } = useFeed()
   const [visible, setVisible] = useState(20)
   const isLoadingMore = useRef(false)
+  const hasRestoredScroll = useRef(false)
   const prevFiltersRef = useRef(JSON.stringify(filters))
+  const isNavigatingBackRef = useRef(false)
 
-  // Reset visible products only when filters actually change (search, filter, sort)
+  // Check if we're navigating back to the page
+  useEffect(() => {
+    const handlePageShow = (event) => {
+      if (event.persisted) {
+        isNavigatingBackRef.current = true
+      }
+    }
+    
+    window.addEventListener('pageshow', handlePageShow)
+    return () => window.removeEventListener('pageshow', handlePageShow)
+  }, [])
+
+  // Reset visible products only when filters actually change
   useEffect(() => {
     const currentFilters = JSON.stringify(filters)
     if (prevFiltersRef.current !== currentFilters) {
       setVisible(20)
       prevFiltersRef.current = currentFilters
+      hasRestoredScroll.current = false
     }
   }, [filters])
 
@@ -52,6 +67,35 @@ const Home = () => {
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [visible, products.length])
+
+  // Handle scroll restoration when navigating back
+  useEffect(() => {
+    if (isNavigatingBackRef.current && !hasRestoredScroll.current && visible > 20) {
+      // Wait for products to render
+      setTimeout(() => {
+        // Try to restore the previous scroll position
+        const savedScrollPosition = sessionStorage.getItem('homeScrollPosition')
+        if (savedScrollPosition) {
+          window.scrollTo(0, parseInt(savedScrollPosition, 10))
+        }
+        hasRestoredScroll.current = true
+        isNavigatingBackRef.current = false
+      }, 100)
+    }
+  }, [visible, loading])
+
+  // Save scroll position before leaving the page
+  useEffect(() => {
+    const handleBeforeUnload = () => {
+      sessionStorage.setItem('homeScrollPosition', window.scrollY)
+    }
+    
+    window.addEventListener('beforeunload', handleBeforeUnload)
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload)
+      sessionStorage.setItem('homeScrollPosition', window.scrollY)
+    }
+  }, [])
 
   return (
     <div className="home-page">
