@@ -23,7 +23,7 @@ const Home = () => {
       setScrollY(window.scrollY) // save scroll position
 
       const scrollPosition = window.innerHeight + window.scrollY
-      const triggerPoint = document.documentElement.scrollHeight - 400
+      const triggerPoint = document.documentElement.scrollHeight - 1200
 
       if (scrollPosition >= triggerPoint && visible < products.length) {
         setVisible((prev) => prev + 20)
