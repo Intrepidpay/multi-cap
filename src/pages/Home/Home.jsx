@@ -1,5 +1,4 @@
-// src/pages/Home/Home.jsx
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect } from "react"
 import { useFeed } from "../../contexts/FeedContext"
 import ProductCard from "../../components/ProductCard/ProductCard"
 import SearchFilter from "../../components/SearchFilter/SearchFilter"
@@ -7,21 +6,13 @@ import "./Home.css"
 
 const Home = () => {
   const { products, loading, filters, setFilters } = useFeed()
+  const [visible, setVisible] = useState(20) // 👈 show 20 products first
 
-  // restore visible from sessionStorage if present (so we render enough items before restoring scroll)
-  const [visible, setVisible] = useState(() => {
-    const saved = sessionStorage.getItem("home-visible")
-    return saved ? parseInt(saved, 10) : 20
-  })
-
-  // ensure we only try to restore once per mount
-  const restoredRef = useRef(false)
-
-  // Infinite scroll: load more when user approaches bottom (unchanged logic, trigger earlier)
+  // 👇 Infinite scroll logic (trigger earlier)
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.innerHeight + window.scrollY
-      const triggerPoint = document.documentElement.scrollHeight - 600 // earlier trigger
+      const triggerPoint = document.documentElement.scrollHeight - 500 // 👈 earlier trigger (before bottom)
 
       if (scrollPosition >= triggerPoint && visible < products.length) {
         setVisible((prev) => prev + 20) // load 20 more
@@ -31,76 +22,6 @@ const Home = () => {
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [visible, products.length])
-
-  // Persist visible count whenever it changes
-  useEffect(() => {
-    try {
-      sessionStorage.setItem("home-visible", String(visible))
-    } catch (e) {
-      // ignore storage errors (e.g. quota)
-    }
-  }, [visible])
-
-  // Temporarily disable browser auto scroll restoration while on this page
-  useEffect(() => {
-    let prev = undefined
-    if (typeof window !== "undefined" && window.history && "scrollRestoration" in window.history) {
-      prev = window.history.scrollRestoration
-      window.history.scrollRestoration = "manual"
-    }
-    return () => {
-      if (typeof window !== "undefined" && window.history && "scrollRestoration" in window.history) {
-        window.history.scrollRestoration = prev || "auto"
-      }
-    }
-  }, [])
-
-  // Restore scroll after products have loaded and DOM is tall enough.
-  // We retry for a short while (requestAnimationFrame loop) so we don't restore too early.
-  useEffect(() => {
-    if (loading) return
-    if (restoredRef.current) return
-
-    const savedScroll = sessionStorage.getItem("home-scroll")
-    if (!savedScroll) return
-
-    const target = parseInt(savedScroll, 10)
-    let attempts = 0
-    const maxAttempts = 60 // ~1 second at 60fps
-
-    const tryRestore = () => {
-      attempts++
-      // If the document is tall enough to reach the target scroll, restore.
-      // OR if we've retried long enough, restore anyway (fallback).
-      if (document.documentElement.scrollHeight > target || attempts >= maxAttempts) {
-        window.scrollTo(0, target)
-        restoredRef.current = true
-      } else {
-        requestAnimationFrame(tryRestore)
-      }
-    }
-
-    tryRestore()
-  }, [loading, products.length, visible])
-
-  // Save scroll position (and visible) on unmount / before page unload
-  useEffect(() => {
-    const saveState = () => {
-      try {
-        sessionStorage.setItem("home-scroll", String(window.scrollY))
-        sessionStorage.setItem("home-visible", String(visible))
-      } catch (e) {
-        // ignore
-      }
-    }
-
-    window.addEventListener("beforeunload", saveState)
-    return () => {
-      // Save immediately on component unmount (covers SPA navigation)
-      saveState()
-      window.removeEventListener("beforeunload", saveState)
-    }
-  }, [visible])
 
   return (
     <div className="home-page">
