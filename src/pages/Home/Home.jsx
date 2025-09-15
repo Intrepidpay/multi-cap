@@ -1,24 +1,11 @@
+import { VirtuosoGrid } from "react-virtuoso";
 import { useFeed } from "../../contexts/FeedContext";
 import ProductCard from "../../components/ProductCard/ProductCard";
 import SearchFilter from "../../components/SearchFilter/SearchFilter";
 import "./Home.css";
-import { FixedSizeList as List } from "react-window";
 
 const Home = () => {
   const { products, loading, filters, setFilters } = useFeed();
-
-  if (loading) {
-    return (
-      <div className="home-page">
-        <div className="home-container">
-          <div className="home-loading">
-            <div className="home-loading-spinner"></div>
-            <p>Loading products...</p>
-          </div>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div className="home-page">
@@ -35,43 +22,22 @@ const Home = () => {
           />
         </div>
 
-        {/* Virtualized scroll container */}
-        <List
-          height={800} // scrollable height
-          itemCount={products.length}
-          itemSize={320} // approximate card height
-          width={"100%"}
-        >
-          {({ index, style }) => (
-            <div style={style} className="home-products-grid">
+        {loading ? (
+          <div className="home-loading">
+            <div className="home-loading-spinner"></div>
+            <p>Loading products...</p>
+          </div>
+        ) : products.length > 0 ? (
+          <VirtuosoGrid
+            style={{ height: "80vh" }}
+            totalCount={products.length}
+            itemContent={(index) => (
               <ProductCard key={products[index].id} product={products[index]} />
-            </div>
-          )}
-        </List>
-
-        {products.length === 0 && (
+            )}
+            listClassName="home-products-grid"
+          />
+        ) : (
           <div className="home-no-products">
-            <svg
-              width="64"
-              height="64"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M15 5V7M9 5V7M3 9H21M3 7L3 17C3 18.1046 3.89543 19 5 19H19C20.1046 19 21 18.1046 21 17V7M3 7L4.5 5H19.5L21 7"
-                stroke="#666"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M10 12H14"
-                stroke="#666"
-                strokeWidth="2"
-                strokeLinecap="round"
-              />
-            </svg>
             <p>No products found. Try a different search or filter.</p>
           </div>
         )}
