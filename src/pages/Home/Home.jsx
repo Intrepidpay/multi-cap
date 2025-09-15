@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useFeed } from "../../contexts/FeedContext"
 import ProductCard from "../../components/ProductCard/ProductCard"
 import SearchFilter from "../../components/SearchFilter/SearchFilter"
@@ -8,9 +8,21 @@ const Home = () => {
   const { products, loading, filters, setFilters } = useFeed()
   const [visible, setVisible] = useState(20) // 👈 show 20 products first
 
-  const loadMore = () => {
-    setVisible((prev) => prev + 20) // 👈 load 20 more on click
-  }
+  // 👇 Infinite scroll logic
+  useEffect(() => {
+    const handleScroll = () => {
+      if (
+        window.innerHeight + window.scrollY >=
+          document.documentElement.scrollHeight - 200 && // near bottom
+        visible < products.length
+      ) {
+        setVisible((prev) => prev + 20) // load 20 more
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [visible, products.length])
 
   return (
     <div className="home-page">
@@ -33,21 +45,11 @@ const Home = () => {
             <p>Loading products...</p>
           </div>
         ) : (
-          <>
-            <div className="home-products-grid">
-              {products.slice(0, visible).map((product) => (
-                <ProductCard key={product.id} product={product} />
-              ))}
-            </div>
-
-            {visible < products.length && (
-              <div className="home-load-more">
-                <button onClick={loadMore} className="load-more-btn">
-                  Load More
-                </button>
-              </div>
-            )}
-          </>
+          <div className="home-products-grid">
+            {products.slice(0, visible).map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+          </div>
         )}
 
         {!loading && products.length === 0 && (
