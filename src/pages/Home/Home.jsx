@@ -1,28 +1,13 @@
-// src/pages/Home/Home.jsx - OPTIMIZED
-import React, { useMemo } from "react";
-import { useFeed } from "../../contexts/FeedContext"
-import ProductCard from "../../components/ProductCard/ProductCard"
-import SearchFilter from "../../components/SearchFilter/SearchFilter"
-import "./Home.css"
+import { FixedSizeList as List } from "react-window";
+import { useFeed } from "../../contexts/FeedContext";
+import ProductCard from "../../components/ProductCard/ProductCard";
+import SearchFilter from "../../components/SearchFilter/SearchFilter";
+import "./Home.css";
 
 const Home = () => {
-  const { products, loading, filters, setFilters } = useFeed()
+  const { products, loading, filters, setFilters } = useFeed();
 
-  // Memoize the filter handler functions
-  const setFilter = useCallback((f) => setFilters(prev => ({ ...prev, filter: f })), []);
-  const setSort = useCallback((s) => setFilters(prev => ({ ...prev, sort: s })), []);
-  const setSearchQuery = useCallback((q) => setFilters(prev => ({ ...prev, searchQuery: q })), []);
-
-  // Virtualization - only render visible products
-  const visibleProducts = useMemo(() => {
-    // In a real implementation, you would use a library like react-window
-    // For now, we'll just return all products
-    return products;
-  }, [products]);
-
-  if (loading) {
-    return <div className="loading">Loading products...</div>;
-  }
+  if (loading) return <p>Loading...</p>;
 
   return (
     <div className="home-page">
@@ -31,26 +16,29 @@ const Home = () => {
           <h2>Featured Products</h2>
           <SearchFilter
             filter={filters.filter}
-            setFilter={setFilter}
+            setFilter={(f) => setFilters({ ...filters, filter: f })}
             sort={filters.sort}
-            setSort={setSort}
+            setSort={(s) => setFilters({ ...filters, sort: s })}
             searchQuery={filters.searchQuery}
-            setSearchQuery={setSearchQuery}
+            setSearchQuery={(q) => setFilters({ ...filters, searchQuery: q })}
           />
         </div>
-        
-        <div className="products-grid">
-          {visibleProducts.map(product => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </div>
-        
-        {visibleProducts.length === 0 && (
-          <div className="no-products">No products found matching your criteria.</div>
-        )}
+
+        <List
+          height={600} // height of scrollable area
+          itemCount={products.length}
+          itemSize={320} // height of each row (tune per your card CSS)
+          width={"100%"}
+        >
+          {({ index, style }) => (
+            <div style={style}>
+              <ProductCard product={products[index]} />
+            </div>
+          )}
+        </List>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default React.memo(Home)
+export default Home;
