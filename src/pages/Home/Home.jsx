@@ -1,68 +1,42 @@
-import { useState, useEffect, useRef } from "react"
+// src/pages/Home/Home.jsx
+import { useEffect } from "react"
 import { useFeed } from "../../contexts/FeedContext"
 import ProductCard from "../../components/ProductCard/ProductCard"
 import SearchFilter from "../../components/SearchFilter/SearchFilter"
 import "./Home.css"
 
 const Home = () => {
-  const { products, loading, filters, setFilters } = useFeed()
-  const [visible, setVisible] = useState(20)
-  const isLoadingMore = useRef(false)
-  const prevProductsLength = useRef(products.length)
+  const {
+    products,
+    loading,
+    filters,
+    setFilters,
+    visible,
+    setVisible,
+    scrollY,
+    setScrollY,
+  } = useFeed()
 
-  // Reset to 20 products when filters change
-  useEffect(() => {
-    setVisible(20)
-  }, [filters.filter, filters.sort, filters.searchQuery])
-
-  // Handle scroll position when products change
-  useEffect(() => {
-    // If products were added (not just initial load)
-    if (products.length > prevProductsLength.current) {
-      // Wait for DOM to update
-      setTimeout(() => {
-        // Maintain scroll position
-        const scrollPosition = window.scrollY
-        const scrollHeight = document.documentElement.scrollHeight
-        window.scrollTo(0, scrollPosition)
-      }, 0)
-    }
-    prevProductsLength.current = products.length
-  }, [products.length])
-
-  // Infinite scroll logic
+  // 👇 Infinite scroll + save scrollY
   useEffect(() => {
     const handleScroll = () => {
-      if (
-        window.innerHeight + window.scrollY >=
-          document.documentElement.scrollHeight - 200 &&
-        visible < products.length &&
-        !isLoadingMore.current
-      ) {
-        isLoadingMore.current = true
-        
-        // Save current scroll position
-        const scrollPosition = window.scrollY
-        const scrollHeight = document.documentElement.scrollHeight
-        
-        setVisible((prev) => {
-          const newVisible = prev + 20
-          
-          // Restore scroll position after update
-          setTimeout(() => {
-            const newScrollHeight = document.documentElement.scrollHeight
-            window.scrollTo(0, scrollPosition + (newScrollHeight - scrollHeight))
-            isLoadingMore.current = false
-          }, 0)
-          
-          return newVisible
-        })
+      setScrollY(window.scrollY) // save scroll position
+
+      const scrollPosition = window.innerHeight + window.scrollY
+      const triggerPoint = document.documentElement.scrollHeight - 400
+
+      if (scrollPosition >= triggerPoint && visible < products.length) {
+        setVisible((prev) => prev + 20)
       }
     }
 
     window.addEventListener("scroll", handleScroll)
+
+    // restore saved scroll position on mount
+    window.scrollTo(0, scrollY)
+
     return () => window.removeEventListener("scroll", handleScroll)
-  }, [visible, products.length])
+  }, [visible, products.length, scrollY, setScrollY, setVisible])
 
   return (
     <div className="home-page">
@@ -94,27 +68,7 @@ const Home = () => {
 
         {!loading && products.length === 0 && (
           <div className="home-no-products">
-            <svg
-              width="64"
-              height="64"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M15 5V7M9 5V7M3 9H21M3 7L3 17C3 18.1046 3.89543 19 5 19H19C20.1046 19 21 18.1046 21 17V7M3 7L4.5 5H19.5L21 7"
-                stroke="#666"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M10 12H14"
-                stroke="#666"
-                strokeWidth="2"
-                strokeLinecap="round"
-              />
-            </svg>
+            {/* empty state */}
             <p>No products found. Try a different search or filter.</p>
           </div>
         )}
