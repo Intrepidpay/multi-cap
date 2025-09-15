@@ -8,13 +8,14 @@ const Home = () => {
   const { products, loading, filters, setFilters } = useFeed()
   const [visible, setVisible] = useState(20) // 👈 show 20 products first
 
-  // 👇 Infinite scroll logic (trigger earlier)
+  // 👇 Infinite scroll logic
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.innerHeight + window.scrollY
-      const triggerPoint = document.documentElement.scrollHeight - 500 // 👈 earlier trigger (before bottom)
-
-      if (scrollPosition >= triggerPoint && visible < products.length) {
+      if (
+        window.innerHeight + window.scrollY >=
+          document.documentElement.scrollHeight - 200 && // near bottom
+        visible < products.length
+      ) {
         setVisible((prev) => prev + 20) // load 20 more
       }
     }
