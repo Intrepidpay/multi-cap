@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { useFeed } from "../../contexts/FeedContext"
 import ProductCard from "../../components/ProductCard/ProductCard"
 import SearchFilter from "../../components/SearchFilter/SearchFilter"
@@ -6,23 +6,37 @@ import "./Home.css"
 
 const Home = () => {
   const { products, loading, filters, setFilters } = useFeed()
-  const [visible, setVisible] = useState(20) // 👈 show 20 products first
+  const [visible, setVisible] = useState(20)
+  const scrollPositionRef = useRef(0)
+  const previousScrollHeightRef = useRef(0)
 
-  // 👇 Infinite scroll logic
   useEffect(() => {
     const handleScroll = () => {
       if (
         window.innerHeight + window.scrollY >=
-          document.documentElement.scrollHeight - 200 && // near bottom
+          document.documentElement.scrollHeight - 200 &&
         visible < products.length
       ) {
-        setVisible((prev) => prev + 20) // load 20 more
+        // Save current scroll position and scroll height before loading more items
+        scrollPositionRef.current = window.scrollY
+        previousScrollHeightRef.current = document.documentElement.scrollHeight
+        setVisible((prev) => prev + 20)
       }
     }
 
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [visible, products.length])
+
+  // Restore scroll position after new items are rendered
+  useEffect(() => {
+    if (visible > 20) {
+      // Calculate new scroll position to maintain the same view
+      const newScrollHeight = document.documentElement.scrollHeight
+      const scrollDifference = newScrollHeight - previousScrollHeightRef.current
+      window.scrollTo(0, scrollPositionRef.current + scrollDifference)
+    }
+  }, [visible])
 
   return (
     <div className="home-page">
