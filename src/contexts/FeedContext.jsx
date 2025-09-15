@@ -1,58 +1,45 @@
-// src/contexts/FeedContext.jsx - OPTIMIZED
-import { createContext, useContext, useState, useEffect, useMemo, useCallback } from "react"
+// src/contexts/FeedContext.jsx
+import { createContext, useContext, useState, useEffect } from "react"
 import { getProducts } from "../data/mockProducts"
 
 const FeedContext = createContext()
 
 export function FeedProvider({ children }) {
-  const [allProducts, setAllProducts] = useState([]) // Store all products
-  const [products, setProducts] = useState([]) // Filtered products
+  const [products, setProducts] = useState([])
   const [loading, setLoading] = useState(true)
   const [filters, setFilters] = useState({
     filter: "all",
     sort: "random",
     searchQuery: "",
   })
-  const [scrollY, setScrollY] = useState(0)
+  const [scrollY, setScrollY] = useState(0) // 👈 store scroll position
 
-  // Load initial products and filters
+  // Load filters from sessionStorage on first render
   useEffect(() => {
     const saved = sessionStorage.getItem("filterState")
     if (saved) {
       setFilters(JSON.parse(saved))
     }
-    
-    // Load all products once
-    const allProductsData = getProducts("all", "random", "")
-    setAllProducts(allProductsData)
-    setProducts(allProductsData)
-    setLoading(false)
   }, [])
 
-  // Save filters when they change
+  // Save filters whenever they change
   useEffect(() => {
     sessionStorage.setItem("filterState", JSON.stringify(filters))
   }, [filters])
 
-  // Memoized filtering and sorting
-  const filteredProducts = useMemo(() => {
-    if (!filters.filter && !filters.sort && !filters.searchQuery) {
-      return allProducts;
-    }
-    
-    return getProducts(
+  // Load products whenever filters change
+  useEffect(() => {
+    setLoading(true)
+    const filteredProducts = getProducts(
       filters.filter,
       filters.sort,
       filters.searchQuery
-    );
-  }, [allProducts, filters.filter, filters.sort, filters.searchQuery]);
+    )
+    setProducts(filteredProducts)
+    setLoading(false)
+  }, [filters])
 
-  // Update products only when filteredProducts changes
-  useEffect(() => {
-    setProducts(filteredProducts);
-  }, [filteredProducts]);
-
-  // Save scroll position
+  // Save scroll on unmount/navigation
   useEffect(() => {
     const handleBeforeUnload = () => {
       sessionStorage.setItem("feedScrollY", window.scrollY.toString())
@@ -65,28 +52,18 @@ export function FeedProvider({ children }) {
     }
   }, [])
 
-  // Restore scroll position
+  // Restore scroll when coming back to Home
   useEffect(() => {
     const savedY = sessionStorage.getItem("feedScrollY")
     if (savedY) {
-      requestAnimationFrame(() => {
-        window.scrollTo(0, parseInt(savedY, 10))
-      });
+      window.scrollTo(0, parseInt(savedY, 10))
     }
   }, [])
 
-  // Memoized context value to prevent unnecessary re-renders
-  const contextValue = useMemo(() => ({
-    products, 
-    loading, 
-    filters, 
-    setFilters, 
-    scrollY, 
-    setScrollY
-  }), [products, loading, filters, scrollY]);
-
   return (
-    <FeedContext.Provider value={contextValue}>
+    <FeedContext.Provider
+      value={{ products, loading, filters, setFilters, scrollY, setScrollY }}
+    >
       {children}
     </FeedContext.Provider>
   )
@@ -94,4 +71,4 @@ export function FeedProvider({ children }) {
 
 export function useFeed() {
   return useContext(FeedContext)
-}
+      }
