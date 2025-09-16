@@ -1,11 +1,11 @@
 /* Watermark styles */
 .product-watermark {
   position: absolute;
-  bottom: 20px;
-  right: 20px;
+  bottom: 20%;
+  right: 40%;
   z-index: 10;
   opacity: 0.35;
-  transform: rotate(-45deg) scale(0.7);
+  transform: rotate(-45deg) scale(0.4);
   pointer-events: none;
   transform-origin: center;
 }
