@@ -19,7 +19,7 @@
 }
 
 .product-watermark img {
-  width: 12%;   /* responsive size */
+  width: 4%;   /* responsive size */
   height: auto;
   object-fit: contain;
 }
