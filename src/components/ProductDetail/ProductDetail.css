@@ -4,8 +4,8 @@
 
 .product-watermark {
   position: absolute;
-  bottom: 81px;       /* fixed distance from bottom */
-  right: -30px;        /* fixed distance from right */
+  bottom: 86px;       /* fixed distance from bottom */
+  right: -35px;        /* fixed distance from right */
   z-index: 10;
   opacity: 0.35;
   pointer-events: none;
