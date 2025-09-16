@@ -2,7 +2,7 @@
 .product-watermark {
   position: absolute !important;
   z-index: 10;
-  transform: translate(55px, -15px) rotate(-45deg) scale(0.4);
+  transform: translate(55px, 20px) rotate(-45deg) scale(0.4);
   opacity: 0.35;
   pointer-events: none;
   transform-origin: center;
