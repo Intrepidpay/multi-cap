@@ -8,6 +8,20 @@
   --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+/* Remove flash/tap highlights and focus outlines globally */
+* {
+  -webkit-tap-highlight-color: transparent; /* mobile tap flash */
+  -webkit-touch-callout: none;              /* prevent callout on long touch (iOS) */
+  outline: none !important;                 /* remove focus outlines */
+  transition: none !important;              /* prevent accidental transition flashes */
+}
+
+/* Remove flash on links and buttons specifically */
+a, button {
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;           /* avoids background flash */
+}
+
 /* 🌍 Global styles */
 
 /* Remove mobile tap flash highlight */
