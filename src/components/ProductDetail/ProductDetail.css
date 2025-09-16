@@ -6,8 +6,8 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 100%;       /* fill parent width */
-  height: 100%;      /* optional, can adjust */
+  width: 10%;       /* fill parent width */
+  height: 10%;      /* optional, can adjust */
   z-index: 10;
   opacity: 0.35;
   pointer-events: none;
