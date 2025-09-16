@@ -4,24 +4,105 @@
 
 .product-watermark {
   position: absolute;
-  bottom: 88.5px;       /* fixed distance from bottom */
-  right: -30.5px;        /* fixed distance from right */
+  bottom: 64.6px;       /* base: tuned for 430x932 */
+  right: -20px;
   z-index: 10;
   opacity: 0.35;
   pointer-events: none;
 
   transform-origin: bottom right;
-  transform: rotate(-45deg) scale(0.4); /* same visual size as before */
-
+  transform: rotate(-45deg) scale(0.3);
   will-change: transform, opacity;
   backface-visibility: hidden;
 }
 
 .product-watermark img {
-  width: 100px;  /* fixed size, matches old scale */
-  height: 40px;  /* fixed size, matches old scale */
+  width: 100px;
+  height: 40px;
   object-fit: contain;
 }
+
+/* -------- RESPONSIVE FIXES -------- */
+
+@media (max-width: 360px) {
+  .product-watermark {
+    bottom: 50px;
+    right: -15px;
+    transform: rotate(-45deg) scale(0.25);
+  }
+  .product-watermark img {
+    width: 85px;
+    height: 34px;
+  }
+}
+
+/* Medium phones (~375–414px) */
+@media (min-width: 361px) and (max-width: 429px) {
+  .product-watermark {
+    bottom: 58px;
+    right: -18px;
+    transform: rotate(-45deg) scale(0.28);
+  }
+  .product-watermark img {
+    width: 95px;
+    height: 38px;
+  }
+}
+
+/* Your perfect fit (≈430px wide) — base already matches */
+
+/* Small wide phones (~480px) */
+@media (min-width: 430px) and (max-width: 480px) {
+  .product-watermark {
+    bottom: 65px;
+    right: -22px;
+    transform: rotate(-45deg) scale(0.32);
+  }
+  .product-watermark img {
+    width: 105px;
+    height: 42px;
+  }
+}
+
+/* Larger phones & small tablets (481px–768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .product-watermark {
+    bottom: 70px;
+    right: -25px;
+    transform: rotate(-45deg) scale(0.35);
+  }
+  .product-watermark img {
+    width: 110px;
+    height: 44px;
+  }
+}
+
+/* Tablets (769px–1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .product-watermark {
+    bottom: 90px;
+    right: -30px;
+    transform: rotate(-45deg) scale(0.4);
+  }
+  .product-watermark img {
+    width: 130px;
+    height: 52px;
+  }
+}
+
+/* Desktops (1025px and up) */
+@media (min-width: 1025px) {
+  .product-watermark {
+    bottom: 110px;
+    right: -40px;
+    transform: rotate(-45deg) scale(0.45);
+  }
+  .product-watermark img {
+    width: 150px;
+    height: 60px;
+  }
+}
+
 
 .product-detail-page {
   padding: 30px 0;
