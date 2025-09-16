@@ -5,6 +5,44 @@ import { getProductById } from '../../data/mockProducts'
 import { formatPrice } from '../../utils/helpers'
 import './ProductDetail.css'
 
+// Watermark component
+const Watermark = () => {
+  return (
+    <div 
+      className="product-detail-watermark"
+      style={{
+        position: 'absolute',
+        bottom: '20px',
+        right: '20px',
+        zIndex: 10,
+        opacity: 0.7,
+        transform: 'rotate(-45deg)',
+        pointerEvents: 'none',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
+      }}
+    >
+      <div 
+        style={{
+          padding: '5px 10px',
+          backgroundColor: 'rgba(0, 0, 0, 0.6)',
+          color: 'white',
+          fontSize: '14px',
+          fontWeight: 'bold',
+          borderRadius: '4px',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center'
+        }}
+      >
+        <div>MULTICAPITAL</div>
+        <div>WAREHOUSE</div>
+      </div>
+    </div>
+  )
+}
+
 const ProductDetail = () => {
   const { id } = useParams()
   const { addToCart, getItemQuantity } = useCart()
@@ -143,6 +181,7 @@ const ProductDetail = () => {
               onTouchEnd={handleTouchEnd}
             >
               <img src={product.images[currentImage]} alt={product.name} />
+              <Watermark />
             </div>
             
             {product.images.length > 1 && (
@@ -160,13 +199,15 @@ const ProductDetail = () => {
                   ref={thumbnailsRef}
                 >
                   {product.images.map((image, index) => (
-                    <img 
-                      key={index} 
-                      src={image} 
-                      alt={`${product.name} ${index + 1}`}
-                      className={index === currentImage ? 'product-detail-active' : ''}
-                      onClick={() => setCurrentImage(index)}
-                    />
+                    <div key={index} style={{ position: 'relative', display: 'inline-block' }}>
+                      <img 
+                        src={image} 
+                        alt={`${product.name} ${index + 1}`}
+                        className={index === currentImage ? 'product-detail-active' : ''}
+                        onClick={() => setCurrentImage(index)}
+                      />
+                      <Watermark />
+                    </div>
                   ))}
                 </div>
                 {showScrollButtons && (
@@ -184,7 +225,7 @@ const ProductDetail = () => {
           <div className="product-detail-info">
             <h1>{product.name}</h1>
             <p className="product-detail-category">{product.category}</p>
-            <p className="product-detail-price">{formatPrice(product.price)}</p> {/* Updated this line */}
+            <p className="product-detail-price">{formatPrice(product.price)}</p>
             
             <div className="product-detail-stock-info">
               <div className={`product-detail-status ${isOutOfStock ? 'product-detail-sold' : 'product-detail-available'}`}>
