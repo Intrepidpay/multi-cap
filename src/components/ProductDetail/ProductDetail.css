@@ -4,13 +4,14 @@
 
 .product-watermark {
   position: absolute;
-  bottom: 5%;
-  right: 5%;
+  bottom: 0;
+  right: 0;
+  width: 100%;       /* fill parent width */
+  height: 100%;      /* optional, can adjust */
   z-index: 10;
   opacity: 0.35;
   pointer-events: none;
 
-  /* Rotate around the bottom-right corner */
   transform-origin: bottom right;
   transform: rotate(-45deg);
 
@@ -19,7 +20,7 @@
 }
 
 .product-watermark img {
-  width: 4%;   /* responsive size */
+  width: 12.5%;   /* % of parent container width */
   height: auto;
   object-fit: contain;
 }
