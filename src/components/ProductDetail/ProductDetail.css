@@ -21,8 +21,8 @@
 
 /* Watermark image */
 .product-watermark img {
-  width: 100px;    /* fixed size */
-  height: 40px;    /* fixed size */
+  width: 50px;    /* fixed size */
+  height: 15px;    /* fixed size */
   object-fit: contain;
 }
 
