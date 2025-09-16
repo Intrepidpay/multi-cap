@@ -7,7 +7,7 @@
 .product-watermark {
   position: absolute;
   bottom: -2%;       /* responsive distance from bottom */
-  right: 5%;        /* responsive distance from right */
+  left: 30%;        /* responsive distance from right */
   z-index: 10;
   opacity: 0.35;
   pointer-events: none;
