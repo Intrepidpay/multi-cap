@@ -24,12 +24,6 @@
   object-fit: contain;
 }
 
-.product-watermark img {
-  width: 15%;   /* % of parent container width */
-  height: auto; /* maintain aspect ratio */
-  object-fit: contain;
-}
-
 .product-detail-page {
   padding: 30px 0;
   min-height: calc(100vh - 100px);
