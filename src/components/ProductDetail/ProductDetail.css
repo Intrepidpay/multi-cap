@@ -4,7 +4,7 @@
 
 .product-watermark {
   position: absolute;
-  bottom: 20px;      /* distance from bottom */
+  bottom: 80px;      /* distance from bottom */
   right: 30px;       /* distance from right */
   z-index: 10;
   opacity: 0.35;
