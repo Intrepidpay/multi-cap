@@ -4,24 +4,24 @@
 
 .product-watermark {
   position: absolute;
-  bottom: 83px;      /* distance from bottom */
-  right: 70px;       /* distance from right */
+  bottom: 5%;           /* % of container height */
+  right: 5%;            /* % of container width */
   z-index: 10;
   opacity: 0.35;
   pointer-events: none;
 
-  /* Rotate and scale around bottom-right corner */
   transform-origin: bottom right;
-  transform: rotate(-45deg) scale(0.4);
+  transform: rotate(-45deg) scale(0.4);  /* keep same visual size relative to container */
 
   will-change: transform, opacity;
   backface-visibility: hidden;
 }
 
 .product-watermark img {
-  width: 100px;   /* original size */
-  height: 40px;   /* original size */
+  width: 20%;    /* scale relative to container width */
+  height: auto;
   object-fit: contain;
+  max-width: 100px;  /* optional: limit size on very large images */
 }
 
 .product-detail-page {
