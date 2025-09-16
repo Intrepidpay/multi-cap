@@ -6,7 +6,7 @@
 /* Watermark styling */
 .product-watermark {
   position: absolute;
-  bottom: 5%;       /* responsive distance from bottom */
+  bottom: 10%;       /* responsive distance from bottom */
   right: 5%;        /* responsive distance from right */
   z-index: 10;
   opacity: 0.35;
