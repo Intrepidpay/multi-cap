@@ -1,5 +1,5 @@
 /* Watermark styles */
-.product-detail-watermark {
+.product-watermark {
   position: absolute;
   bottom: 20px;
   right: 20px;
@@ -7,32 +7,17 @@
   opacity: 0.7;
   transform: rotate(-45deg);
   pointer-events: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.product-detail-watermark > div {
-  padding: 5px 10px;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: white;
-  font-size: 14px;
-  font-weight: bold;
-  border-radius: 4px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.product-watermark img {
+  width: 100px;
+  height: 40px;
+  object-fit: contain;
 }
 
 /* Ensure main image container has relative positioning */
 .product-detail-main-image {
   position: relative;
-}
-
-/* Thumbnail container positioning */
-.product-detail-thumbnails > div {
-  position: relative;
-  display: inline-block;
 }
 
 .product-detail-page {
@@ -394,3 +379,4 @@
     max-width: 540px; /* 6 thumbnails * 80px + 5 gaps * 10px */
   }
   }
+  
