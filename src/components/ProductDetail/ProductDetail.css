@@ -1,8 +1,8 @@
 /* Watermark styles */
 .product-watermark {
   position: absolute;
-  bottom: 25px;
-  left: 55px;
+  bottom: 35px;
+  left: 85px;
   z-index: 10;
   opacity: 0.35;
   transform: rotate(-45deg) scale(0.4);
