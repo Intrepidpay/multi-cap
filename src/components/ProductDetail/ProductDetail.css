@@ -4,9 +4,10 @@
   bottom: 20px;
   right: 20px;
   z-index: 10;
-  opacity: 0.7;
-  transform: rotate(-45deg);
+  opacity: 0.35;
+  transform: rotate(-45deg); scale(0.7);
   pointer-events: none;
+  transform-origin: center;
 }
 
 .product-watermark img {
