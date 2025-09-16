@@ -1,28 +1,26 @@
-/* Ensure the main product image container is relative */
 .product-detail-main-image {
   position: relative;
 }
 
-/* Watermark container */
 .product-watermark {
   position: absolute;
-  bottom: 30px;        /* distance from bottom */
-  right: 30px;         /* distance from right */
+  bottom: 30px;      /* distance from bottom */
+  right: 30px;       /* distance from right */
   z-index: 10;
   opacity: 0.35;
   pointer-events: none;
 
-  transform-origin: center;  
-  transform: rotate(-45deg);  /* diagonal rotation */
+  /* Rotate and scale around bottom-right corner */
+  transform-origin: bottom right;
+  transform: rotate(-45deg) scale(0.4);
 
   will-change: transform, opacity;
   backface-visibility: hidden;
 }
 
-/* Watermark image */
 .product-watermark img {
-  width: 50px;    /* fixed size */
-  height: 15px;    /* fixed size */
+  width: 100px;   /* original size */
+  height: 40px;   /* original size */
   object-fit: contain;
 }
 
