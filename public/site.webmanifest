@@ -4,6 +4,7 @@
   "description": "Discover premium products at unbeatable prices. Shop electronics, rare arts, home goods and more with fast shipping and exceptional customer service.",
   "start_url": "/",
   "display": "standalone",
+  "background_color": "#F7FDFF",
   "orientation": "portrait-primary",
   "scope": "/",
   "lang": "en",
