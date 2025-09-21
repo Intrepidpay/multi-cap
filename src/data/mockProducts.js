@@ -182,7 +182,13 @@ const products = [
     value: 4.7,
     count: 58
       },
-     {
+    reviews: [
+    {
+      rating: 5
+    }
+  ]
+},
+ {
       id: 6,
       name: "Ford Mustang 5.0 GT",
       price: 28999.99,
