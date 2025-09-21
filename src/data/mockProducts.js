@@ -161,30 +161,28 @@ const products = [
     ]
   },
   {
-    id: 5,
-    name: "Smart TV 55 inch",
-    price: 799.99,
-    category: "tv",
-    description: "4K Ultra HD Smart TV with HDR and built-in streaming apps.",
-    images: [
-      "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-    ],
-    highDemand: false,
-    sold: false,
-    quantity: 8,
-    sku: "TV-SM-055",
-    brand: "Multicapital",
-    rating: {
-      value: 4.5,
-      count: 13
-    },
-    reviews: [
-      {
-        rating: 4
-      }
-    ]
-  },
-  {
+  id: 5,
+  name: "LG 55-Inch Smart TV 4K UHD",
+  price: 339.99,
+  category: "tv",
+  description: "2024 LG 55-Inch 4K UHD Smart TV | HDR10 & Dolby Vision | webOS with Built-in Apps | Magic Remote with Voice Control | TruMotion 120Hz | Dolby Atmos Sound | HDMI 2.1, USB & Wi-Fi | Warranty: 12 Months",
+  images: [
+    "/images/lg_tv_1.jpg",
+    "/images/lg_tv_2.jpg",
+    "/images/lg_tv_3.jpg",
+    "/images/lg_tv_4.jpg",
+    "/images/lg_tv_5.jpg"
+  ],
+  highDemand: false,
+  sold: false,
+  quantity: 3,
+  sku: "LG-55UHD-24",
+  brand: "LG",
+  rating: {
+    value: 4.7,
+    count: 58
+      },
+     {
       id: 6,
       name: "Ford Mustang 5.0 GT",
       price: 28999.99,
