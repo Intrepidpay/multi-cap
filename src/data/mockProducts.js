@@ -167,7 +167,7 @@ const products = [
   category: "tv",
   description: "2024 LG 55-Inch 4K UHD Smart TV | HDR10 & Dolby Vision | webOS with Built-in Apps | Magic Remote with Voice Control | TruMotion 120Hz | Dolby Atmos Sound | HDMI 2.1, USB & Wi-Fi | Warranty: 12 Months",
   images: [
-    "/images/lg_tv_1.jpg",
+    "/lg_tv_1.jpg",
     "/images/lg_tv_2.jpg",
     "/images/lg_tv_3.jpg",
     "/images/lg_tv_4.jpg",
