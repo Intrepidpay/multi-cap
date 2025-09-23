@@ -12,17 +12,21 @@ const ProductDetail = () => {
   const [currentImage, setCurrentImage] = useState(0)
   const [touchStart, setTouchStart] = useState(0)
   const [touchEnd, setTouchEnd] = useState(0)
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false)
+  const [imageFit, setImageFit] = useState("fill") // default to fill
   const thumbnailsRef = useRef(null)
+  const lightboxThumbnailsRef = useRef(null)
+  const mainImageRef = useRef(null)
 
   useEffect(() => {
     const productData = getProductById(parseInt(id))
     setProduct(productData)
   }, [id])
 
+  // --- Structured data JSON-LD ---
   useEffect(() => {
     if (!product) return;
 
-    // Create structured data for Google
     const structuredData = {
       "@context": "https://schema.org/",
       "@type": "Product",
@@ -65,7 +69,6 @@ const ProductDetail = () => {
       }))
     };
 
-    // Add structured data to the page
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.text = JSON.stringify(structuredData);
@@ -76,9 +79,43 @@ const ProductDetail = () => {
     };
   }, [product]);
 
+  // --- Handle back button with lightbox ---
+  useEffect(() => {
+    const handlePopState = () => {
+      if (isLightboxOpen) {
+        closeLightbox();
+      }
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, [isLightboxOpen]);
+
+  // --- Scroll thumbnails ---
+  useEffect(() => {
+    if (thumbnailsRef.current && product) {
+      const thumbnails = thumbnailsRef.current;
+      const currentThumbnail = thumbnails.children[currentImage];
+      if (currentThumbnail) {
+        const scrollLeft = currentThumbnail.offsetLeft - (thumbnails.offsetWidth / 2) + (currentThumbnail.offsetWidth / 2);
+        thumbnails.scrollTo({ left: scrollLeft, behavior: 'smooth' });
+      }
+    }
+  }, [currentImage, product]);
+
+  useEffect(() => {
+    if (isLightboxOpen && lightboxThumbnailsRef.current && product) {
+      const thumbnails = lightboxThumbnailsRef.current;
+      const currentThumbnail = thumbnails.children[currentImage];
+      if (currentThumbnail) {
+        const scrollLeft = currentThumbnail.offsetLeft - (thumbnails.offsetWidth / 2) + (currentThumbnail.offsetWidth / 2);
+        thumbnails.scrollTo({ left: scrollLeft, behavior: 'smooth' });
+      }
+    }
+  }, [currentImage, isLightboxOpen, product]);
+
   const handleThumbnailScroll = (direction) => {
     if (thumbnailsRef.current) {
-      const scrollAmount = 90; // Width of thumbnail + gap
+      const scrollAmount = 90;
       thumbnailsRef.current.scrollBy({
         left: direction === 'left' ? -scrollAmount : scrollAmount,
         behavior: 'smooth'
@@ -86,31 +123,112 @@ const ProductDetail = () => {
     }
   };
 
+  // --- Detect swipe/tap on main image ---
   const handleTouchStart = (e) => {
-    setTouchStart(e.targetTouches[0].clientX);
-  };
+    setTouchStart(e.targetTouches[0].clientX)
+    setTouchEnd(e.targetTouches[0].clientX)
+  }
 
   const handleTouchMove = (e) => {
-    setTouchEnd(e.targetTouches[0].clientX);
-  };
+    setTouchEnd(e.targetTouches[0].clientX)
+  }
 
   const handleTouchEnd = () => {
-    if (!product) return;
-    
-    if (touchStart - touchEnd > 50) {
-      // Swipe left - next image
-      setCurrentImage(prev => 
-        prev === product.images.length - 1 ? 0 : prev + 1
-      );
-    }
+    if (!product) return
+    const deltaX = touchEnd - touchStart
 
-    if (touchEnd - touchStart > 50) {
-      // Swipe right - previous image
-      setCurrentImage(prev => 
-        prev === 0 ? product.images.length - 1 : prev - 1
-      );
+    if (Math.abs(deltaX) > 10) {
+      // Swipe
+      if (deltaX < 0) {
+        setCurrentImage(prev => prev === product.images.length - 1 ? 0 : prev + 1)
+      } else {
+        setCurrentImage(prev => prev === 0 ? product.images.length - 1 : prev - 1)
+      }
+    } else {
+      // Tap → open lightbox
+      openLightbox()
     }
-  };
+  }
+
+  // --- Detect swipe inside lightbox ---
+  const handleLightboxTouchStart = (e) => {
+    setTouchStart(e.targetTouches[0].clientX)
+    setTouchEnd(e.targetTouches[0].clientX)
+  }
+
+  const handleLightboxTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX)
+  }
+
+  const handleLightboxTouchEnd = () => {
+    if (!product) return
+    const deltaX = touchEnd - touchStart
+
+    if (Math.abs(deltaX) > 50) {
+      if (deltaX < 0) {
+        setCurrentImage(prev => prev === product.images.length - 1 ? 0 : prev + 1)
+      } else {
+        setCurrentImage(prev => prev === 0 ? product.images.length - 1 : prev - 1)
+      }
+    }
+  }
+
+  const openLightbox = () => {
+    setIsLightboxOpen(true)
+    document.body.classList.add('lightbox-open')
+    window.history.pushState({ lightbox: true }, '')
+  }
+
+  const closeLightbox = () => {
+    setIsLightboxOpen(false)
+    document.body.classList.remove('lightbox-open')
+    if (window.history.state?.lightbox) {
+      window.history.back()
+    }
+  }
+
+  // --- Keyboard navigation ---
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (!isLightboxOpen || !product) return
+      switch(e.key) {
+        case 'Escape':
+          closeLightbox()
+          break
+        case 'ArrowLeft':
+          setCurrentImage(prev => prev === 0 ? product.images.length - 1 : prev - 1)
+          break
+        case 'ArrowRight':
+          setCurrentImage(prev => prev === product.images.length - 1 ? 0 : prev + 1)
+          break
+        default:
+          break
+      }
+    }
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [isLightboxOpen, product])
+
+  // --- Cleanup lightbox-open class ---
+  useEffect(() => {
+    return () => {
+      document.body.classList.remove('lightbox-open')
+    }
+  }, [])
+
+  // --- Detect image ratio for main image (portrait = contain, landscape = fill) ---
+  useEffect(() => {
+    if (!product) return;
+    const img = new Image();
+    img.src = product.images[currentImage];
+    img.onload = () => {
+      if (img.height > img.width) {
+        setImageFit("contain"); // portrait → contain (side gaps)
+      } else {
+        setImageFit("fill"); // landscape → fill (no gaps)
+      }
+    };
+  }, [product, currentImage]);
 
   if (!product) {
     return (
@@ -141,9 +259,18 @@ const ProductDetail = () => {
               onTouchStart={handleTouchStart}
               onTouchMove={handleTouchMove}
               onTouchEnd={handleTouchEnd}
+              ref={mainImageRef}
             >
-              <img src={product.images[currentImage]} alt={product.name} />
-              {/* Watermark added here */}
+              <img 
+                src={product.images[currentImage]} 
+                alt={product.name} 
+                className="product-main-img"
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: imageFit,
+                }}
+              />
               <div className="product-watermark">
                 <img src="/watermark.png" alt="Watermark" />
               </div>
@@ -204,7 +331,6 @@ const ProductDetail = () => {
               )}
             </div>
             
-            {/* Enhanced Star Rating */}
             <div className="product-detail-rating">
               <div className="product-detail-stars">
                 <div 
@@ -253,8 +379,58 @@ const ProductDetail = () => {
           </div>
         </div>
       </div>
+
+      {isLightboxOpen && (
+        <div 
+          className="product-lightbox" 
+          onClick={closeLightbox}
+        >
+          <div 
+            className="product-lightbox-content"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button className="product-lightbox-close" onClick={closeLightbox}>
+              &times;
+            </button>
+            
+            <div 
+              className="product-lightbox-image-container"
+              onTouchStart={handleLightboxTouchStart}
+              onTouchMove={handleLightboxTouchMove}
+              onTouchEnd={handleLightboxTouchEnd}
+            >
+              <img 
+                src={product.images[currentImage]} 
+                alt={product.name} 
+                className="product-lightbox-image"
+              />
+            </div>
+
+            {product.images.length > 1 && (
+              <div 
+                className="product-lightbox-thumbnails"
+                ref={lightboxThumbnailsRef}
+              >
+                {product.images.map((image, index) => (
+                  <img 
+                    key={index} 
+                    src={image} 
+                    alt={`${product.name} ${index + 1}`}
+                    className={index === currentImage ? 'product-lightbox-thumbnail-active' : ''}
+                    onClick={() => setCurrentImage(index)}
+                  />
+                ))}
+              </div>
+            )}
+
+            <div className="product-lightbox-counter">
+              {currentImage + 1} / {product.images.length}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
 
-export default ProductDetail
+export default ProductDetail;
