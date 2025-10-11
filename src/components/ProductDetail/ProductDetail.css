@@ -622,4 +622,28 @@ body.lightbox-open {
     max-width: 540px;
   }
   }
+
+/* --- Safari / iOS Tap Fixes --- */
+.product-detail-main-image {
+  touch-action: manipulation !important;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.product-watermark {
+  pointer-events: none !important;
+}
+
+/* Optional: smooth lightbox fade */
+.product-lightbox {
+  animation: fadeIn 0.25s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
   
