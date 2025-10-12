@@ -651,26 +651,30 @@ body.lightbox-open {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
   border: none;
   font-size: 2rem;
   cursor: pointer;
   z-index: 20;
   padding: 0.4rem 0.8rem;
   border-radius: 50%;
-  transition: background 0.2s ease;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.1s ease;
 }
 
+/* Hover effect: white background, black arrow */
 .product-lightbox-nav:hover {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.9);
+  color: black;
+  transform: scale(1.05); /* Subtle lift instead of bounce */
 }
 
 .product-lightbox-nav.prev {
-  left: 2rem;
+  left: 1rem;
 }
 
 .product-lightbox-nav.next {
-  right: 2rem;
+  right: 1rem;
 }
 
 /* Hide navigation buttons on mobile and tablets */
@@ -679,5 +683,3 @@ body.lightbox-open {
     display: none !important;
   }
 }
-
-  
