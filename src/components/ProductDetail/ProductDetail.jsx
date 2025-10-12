@@ -33,10 +33,7 @@ const ProductDetail = () => {
       "image": product.images,
       "description": product.description,
       "sku": product.sku,
-      "brand": {
-        "@type": "Brand",
-        "name": product.brand || "Multicapital"
-      },
+      "brand": { "@type": "Brand", "name": product.brand || "Multicapital" },
       "offers": {
         "@type": "Offer",
         "url": window.location.href,
@@ -48,10 +45,7 @@ const ProductDetail = () => {
         "availability": product.quantity > 0
           ? "https://schema.org/InStock"
           : "https://schema.org/OutOfStock",
-        "seller": {
-          "@type": "Organization",
-          "name": "Multicapital Warehouse"
-        }
+        "seller": { "@type": "Organization", "name": "Multicapital Warehouse" }
       },
       "aggregateRating": {
         "@type": "AggregateRating",
@@ -61,10 +55,7 @@ const ProductDetail = () => {
       "review": product.reviews.map(review => ({
         "@type": "Review",
         "author": { "@type": "Person", "name": review.author },
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": review.rating
-        },
+        "reviewRating": { "@type": "Rating", "ratingValue": review.rating },
         "reviewBody": review.comment
       }))
     }
@@ -241,7 +232,7 @@ const ProductDetail = () => {
               onTouchStart={handleTouchStart}
               onTouchMove={handleTouchMove}
               onTouchEnd={handleTouchEnd}
-              onClick={openLightbox} // ✅ Safari/macOS/iPhone fix
+              onClick={openLightbox}
               ref={mainImageRef}
             >
               <img
@@ -329,18 +320,49 @@ const ProductDetail = () => {
         </div>
       </div>
 
+      {/* --- Lightbox --- */}
       {isLightboxOpen && (
         <div className="product-lightbox" onClick={closeLightbox}>
           <div className="product-lightbox-content" onClick={(e) => e.stopPropagation()}>
-            <button className="product-lightbox-close" onClick={closeLightbox}>&times;</button>
+            <button className="product-lightbox-close" onClick={closeLightbox}>
+              &times;
+            </button>
+
+            {/* --- Desktop Navigation Buttons --- */}
+            <button
+              className="product-lightbox-nav prev"
+              onClick={() =>
+                setCurrentImage((prev) =>
+                  prev === 0 ? product.images.length - 1 : prev - 1
+                )
+              }
+            >
+              &#10094;
+            </button>
+            <button
+              className="product-lightbox-nav next"
+              onClick={() =>
+                setCurrentImage((prev) =>
+                  prev === product.images.length - 1 ? 0 : prev + 1
+                )
+              }
+            >
+              &#10095;
+            </button>
+
             <div
               className="product-lightbox-image-container"
               onTouchStart={handleLightboxTouchStart}
               onTouchMove={handleLightboxTouchMove}
               onTouchEnd={handleLightboxTouchEnd}
             >
-              <img src={product.images[currentImage]} alt={product.name} className="product-lightbox-image" />
+              <img
+                src={product.images[currentImage]}
+                alt={product.name}
+                className="product-lightbox-image"
+              />
             </div>
+
             {product.images.length > 1 && (
               <div className="product-lightbox-thumbnails" ref={lightboxThumbnailsRef}>
                 {product.images.map((image, index) => (
@@ -354,7 +376,9 @@ const ProductDetail = () => {
                 ))}
               </div>
             )}
-            <div className="product-lightbox-counter">{currentImage + 1} / {product.images.length}</div>
+            <div className="product-lightbox-counter">
+              {currentImage + 1} / {product.images.length}
+            </div>
           </div>
         </div>
       )}
@@ -362,4 +386,4 @@ const ProductDetail = () => {
   )
 }
 
-export default ProductDetail
+export default ProductDetail;
