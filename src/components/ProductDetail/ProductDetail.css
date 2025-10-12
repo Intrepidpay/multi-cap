@@ -646,4 +646,38 @@ body.lightbox-open {
   to { opacity: 1; }
 }
 
+/* --- Lightbox Navigation Buttons (Desktop Only) --- */
+.product-lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.75);
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 20;
+  padding: 0.4rem 0.8rem;
+  border-radius: 50%;
+  transition: background 0.2s ease;
+}
+
+.product-lightbox-nav:hover {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.product-lightbox-nav.prev {
+  left: 2rem;
+}
+
+.product-lightbox-nav.next {
+  right: 2rem;
+}
+
+/* Hide navigation buttons on mobile and tablets */
+@media (max-width: 768px) {
+  .product-lightbox-nav {
+    display: none !important;
+  }
+}
+
   
