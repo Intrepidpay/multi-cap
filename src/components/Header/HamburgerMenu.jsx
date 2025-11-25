@@ -4,11 +4,15 @@ import './HamburgerMenu.css'
 const HamburgerMenu = ({ isOpen, onClose }) => {
   return (
     <>
-      <div className={`menu-overlay ${isOpen ? 'open' : ''}`} onClick={onClose}></div>
-
+      {/* Overlay */}
+      <div 
+        className={`menu-overlay ${isOpen ? 'open' : ''}`} 
+        onClick={onClose}
+      />
+      
+      {/* Menu */}
       <div className={`hamburger-menu ${isOpen ? 'open' : ''}`}>
         <button className="close-btn" onClick={onClose}>✕</button>
-
         <nav className="mobile-nav">
           <ul>
             <li><Link to="/" onClick={onClose}>Home</Link></li>
