@@ -1,49 +1,45 @@
-/* Smooth slide-in menu */
 .hamburger-menu {
   position: fixed;
   top: 0;
-  right: 0;
+  right: -100%;
   width: 80%;
   max-width: 300px;
   height: 100vh;
   background: white;
-  z-index: 1001;
-  padding: 60px 20px 20px;
-
-  /* Smooth, flicker-free GPU animation */
-  transform: translateX(100%);
-  transition: transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
-  will-change: transform;
-
-  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.12);
+  z-index: 1000;
+  transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  will-change: right;
 }
 
 .hamburger-menu.open {
-  transform: translateX(0);
+  right: 0;
 }
 
-/* Close button */
 .close-btn {
   position: absolute;
-  top: 18px;
-  right: 18px;
+  top: 20px;
+  right: 20px;
   background: none;
   border: none;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   color: #133B5F;
   cursor: pointer;
-  transition: opacity 0.3s ease;
+  transition: color 0.2s ease;
+  padding: 5px;
+  border-radius: 4px;
 }
 
 .close-btn:hover {
-  opacity: 0.6;
+  color: #FF6B6B;
+  background-color: rgba(255, 107, 107, 0.1);
 }
 
-/* Menu list */
 .mobile-nav ul {
   list-style: none;
   padding: 0;
-  margin-top: 40px;
+  margin-top: 50px;
 }
 
 .mobile-nav li {
@@ -51,32 +47,33 @@
 }
 
 .mobile-nav a {
-  display: block;
-  padding: 12px 0;
-  font-size: 1.2rem;
-  font-weight: 500;
   color: #133B5F;
   text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  display: block;
+  padding: 12px 0;
   border-bottom: 1px solid #E9EDF8;
-  transition: color 0.25s ease;
+  transition: all 0.2s ease;
 }
 
 .mobile-nav a:hover {
   color: #FF6B6B;
+  padding-left: 10px;
 }
 
-/* Background overlay */
+/* Overlay styles */
 .menu-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.45);
-  z-index: 1000;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
   opacity: 0;
   visibility: hidden;
-  transition: opacity .35s ease, visibility .35s ease;
+  transition: all 0.3s ease;
 }
 
 .menu-overlay.open {
