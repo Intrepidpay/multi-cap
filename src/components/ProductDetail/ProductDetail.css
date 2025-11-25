@@ -683,7 +683,13 @@ body.lightbox-open {
   transform: translateY(-50%) scale(1.1);
 }
 
+.product-lightbox-nav.prev {
+  left: 20px;
+}
 
+.product-lightbox-nav.next {
+  right: 20px;
+}
 
 
 /* Hide navigation buttons on mobile and tablets */
