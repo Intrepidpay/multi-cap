@@ -98,23 +98,6 @@
 }
 
 /* Hamburger menu styles */
-.hamburger-menu {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 80%;
-  max-width: 300px;
-  height: 100vh;
-  background: white;
-  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-  z-index: 101;
-  transition: right 0.3s ease;
-  padding: 60px 20px 20px;
-}
-
-.hamburger-menu.open {
-  right: 0;
-}
 
 .hamburger-menu ul {
   list-style: none;
