@@ -23,7 +23,7 @@
   margin: 0;
 }
 
-/* Navbar styles for desktop */
+/* Desktop Navbar */
 .navbar {
   display: flex;
   align-items: center;
@@ -59,6 +59,7 @@
   display: flex;
   align-items: center;
   font-size: 1.5rem;
+  color: #133B5F;
 }
 
 .cart-count {
@@ -77,47 +78,18 @@
   font-weight: bold;
 }
 
-.hamburger-btn span {
-  height: 3px; 
-  width: 100%; 
-  background-color: #133B5F; 
-  border-radius: 3px; 
-  transition: all 0.3s ease; 
-}
-
-
-@media (max-width: 768px) {
-  .hamburger-btn {
-    display: flex;
-  }
-  
-  .navbar {
-    display: none;
-  }
-  
-  .header .container {
-    padding: 0 15px;
-  }
-}
-
-@media (min-width: 769px) {
-  .hamburger-menu,
-  .menu-overlay {
-    display: none;
-  }
-}
-/* Hamburger Button */
+/* Hamburger Button - Turns into X */
 .hamburger-btn {
   display: none;
   flex-direction: column;
   justify-content: space-between;
   width: 30px;
   height: 21px;
-  background: none;
+  background: transparent;
   border: none;
   cursor: pointer;
   padding: 0;
-  margin-left: 15px;
+  z-index: 1100;
 }
 
 .hamburger-btn span {
@@ -126,35 +98,34 @@
   width: 100%;
   background-color: #133B5F;
   border-radius: 3px;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transform-origin: center;
 }
 
-.hamburger-btn:hover span {
-  background-color: #FF6B6B;
-}
-
-/* Active state for hamburger button when menu is open */
+/* Transform to X when active */
 .hamburger-btn.active span:nth-child(1) {
-  transform: rotate(45deg) translate(6px, 6px);
+  transform: translateY(9px) rotate(45deg);
 }
 
 .hamburger-btn.active span:nth-child(2) {
   opacity: 0;
+  transform: scale(0.1);
 }
 
 .hamburger-btn.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
+  transform: translateY(-9px) rotate(-45deg);
 }
 
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
   .hamburger-btn {
     display: flex;
   }
-  
+
   .navbar {
     display: none;
   }
-  
+
   .header .container {
     padding: 0 15px;
   }
