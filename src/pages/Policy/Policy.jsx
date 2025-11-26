@@ -34,7 +34,28 @@ const Policy = () => {
               <li>Develop new products, services, features, and functionality</li>
               <li>Process your transactions and manage your orders</li>
             </ul>
-          </section>
+
+             <h3>4. Our Business Operations</h3>
+  <p>
+    Multicapital Warehouse specializes in sourcing high-quality, fairly used vehicles including cars, trucks, and other automotive vehicles 
+    from various regions across Germany. We refurbish and recondition these vehicles to meet North American standards, 
+    then export and sell them to customers throughout the United States and Canada. Our German sourcing network ensures access to 
+    well-maintained vehicles with comprehensive service histories.
+  </p>
+  
+  <h3>5. Payment Terms</h3>
+  <p>
+    To secure your purchase, we require the following down payments:
+  </p>
+  <ul>
+    <li><strong>For purchases above $1,000:</strong> A minimum 10% down payment is required to initiate the order process</li>
+    <li><strong>For purchases below $1,000:</strong> A 50% down payment is required to secure your order</li>
+  </ul>
+  <p>
+    These down payments are non-refundable and serve to reserve your order while we process the necessary export documentation 
+    and prepare for shipment. The remaining balance is due prior to delivery or shipment.
+  </p>
+</section>
           
           <section className="policy-section">
             <h2>Cookie Policy</h2>
