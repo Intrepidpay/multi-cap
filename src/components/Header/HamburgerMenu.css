@@ -1,19 +1,48 @@
-import { Link } from 'react-router-dom'
-import './HamburgerMenu.css'
-const HamburgerMenu = ({ isOpen, onClose }) => {
-  return (
-    <div className={hamburger-menu ${isOpen ? 'open' : ''}}>
-      <button className="close-btn" onClick={onClose}>✕</button>
-      <nav className="mobile-nav">
-        <ul>
-          <li><Link to="/" onClick={onClose}>Home</Link></li>
-          <li><Link to="/services" onClick={onClose}>Services</Link></li>
-          <li><Link to="/support" onClick={onClose}>Support</Link></li>
-          <li><Link to="/about" onClick={onClose}>About</Link></li>
-          <li><Link to="/cart" onClick={onClose}>Cart</Link></li>
-        </ul>
-      </nav>
-    </div>
-  )
+.hamburger-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  max-width: 300px;
+  height: 100vh;
+  background: white;
+  z-index: 1000;
+  transition: right 0.3s ease;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
 }
-export default HamburgerMenu
+
+.hamburger-menu.open {
+  right: 0;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #133B5F;
+  cursor: pointer;
+}
+
+.mobile-nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 50px;
+}
+
+.mobile-nav li {
+  margin-bottom: 20px;
+}
+
+.mobile-nav a {
+  color: #133B5F;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  display: block;
+  padding: 10px 0;
+  border-bottom: 1px solid #E9EDF8;
+}
