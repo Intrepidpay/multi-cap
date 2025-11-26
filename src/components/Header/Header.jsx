@@ -3,16 +3,12 @@ import { Link } from 'react-router-dom'
 import { useCart } from '../../contexts/CartContext'
 import Navbar from './Navbar'
 import HamburgerMenu from './HamburgerMenu'
-import Logo from './Logo'
+import Logo from './Logo'; // adjust path if your file structure differs
 import './Header.css'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const { getCartItemsCount } = useCart()
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-  }
 
   return (
     <header className="header">
@@ -27,9 +23,8 @@ const Header = () => {
           </Link>
           
           <button 
-            className={`hamburger-btn ${isMenuOpen ? 'active' : ''}`}
-            onClick={toggleMenu}
-            aria-label="Toggle menu"
+            className="hamburger-btn"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             <span></span>
             <span></span>
