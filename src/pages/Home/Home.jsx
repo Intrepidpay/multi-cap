@@ -17,10 +17,13 @@ const Home = () => {
   } = useFeed()
 
   const [showScrollTop, setShowScrollTop] = useState(false)
+  const [isScrollingToTop, setIsScrollingToTop] = useState(false)
 
   // 👇 Infinite scroll + save scrollY
   useEffect(() => {
     const handleScroll = () => {
+      if (isScrollingToTop) return; // Don't save scroll position while scrolling to top
+      
       const currentScrollY = window.scrollY
       setScrollY(currentScrollY) // save scroll position
 
@@ -39,17 +42,27 @@ const Home = () => {
     window.addEventListener("scroll", handleScroll)
 
     // restore saved scroll position on mount
-    window.scrollTo(0, scrollY)
+    if (!isScrollingToTop) {
+      window.scrollTo(0, scrollY)
+    }
 
     return () => window.removeEventListener("scroll", handleScroll)
-  }, [visible, products.length, scrollY, setScrollY, setVisible])
+  }, [visible, products.length, scrollY, setScrollY, setVisible, isScrollingToTop])
 
-  // Scroll to top function - doesn't interfere with scroll position memory
+  // Scroll to top function - FIXED
   const scrollToTop = () => {
+    setIsScrollingToTop(true)
+    
     window.scrollTo({
       top: 0,
       behavior: "smooth"
     })
+    
+    // Reset after scroll completes
+    setTimeout(() => {
+      setIsScrollingToTop(false)
+      setScrollY(0) // Update the stored position to top
+    }, 500)
   }
 
   return (
