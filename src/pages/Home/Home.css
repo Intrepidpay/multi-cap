@@ -136,3 +136,77 @@
     gap: 16px;
   }
 }
+/* Scroll to Top Button */
+.home-scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(19, 59, 95, 0.1); /* transparent with brand color tint */
+  border: 2px solid #133B5F;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+
+.home-scroll-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.home-scroll-to-top:hover {
+  background-color: rgba(19, 59, 95, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(19, 59, 95, 0.2);
+}
+
+.home-scroll-to-top:active {
+  transform: translateY(0);
+}
+
+.home-scroll-to-top svg {
+  width: 20px;
+  height: 20px;
+  fill: #133B5F;
+  transition: transform 0.3s ease;
+}
+
+.home-scroll-to-top:hover svg {
+  transform: translateY(-2px);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .home-scroll-to-top {
+    width: 45px;
+    height: 45px;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .home-scroll-to-top svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-scroll-to-top {
+    width: 40px;
+    height: 40px;
+    bottom: 15px;
+    right: 15px;
+  }
+  
+  .home-scroll-to-top svg {
+    width: 16px;
+    height: 16px;
+  }
+}
