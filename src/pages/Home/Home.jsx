@@ -38,8 +38,10 @@ const Home = () => {
 
     window.addEventListener("scroll", handleScroll)
 
-    // restore saved scroll position on mount
-    window.scrollTo(0, scrollY)
+    // restore saved scroll position on mount ONLY if not at top
+    if (scrollY > 0) {
+      window.scrollTo(0, scrollY)
+    }
 
     return () => window.removeEventListener("scroll", handleScroll)
   }, [visible, products.length, scrollY, setScrollY, setVisible])
