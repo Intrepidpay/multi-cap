@@ -18,7 +18,7 @@ const Home = () => {
 
   const [showScrollTop, setShowScrollTop] = useState(false)
 
-  // 👇 Infinite scroll + save scrollY + show/hide scroll to top button
+  // 👇 Infinite scroll + save scrollY
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY
@@ -27,7 +27,7 @@ const Home = () => {
       // Show scroll-to-top button when scrolled down 300px
       setShowScrollTop(currentScrollY > 300)
 
-      const scrollPosition = window.innerHeight + currentScrollY
+      const scrollPosition = window.innerHeight + window.scrollY
       const triggerPoint =
         document.documentElement.scrollHeight - window.innerHeight * 2
 
@@ -38,15 +38,13 @@ const Home = () => {
 
     window.addEventListener("scroll", handleScroll)
 
-    // restore saved scroll position on mount ONLY if not at top
-    if (scrollY > 0) {
-      window.scrollTo(0, scrollY)
-    }
+    // restore saved scroll position on mount
+    window.scrollTo(0, scrollY)
 
     return () => window.removeEventListener("scroll", handleScroll)
   }, [visible, products.length, scrollY, setScrollY, setVisible])
 
-  // Scroll to top function
+  // Scroll to top function - doesn't interfere with scroll position memory
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
