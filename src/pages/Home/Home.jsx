@@ -1,5 +1,4 @@
-// src/pages/Home/Home.jsx
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { useFeed } from "../../contexts/FeedContext"
 import ProductCard from "../../components/ProductCard/ProductCard"
 import SearchFilter from "../../components/SearchFilter/SearchFilter"
@@ -17,14 +16,20 @@ const Home = () => {
     setScrollY,
   } = useFeed()
 
-  // 👇 Infinite scroll + save scrollY
+  const [showScrollTop, setShowScrollTop] = useState(false)
+
+  // 👇 Infinite scroll + save scrollY + show/hide scroll to top button
   useEffect(() => {
     const handleScroll = () => {
-      setScrollY(window.scrollY) // save scroll position
+      const currentScrollY = window.scrollY
+      setScrollY(currentScrollY) // save scroll position
 
-      const scrollPosition = window.innerHeight + window.scrollY
+      // Show scroll-to-top button when scrolled down 300px
+      setShowScrollTop(currentScrollY > 300)
+
+      const scrollPosition = window.innerHeight + currentScrollY
       const triggerPoint =
-        document.documentElement.scrollHeight - window.innerHeight * 2 // 👈 dynamic preload
+        document.documentElement.scrollHeight - window.innerHeight * 2
 
       if (scrollPosition >= triggerPoint && visible < products.length) {
         setVisible((prev) => prev + 20)
@@ -38,6 +43,14 @@ const Home = () => {
 
     return () => window.removeEventListener("scroll", handleScroll)
   }, [visible, products.length, scrollY, setScrollY, setVisible])
+
+  // Scroll to top function
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    })
+  }
 
   return (
     <div className="home-page">
@@ -82,6 +95,17 @@ const Home = () => {
             <p>No products found. Try a different search or filter.</p>
           </div>
         )}
+      </div>
+
+      {/* Scroll to Top Button - Only on Home Page */}
+      <div 
+        className={`home-scroll-to-top ${showScrollTop ? 'visible' : ''}`}
+        onClick={scrollToTop}
+        title="Scroll to top"
+      >
+        <svg viewBox="0 0 24 24">
+          <path d="M12 4l-8 8h6v8h4v-8h6z"/>
+        </svg>
       </div>
     </div>
   )
