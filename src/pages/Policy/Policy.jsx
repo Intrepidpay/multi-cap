@@ -53,7 +53,7 @@ const Policy = () => {
   </ul>
   <p>
     These down payments are non-refundable and serve to reserve your order while we process the necessary export documentation 
-    and prepare for shipment. The remaining balance is due prior to delivery or shipment.
+    and prepare for shipment. The remaining balance is due after delivery or shipment.
   </p>
 </section>
           
