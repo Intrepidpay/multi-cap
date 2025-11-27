@@ -898,8 +898,6 @@ const products = [
       "/images/jeep_14.jpg",
       "/images/jeep_15.jpg",
       "/images/jeep_16.jpg",
-      "/images/jeep_17.jpg",
-      "/images/jeep_18.jpg",
       "/images/jeep_19.jpg",
       "/images/jeep_20.jpg"
     ],
