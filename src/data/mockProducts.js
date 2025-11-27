@@ -929,7 +929,6 @@ const products = [
       "/images/s_out_2.jpg",
       "/images/s_out_3.jpg",
       "/images/s_out_4.jpg",
-      "/images/s_out_5.jpg",
       "/images/s_out_6.jpg",
       "/images/s_out_7.jpg",
       "/images/s_out_8.jpg",
@@ -1208,8 +1207,7 @@ images: [
 "/images/challenger_12.jpg",
 "/images/challenger_13.jpg",
 "/images/challenger_14.jpg",
-"/images/challenger_15.jpg",
-"/images/challenger_17.jpg"
+"/images/challenger_15.jpg"
 ],
 highDemand: true,
 sold: false,
