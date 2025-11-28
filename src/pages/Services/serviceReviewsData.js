@@ -1,7 +1,7 @@
 // serviceReviewsData.js
 export const serviceReviews = [
 
-  {
+{
     "id": 1,
     "author": "Mike Thompson",
     "rating": 5,
@@ -89,7 +89,7 @@ export const serviceReviews = [
     "id": 8,
     "author": "Tom Harris",
     "rating": 5,
-    "comment": "CX-5 Carbon Edition showed up two states away in 48 hours flat. Tracking actually worked and the driver called 30 min out. Hopped in and drove it home—perfect",
+    "comment": "CX 5 Carbon Edition showed up two states away in 48 hours flat. Tracking actually worked and the driver called 30 min out. Hopped in and drove it home perfect",
     "date": "2025-02-02T10:12:00Z",
     "replies": []
   },
@@ -112,7 +112,7 @@ export const serviceReviews = [
     "id": 10,
     "author": "Jessica Lee",
     "rating": 4.5,
-    "comment": "2021 Rogue SV was exactly as described, Only gripe—one key fob was dead on arrival but they overnighted two new batteries free",
+    "comment": "2021 Rogue SV was exactly as described, Only gripe one key fob was dead on arrival but they overnighted two new batteries free",
     "date": "2025-02-10T09:33:00Z",
     "replies": [
       {
@@ -158,7 +158,7 @@ export const serviceReviews = [
     "id": 14,
     "author": "RockyMtnCollector",
     "rating": 4.5,
-    "comment": "1965 Mustang convertible finally showed up. Numbers-matching 289, original Poppy Red paint, zero rust under the floors. Been dreaming about this car since I was 12",
+    "comment": "1965 Mustang convertible finally showed up. Numbers matching 289, original Poppy Red paint, zero rust under the floors. Been dreaming about this car since I was 12",
     "date": "2025-03-02T12:30:00Z",
     "replies": []
   },
@@ -204,7 +204,7 @@ export const serviceReviews = [
     "id": 18,
     "author": "Brian Taylor",
     "rating": 5,
-    "comment": "GMC Sierra Denali diesel—pulls my 28ft camper like it’s not even there. Suspension upgrade is night and day",
+    "comment": "GMC Sierra Denali diesel pulls my 28ft camper like it’s not even there. Suspension upgrade is night and day",
     "date": "2025-03-18T16:55:00Z",
     "replies": []
   },
@@ -251,7 +251,7 @@ export const serviceReviews = [
     "id": 23,
     "author": "Jennifer Wong",
     "rating": 5,
-    "comment": "RAV4 Hybrid XLE—45 mpg real world and the panoramic roof is awesome. Wife already stole it from me",
+    "comment": "RAV4 Hybrid XLE 45 mpg real world and the panoramic roof is awesome. Wife already stole it from me",
     "date": "2025-04-11T09:03:00Z",
     "replies": []
   },
@@ -290,7 +290,7 @@ export const serviceReviews = [
     "id": 27,
     "author": "Rachel Kim",
     "rating": 5,
-    "comment": "Honda CR-V for my daughter heading to college. Safety features galore and she loves the moonroof",
+    "comment": "Honda CRV for my daughter heading to college. Safety features galore and she loves the moonroof",
     "date": "2025-05-02T11:00:00Z",
     "replies": []
   },
@@ -353,7 +353,7 @@ export const serviceReviews = [
     "id": 34,
     "author": "DesertDriverCoder",
     "rating": 5,
-    "comment": "Rivian R1T—zero regrets. Already did a 900-mile road trip on a single charge with planning",
+    "comment": "Rivian R1T zero regrets. Already did a 900 mile road trip on a single charge with planning",
     "date": "2025-06-05T08:25:00Z",
     "replies": []
   },
@@ -369,7 +369,7 @@ export const serviceReviews = [
     "id": 36,
     "author": "CleanQueenAva",
     "rating": 5,
-    "comment": "Cadillac Escalade ESV—fits the whole soccer team and still has massage seats for mom",
+    "comment": "Cadillac Escalade ESV fits the whole soccer team and still has massage seats for mom",
     "date": "2025-06-13T12:18:00Z",
     "replies": []
   },
@@ -432,7 +432,7 @@ export const serviceReviews = [
     "id": 43,
     "author": "GalleryGuruNYC",
     "rating": 5,
-    "comment": "Corvette Z06 allocation finally came in. 670 hp mid-engine monster worth the wait",
+    "comment": "Corvette Z06 allocation finally came in. 670 hp mid engine monster worth the wait",
     "date": "2025-07-17T09:55:00Z",
     "replies": []
   },
@@ -448,7 +448,7 @@ export const serviceReviews = [
     "id": 45,
     "author": "Rachel Green",
     "rating": 4,
-    "comment": "2022 Volvo XC90 Recharge—electric for school runs, gas when we road-trip. Best of both worlds",
+    "comment": "2022 Volvo XC90 Recharge electric for school runs, gas when we road-trip. Best of both worlds",
     "date": "2025-08-01T08:20:00Z",
     "replies": []
   },
@@ -472,7 +472,7 @@ export const serviceReviews = [
     "id": 48,
     "author": "SiliconValleySteve",
     "rating": 5,
-    "comment": "Lucid Air Grand Touring—1000+ hp and 500+ mile range. Tesla who?",
+    "comment": "Lucid Air Grand Touring 1000+ hp and 500+ mile range. Tesla who?",
     "date": "2025-08-13T09:32:00Z",
     "replies": []
   },
@@ -496,7 +496,7 @@ export const serviceReviews = [
     "id": 51,
     "author": "VintageVinylFan",
     "rating": 5,
-    "comment": "GR Corolla Circuit Edition—three exhaust modes and a manual. Car people get it",
+    "comment": "GR Corolla Circuit Edition three exhaust modes and a manual. Car people get it",
     "date": "2025-08-25T09:28:00Z",
     "replies": []
   },
@@ -504,7 +504,7 @@ export const serviceReviews = [
     "id": 52,
     "author": "FrostyFlipperMike",
     "rating": 4,
-    "comment": "Tahoe RST diesel—35 mpg highway unloaded is wild for something this big",
+    "comment": "Tahoe RST diesel 35 mpg highway unloaded is wild for something this big",
     "date": "2025-08-28T11:11:00Z",
     "replies": []
   },
@@ -520,7 +520,7 @@ export const serviceReviews = [
     "id": 54,
     "author": "DIYDecoratorBrooke",
     "rating": 5,
-    "comment": "Hyundai Ioniq 5 Limited—looks like a spaceship and charges crazy fast",
+    "comment": "Hyundai Ioniq 5 Limited looks like a spaceship and charges crazy fast",
     "date": "2025-08-31T08:55:00Z",
     "replies": []
   },
@@ -544,7 +544,7 @@ export const serviceReviews = [
     "id": 57,
     "author": "SneakerElla",
     "rating": 5,
-    "comment": "2022 Mach-E GT Performance 0-60 in 3.5 and no gas station stops. I’m sold",
+    "comment": "2022 Mach EGT Performance 0 to 60 in 3.5 and no gas station stops. I’m sold",
     "date": "2025-09-02T11:00:00Z",
     "replies": []
   },
