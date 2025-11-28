@@ -5,7 +5,7 @@ export const serviceReviews = [
     "id": 1,
     "author": "Mike Thompson",
     "rating": 5,
-    "comment": "Just took home a 2018 Accord EX-L with 38k miles. Drives like it just rolled off the lot, zero rattles, ice cold AC, and they even tossed in a fresh oil change and detail. Best car buying experience I’ve ever had",
+    "comment": "Just took home a 2018 Accord EX L with 38k miles, drives like it just rolled off the lot, zero rattles, ice cold AC, and they even tossed in a fresh oil change and detail. Best car buying experience I’ve ever had",
     "date": "2025-01-04T10:15:00Z",
     "replies": []
   },
@@ -13,7 +13,7 @@ export const serviceReviews = [
     "id": 2,
     "author": "CityDriver88",
     "rating": 5,
-    "comment": "Snagged a Silverado RST crew cab for way under market. Truck is spotless underneath, no rust at all. Only thing I asked was if they undercoated it and the guy sent me pics of the spray receipt same day",
+    "comment": "Snagged a Silverado RST crew cab for way under market, Truck is spotless underneath, no rust at all. Only thing I asked was if they undercoated it and the guy sent me pics of the spray receipt same day",
     "date": "2025-01-08T16:22:00Z",
     "replies": [
       {
@@ -28,7 +28,7 @@ export const serviceReviews = [
     "id": 3,
     "author": "Sarah Wilson",
     "rating": 5,
-    "comment": "My 2021 Camry Hybrid came in a day early. 52 mpg on the drive home, interior still smells new, and the battery health report showed 98%. I’m obsessed",
+    "comment": "My 2021 Camry Hybrid came in a day early 52 mpg while driving home, interior still smells new, and the battery health report showed 98%. I’m obsessed",
     "date": "2025-01-11T09:05:00Z",
     "replies": []
   },
@@ -51,7 +51,7 @@ export const serviceReviews = [
     "id": 5,
     "author": "Emily Davis",
     "rating": 5,
-    "comment": "Bought a Wrangler Sahara, There was one tiny scuff on the driver fender and the detail guy literally buffed it out while I did paperwork. Took it straight to the trail this weekend—zero regrets",
+    "comment": "Bought a Wrangler Sahara, There was one tiny scuff on the driver fender and the detail guy literally buffed it out while I did paperwork. Took it straight to the trail this weekend zero regrets",
     "date": "2025-01-19T11:18:00Z",
     "replies": [
       {
@@ -66,7 +66,7 @@ export const serviceReviews = [
     "id": 6,
     "author": "GearHead42",
     "rating": 5,
-    "comment": "Found a one-owner 2019 Outback with 48k miles. Thing is MINT. I’ve been hunting for months and this was the best price by far. Already took it up to the mountains—handles better than my buddy’s new one",
+    "comment": "later found a one owner Outback with 48k miles. Thing is MINT. I’ve been hunting for months and this was the best price by far. Already took it up to the mountains handles better than my buddy’s new one",
     "date": "2025-01-22T17:55:00Z",
     "replies": []
   },
@@ -112,7 +112,7 @@ export const serviceReviews = [
     "id": 10,
     "author": "Jessica Lee",
     "rating": 4.5,
-    "comment": "2021 Rogue SV was exactly as described. Only gripe—one key fob was dead on arrival but they overnighted two new batteries free",
+    "comment": "2021 Rogue SV was exactly as described, Only gripe—one key fob was dead on arrival but they overnighted two new batteries free",
     "date": "2025-02-10T09:33:00Z",
     "replies": [
       {
@@ -135,7 +135,7 @@ export const serviceReviews = [
     "id": 12,
     "author": "Olivia Grant",
     "rating": 5,
-    "comment": "Buying the 2020 Tucson Limited was stupid easy. Came with weather mats and cargo tray already installed. Just had a couple questions about the AWD lock button",
+    "comment": "Buying the 2020 Tucson Limited was stupid easy Came with weather mats and cargo tray already installed, Just had a couple questions about the AWD lock button",
     "date": "2025-02-18T18:21:00Z",
     "replies": [
       {
@@ -166,7 +166,7 @@ export const serviceReviews = [
     "id": 15,
     "author": "Alex Kim",
     "rating": 5,
-    "comment": "Tiguan SEL R-Line—wife loves it Plates transferred same day and I was kinda lost on the service interval reset thing",
+    "comment": "Tiguan SEL R Line wife loves it Plates transferred same day and I was kinda lost on the service interval reset thing",
     "date": "2025-03-06T09:00:00Z",
     "replies": [
       {
@@ -227,7 +227,7 @@ export const serviceReviews = [
     "id": 20,
     "author": "Chris Morales",
     "rating": 5,
-    "comment": "Scrolling through the Ram 1500 inventory felt like a kid in a candy store. Ended up with a 2021 Limited Night Edition—looks mean as hell",
+    "comment": "Scrolling through the Ram 1500 inventory felt like a kid in a candy store. Ended up with a 2021 Limited Night Edition looks mean as hell",
     "date": "2025-03-28T09:28:00Z",
     "replies": []
   },
@@ -259,7 +259,7 @@ export const serviceReviews = [
     "id": 24,
     "author": "Mark Jenkins",
     "rating": 4.5,
-    "comment": "Got a 2021 Jeep Grand Cherokee L Summit. Tracking was weird for a few hours but the truck is flawless",
+    "comment": "Got a 2021 Jeep Grand Cherokee L Summit, Tracking was weird for a few hours but the truck is flawless",
     "date": "2025-04-15T13:41:00Z",
     "replies": [
       {
@@ -290,7 +290,7 @@ export const serviceReviews = [
     "id": 27,
     "author": "Rachel Kim",
     "rating": 5,
-    "comment": "Honda CR-V EX-L AWD for my daughter heading to college. Safety features galore and she loves the moonroof",
+    "comment": "Honda CR-V for my daughter heading to college. Safety features galore and she loves the moonroof",
     "date": "2025-05-02T11:00:00Z",
     "replies": []
   },
@@ -313,7 +313,7 @@ export const serviceReviews = [
     "id": 29,
     "author": "Tyler Ross",
     "rating": 5,
-    "comment": "Chevy Traverse RS—third row actually fits adults and the twin turbos surprise people at stoplights",
+    "comment": "Chevy Traverse row actually fits adults and the twin turbos surprise people at stoplights",
     "date": "2025-05-10T14:14:00Z",
     "replies": []
   },
@@ -321,7 +321,7 @@ export const serviceReviews = [
     "id": 30,
     "author": "Aisha Khan",
     "rating": 5,
-    "comment": "Mercedes GLC 300—cream puff with 22k miles. Smells like new money inside",
+    "comment": "Mercedes GLC 300 puff with 22k miles. Smells like new money inside",
     "date": "2025-05-14T16:33:00Z",
     "replies": []
   },
@@ -337,7 +337,7 @@ export const serviceReviews = [
     "id": 32,
     "author": "Greg Sullivan",
     "rating": 5,
-    "comment": "Ford Explorer ST—400 hp grocery getter, Kids think we’re cool now",
+    "comment": "Ford Explorer hp grocery getter, Kids think we’re cool now",
     "date": "2025-05-24T10:45:00Z",
     "replies": []
   },
@@ -345,7 +345,7 @@ export const serviceReviews = [
     "id": 33,
     "author": "Nina Patel",
     "rating": 5,
-    "comment": "2022 Lexus RX 350 F-Sport. Quietest cabin I’ve ever been in and the red leather still pops",
+    "comment": "2022 Lexus RX 350, Quietest cabin I’ve ever been in and the red leather still pops",
     "date": "2025-06-01T13:05:00Z",
     "replies": []
   },
@@ -361,7 +361,7 @@ export const serviceReviews = [
     "id": 35,
     "author": "Ethan Cole",
     "rating": 4.5,
-    "comment": "65-inch LG C3 OLED arrived perfect. Colors are insane and the blacks are blacker than my soul. Only complaint—remote needed batteries",
+    "comment": "LG OLED arrived perfect. Colors are insane and the blacks are blacker than my soul. Only complaint remote needed batteries",
     "date": "2025-06-09T15:40:00Z",
     "replies": []
   },
@@ -377,7 +377,7 @@ export const serviceReviews = [
     "id": 37,
     "author": "Jordan Hayes",
     "rating": 5,
-    "comment": "Subaru WRX Limited 6-speed. Rowing gears again feels so good",
+    "comment": "Subaru WRX Limited 6 speed. Rowing gears again feels so good",
     "date": "2025-06-17T10:20:00Z",
     "replies": []
   },
@@ -385,7 +385,7 @@ export const serviceReviews = [
     "id": 38,
     "author": "Sophia Ruiz",
     "rating": 5,
-    "comment": "Porsche Cayenne GTS—wife said “no more fun cars” until she drove it. Now it’s hers",
+    "comment": "Porsche Cayenne GTS wife said no more fun cars until she drove it, Now it’s hers lol",
     "date": "2025-06-23T17:30:00Z",
     "replies": []
   },
@@ -393,7 +393,7 @@ export const serviceReviews = [
     "id": 39,
     "author": "ToolTimeHank",
     "rating": 5,
-    "comment": "Ram 3500 Cummins dually—tows my 40ft fifth wheel like it’s a popup camper",
+    "comment": "Ram 3500 Cummins dually tows my 40ft fifth wheel like it’s a popup camper didn't expect that",
     "date": "2025-07-01T09:02:00Z",
     "replies": []
   },
@@ -401,7 +401,7 @@ export const serviceReviews = [
     "id": 40,
     "author": "Isabella Cruz",
     "rating": 5,
-    "comment": "2023 Alfa Romeo Giulia Quadrifoglio—sounds like an angry Italian on cold start. Zero regrets",
+    "comment": "2023 Alfa Romeo sounds like an angry Italian on cold start. Zero regrets",
     "date": "2025-07-05T11:28:00Z",
     "replies": []
   },
@@ -409,7 +409,7 @@ export const serviceReviews = [
     "id": 41,
     "author": "Patrick O'Malley",
     "rating": 4,
-    "comment": "Gladiator Rubicon—top off, doors off, life is good. Floor mats are a shade darker than pics tho",
+    "comment": "Gladiator Rubicon top off, doors off, life is good. Floor mats are a shade darker than pics tho",
     "date": "2025-07-09T14:10:00Z",
     "replies": [
       {
@@ -432,7 +432,7 @@ export const serviceReviews = [
     "id": 43,
     "author": "GalleryGuruNYC",
     "rating": 5,
-    "comment": "Corvette Z06 allocation finally came in. 670 hp mid-engine monster—worth the wait",
+    "comment": "Corvette Z06 allocation finally came in. 670 hp mid-engine monster worth the wait",
     "date": "2025-07-17T09:55:00Z",
     "replies": []
   },
@@ -440,7 +440,7 @@ export const serviceReviews = [
     "id": 44,
     "author": "Jack Riley",
     "rating": 4,
-    "comment": "2021 Bronco Sport Badlands—surprisingly capable off-road for a baby Bronco",
+    "comment": "2021 Bronco Sport Badlandssurprisingly capable off-road for a baby Bronco",
     "date": "2025-07-23T13:44:00Z",
     "replies": []
   },
@@ -456,7 +456,7 @@ export const serviceReviews = [
     "id": 46,
     "author": "TechTinkererLarry",
     "rating": 3.8,
-    "comment": "Telluride Nightfall—great family hauler but the third row is tight for adults",
+    "comment": "Telluride Nightfall great family hauler but the third row is tight for adults",
     "date": "2025-08-05T10:18:00Z",
     "replies": []
   },
@@ -464,7 +464,7 @@ export const serviceReviews = [
     "id": 47,
     "author": "Hannah Lopez",
     "rating": 3.6,
-    "comment": "Palisade Calligraphy—looks expensive but the ride is softer than I expected",
+    "comment": "Palisade Calligraphy looks expensive but the ride is softer than I expected",
     "date": "2025-08-09T12:50:00Z",
     "replies": []
   },
@@ -480,7 +480,7 @@ export const serviceReviews = [
     "id": 49,
     "author": "Ethan Moore",
     "rating": 3.5,
-    "comment": "Atlas Cross Sport—tons of room but the 2.0T feels slow with a full load",
+    "comment": "Atlas Cross Sport tons of room but the 2.0T feels slow with a full load",
     "date": "2025-08-17T14:05:00Z",
     "replies": []
   },
@@ -488,7 +488,7 @@ export const serviceReviews = [
     "id": 50,
     "author": "Kayla Wright",
     "rating": 3.7,
-    "comment": "Blazer RS—sharp looks but the infotainment glitches sometimes",
+    "comment": "Blazer RS sharp looks but the infotainment glitches sometimes",
     "date": "2025-08-21T16:45:00Z",
     "replies": []
   },
@@ -512,7 +512,7 @@ export const serviceReviews = [
     "id": 53,
     "author": "CaffeineZach",
     "rating": 3,
-    "comment": "Maverick Hybrid—50 mpg is real but the bed is smaller than I thought",
+    "comment": "Maverick Hybrid 50 mpg is real but the bed is smaller than I thought",
     "date": "2025-08-30T10:36:00Z",
     "replies": []
   },
@@ -528,7 +528,7 @@ export const serviceReviews = [
     "id": 55,
     "author": "YardWorkYoda",
     "rating": 3.9,
-    "comment": "Durango SRT—392 Hemi sounds nasty but drinks gas like a sailor on leave",
+    "comment": "Durango SRT 392 Hemi sounds nasty but drinks gas like a sailor on leave",
     "date": "2025-08-31T15:20:00Z",
     "replies": []
   },
@@ -536,7 +536,7 @@ export const serviceReviews = [
     "id": 56,
     "author": "GamerGuruBee",
     "rating": 4.5,
-    "comment": "BMW M340i xDrive—perfect daily that can embarrass sports cars",
+    "comment": "BMW M340i xDrive perfect daily that can embarrass sports cars",
     "date": "2025-09-01T09:40:00Z",
     "replies": []
   },
@@ -544,7 +544,7 @@ export const serviceReviews = [
     "id": 57,
     "author": "SneakerElla",
     "rating": 5,
-    "comment": "2022 Mach-E GT Performance—0-60 in 3.5 and no gas station stops. I’m sold",
+    "comment": "2022 Mach-E GT Performance 0-60 in 3.5 and no gas station stops. I’m sold",
     "date": "2025-09-02T11:00:00Z",
     "replies": []
   },
