@@ -1486,7 +1486,7 @@ rating: 4
   name: "Chrysler Pacifica Plug-in Hybrid",
   price: 51999.99,
   category: "cars",
-  description: "2023 Chrysler Pacifica Plug-in Hybrid | Grey Metallic Exterior | Used | 3.6L V6 Hybrid Engine | 9-Speed Automatic | Family Minivan | 7-Passenger Seating | Tri-Zone Climate Control | Uconnect Theater System with Dual Rear TVs | Full 360° Camera | Advanced Adaptive Cruise Control (ACC) | Leather Upholstery | Heated & Ventilated Front Seats | Hands-Free Power Sliding Doors | Warranty: 9 Months Comprehensive",
+  description: "2023 Chrysler Pacifica Plug-in Hybrid | Grey Metallic Exterior | Used | 3.6L V6 Hybrid Engine | 9-Speed Automatic | Family Minivan | 7-Passenger Seating | Tri-Zone Climate Control | Uconnect Theater System with Dual Rear TVs | Full 360° Camera | Advanced Adaptive Cruise Control (ACC) | Leather Upholstery | Heated & Ventilated Front Seats | Hands-Free Power Sliding Doors | Mileage: 17,694 km",
   images: [
     "/images/chrysler_pacifica_1.jpg",
     "/images/chrysler_pacifica_2.jpg",
@@ -1532,7 +1532,7 @@ rating: 4
   name: "Acura RDX A-Spec",
   price: 29299.99,
   category: "cars",
-  description: "2022 Acura RDX A-Spec | Dark Silver Exterior | Used | 2.0L Turbocharged 4-Cylinder | 10-Speed Automatic Transmission | All-Wheel Drive | Sport-Inspired Design | Alcantara & Leather-Trimmed Seats | ELS Studio Premium Audio | Panoramic Sunroof | Adaptive Dampers | Jewel Eye LED Headlights | Hands-Free Power Tailgate | Warranty: Balance of 4-Year/50,000-Mile Factory Coverage",
+  description: "2022 Acura RDX A-Spec | Dark Silver Exterior | Used | 2.0L Turbocharged 4-Cylinder | 10-Speed Automatic Transmission | All-Wheel Drive | Sport-Inspired Design | Alcantara & Leather-Trimmed Seats | ELS Studio Premium Audio | Panoramic Sunroof | Adaptive Dampers | Jewel Eye LED Headlights | Hands-Free Power Tailgate | Mileage: 16,755 km",
   images: [
     "/images/acura_rdx_1.jpg",
     "/images/acura_rdx_2.jpg",
@@ -1568,7 +1568,7 @@ rating: 4
   name: "Ford Bronco Badlands",
   price: 54799.99,
   category: "cars",
-  description: "2023 Ford Bronco Badlands First Edition | Well-Maintained | Light Blue Exterior | 2.7L EcoBoost V6 | 10-Speed Automatic | e-4WD Advanced Off-Road System | Sasquatch Package with 35-Inch Tires | Removable Doors & Roof | Leather-Trimmed Interior | Trail Turn Assist | Off-Road Navigation | First Edition Badging | Heavy-Duty Suspension | Warranty: 12 Months Coverage",
+  description: "2023 Ford Bronco Badlands First Edition | Well-Maintained | Light Blue Exterior | 2.7L EcoBoost V6 | 10-Speed Automatic | e-4WD Advanced Off-Road System | Sasquatch Package with 35-Inch Tires | Removable Doors & Roof | Leather-Trimmed Interior | Trail Turn Assist | Off-Road Navigation | First Edition Badging | Heavy-Duty Suspension | Mileage: 10,990 km",
   images: [
     "/images/ford_bronco_1.jpg",
     "/images/ford_bronco_2.jpg",
@@ -1619,7 +1619,7 @@ rating: 4
   name: "Hyundai Sonata",
   price: 6159.99,
   category: "cars",
-  description: "2006 Hyundai Sonata Comfort | Black Exterior | Used | 3.3L Petrol V6 Engine | 5-Speed Automatic Transmission | Comfortable Cloth Seating | Air Conditioning | Power Windows & Mirrors | Premium Factory Audio System | Spacious Interior | Reliable Daily Driver | Accident-Free",
+  description: "2006 Hyundai Sonata Comfort | Black Exterior | Used | 3.3L Petrol V6 Engine | 5-Speed Automatic Transmission | Comfortable Cloth Seating | Air Conditioning | Power Windows & Mirrors | Premium Factory Audio System | Spacious Interior | Reliable Daily Driver | Accident-Free | Mileage: 43,380 km",
   images: [
     "/images/hyundai_sonata_1.jpg",
     "/images/hyundai_sonata_2.jpg",
@@ -1649,7 +1649,7 @@ rating: 4
   name: "Jeep Grand Cherokee 4xe",
   price: 66199.99,
   category: "cars",
-  description: "2024 Jeep Grand Cherokee Summit 4xe Plug-in Hybrid | Grey Metallic Exterior | 2.0L Turbocharged Hybrid Engine | 8-Speed Automatic | Luxury Summit Trim | Quadra-Lift Air Suspension | 380 PS Combined Power | Well-Maintained | Panoramic Sunroof | McIntosh Premium Audio | Ventilated Nappa Leather Seats | Full 360° Camera System | Adaptive Cruise Control | Warranty: 11 Months Remaining",
+  description: "2024 Jeep Grand Cherokee Summit 4xe Plug-in Hybrid | Grey Metallic Exterior | 2.0L Turbocharged Hybrid Engine | 8-Speed Automatic | Luxury Summit Trim | Quadra-Lift Air Suspension | 380 PS Combined Power | Well-Maintained | Panoramic Sunroof | McIntosh Premium Audio | Ventilated Nappa Leather Seats | Full 360° Camera System | Adaptive Cruise Control | Mileage: 16,733 km",
   images: [
     "/images/jeep_grand_cherokee_1.jpg",
     "/images/jeep_grand_cherokee_2.jpg",
@@ -1691,7 +1691,7 @@ rating: 4
   name: "Toyota Camry Hybrid",
   price: 28999.99,
   category: "cars",
-  description: "2022 Toyota Camry Hybrid Executive | White Exterior | Used | 2.5L VVT-i Hybrid Engine | CVT Automatic Transmission | Luxury Executive Trim | Full Leather Interior | Heated & Ventilated Seats | Panoramic Roof | Head-Up Display | Adaptive Cruise Control | Premium JBL Audio | Bird’s Eye View Camera | Accident-Free | Warranty: 7 Months Limited",
+  description: "2022 Toyota Camry Hybrid Executive | White Exterior | Used | 2.5L VVT-i Hybrid Engine | CVT Automatic Transmission | Luxury Executive Trim | Full Leather Interior | Heated & Ventilated Seats | Panoramic Roof | Head-Up Display | Adaptive Cruise Control | Premium JBL Audio | Bird’s Eye View Camera | Accident-Free | Mileage: 14,372 km",
   images: [
     "/images/toyota_camry_1.jpg",
     "/images/toyota_camry_2.jpg",
