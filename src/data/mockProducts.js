@@ -2566,7 +2566,7 @@ rating: 4
   sku: "KTM-1290-SUPERDUKE-R",
   brand: "KTM",
   rating: {
-    value: 4 1,
+    value: 4,
     count: 16
   },
   reviews: [
