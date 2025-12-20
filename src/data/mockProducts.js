@@ -2875,8 +2875,8 @@ rating: 4
   category: "cameras",
   description: "Professional PTZ cinema camera | Sony FR7 E-Mount | 4K full-frame sensor | Supports UHD 4K120 video | 28-135mm zoom lens included | Sony E-Mount lens interchangeability | 12G-SDI, HDMI & streaming output | Variable electronic ND filter | Designed for cinematic, full-frame capture in broadcast, reality shows, houses of worship, live events, and sports",
   images: [
-    "/images/SonyFR7_1.jpg",
     "/images/SonyFR7_2.jpg",
+    "/images/SonyFR7_1.jpg",
     "/images/SonyFR7_3.jpg",
     "/images/SonyFR7_4.jpg",
     "/images/SonyFR7_5.jpg",
