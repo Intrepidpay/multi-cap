@@ -2630,8 +2630,7 @@ rating: 4
     "/images/BMPCC1.jpg",
     "/images/BMPCC2.jpg",
     "/images/BMPCC3.jpg",
-    "/images/BMPCC4.jpg",
-    "/images/BMPCC5.jpg"
+    "/images/BMPCC4.jpg"
   ],
   highDemand: false,
   sold: true,
