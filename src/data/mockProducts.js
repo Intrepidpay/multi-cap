@@ -3565,6 +3565,46 @@ rating: 4
       rating: 4
     }
   ]
+},
+{
+  id: 652,
+  name: "Hasselblad X2D II 100C",
+  price: 6499.99,
+  category: "cameras",
+  description: "Medium-format mirrorless camera designed for ultimate image quality | Hasselblad X2D II 100C | 100MP 43.8 x 32.9mm back-illuminated CMOS sensor | Hasselblad Natural Colour Solution (HNCS) HDR with 16-bit color depth | 15.3 stops of dynamic range | Advanced 5-axis in-body image stabilization providing up to 10 stops | Improved autofocus with 425-point phase-detection AF and LiDAR assistance | AF-C mode with subject detection and tracking | 5.76-million-dot OLED electronic viewfinder with 1x magnification | 3.6-inch two-way tilting OLED touchscreen | ISO range 50–25600 | Continuous shooting up to 3 fps | Built-in 1TB SSD storage plus CFexpress Type B card slot | Seamless connectivity via updated Phocus Mobile 2 app | Ideal for professional studio, landscape, and fine art photography",
+  images: [
+    "/images/X2D1.jpg",
+    "/images/X2D2.jpg",
+    "/images/X2D3.jpg",
+    "/images/X2D4.jpg",
+    "/images/X2D5.jpg",
+    "/images/X2D6.jpg",
+    "/images/X2D7.jpg",
+    "/images/X2D8.jpg",
+    "/images/X2D9.jpg",
+    "/images/X2D10.jpg",
+    "/images/X2D11.jpg",
+    "/images/X2D12.jpg",
+    "/images/X2D13.jpg",
+    "/images/X2D14.jpg",
+    "/images/X2D15.jpg",
+    "/images/X2D16.jpg",
+    "/images/X2D17.jpg"
+  ],
+  highDemand: true,
+  sold: false,
+  quantity: 2,
+  sku: "HASSELBLAD-X2D-II-100C",
+  brand: "Hasselblad",
+  rating: {
+    value: 4.6,
+    count: 12
+  },
+  reviews: [
+    {
+      rating: 5
+    }
+  ]
 }
 
  ]
