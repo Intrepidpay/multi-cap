@@ -5,15 +5,39 @@
   width: 80%;
   max-width: 300px;
   height: 100vh;
+  height: 100dvh; /* Better mobile support */
   background: white;
-  z-index: 1000;
-  transition: right 0.3s ease;
+  z-index: 1001; /* Increased to ensure it's above header */
+  transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
   padding: 20px;
+  overflow-y: auto;
+  will-change: right; /* Optimize for animation */
+  overscroll-behavior: contain; /* Prevent scroll bleed */
 }
 
 .hamburger-menu.open {
   right: 0;
+}
+
+/* Backdrop overlay for better UX */
+.hamburger-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(2px);
+}
+
+.hamburger-menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 .close-btn {
@@ -22,20 +46,45 @@
   right: 20px;
   background: none;
   border: none;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: #133B5F;
   cursor: pointer;
+  padding: 5px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+.close-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.close-btn:active {
+  background-color: #e0e0e0;
 }
 
 .mobile-nav ul {
   list-style: none;
   padding: 0;
-  margin-top: 50px;
+  margin-top: 60px;
 }
 
 .mobile-nav li {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  opacity: 0;
+  transform: translateX(20px);
+  animation: slideIn 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
+
+.mobile-nav li:nth-child(1) { animation-delay: 0.1s; }
+.mobile-nav li:nth-child(2) { animation-delay: 0.15s; }
+.mobile-nav li:nth-child(3) { animation-delay: 0.2s; }
+.mobile-nav li:nth-child(4) { animation-delay: 0.25s; }
+.mobile-nav li:nth-child(5) { animation-delay: 0.3s; }
 
 .mobile-nav a {
   color: #133B5F;
@@ -43,6 +92,39 @@
   font-size: 1.2rem;
   font-weight: 500;
   display: block;
-  padding: 10px 0;
+  padding: 12px 0;
   border-bottom: 1px solid #E9EDF8;
+  transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+.mobile-nav a:hover {
+  color: #FF6B6B;
+  padding-left: 10px;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* For closing animation */
+.hamburger-menu.closing .mobile-nav li {
+  animation: slideOut 0.2s cubic-bezier(0.4, 0, 1, 1) forwards;
+}
+
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(20px);
+  }
 }
