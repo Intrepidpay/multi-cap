@@ -23,7 +23,8 @@
   margin: 0;
 }
 
-/* Navbar styles for desktop */
+/* ================= Desktop Navbar ================= */
+
 .navbar {
   display: flex;
   align-items: center;
@@ -47,6 +48,8 @@
 .navbar a:hover {
   color: #FF6B6B;
 }
+
+/* ================= Header Actions ================= */
 
 .header-actions {
   display: flex;
@@ -77,6 +80,7 @@
   font-weight: bold;
 }
 
+/* ================= Hamburger Button ================= */
 
 .hamburger-btn {
   display: none;
@@ -88,17 +92,6 @@
   border: none;
   cursor: pointer;
   padding: 0;
-  position: relative;
-  z-index: 1002; /* Ensure button stays above overlay */
-  transition: transform 0.3s ease;
-}
-
-.hamburger-btn:hover {
-  transform: scale(1.1);
-}
-
-.hamburger-btn:active {
-  transform: scale(0.95);
 }
 
 .hamburger-btn span {
@@ -106,49 +99,34 @@
   width: 100%;
   background-color: #133B5F;
   border-radius: 3px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.3s ease;
 }
 
-/* Animated hamburger icon when menu is open */
-.hamburger-btn.active span:nth-child(1) {
-  transform: translateY(9px) rotate(45deg);
+/* FIX: prevent sticky hover on mobile */
+@media (hover: none) {
+  .hamburger-btn:hover span {
+    transform: none;
+  }
 }
 
-.hamburger-btn.active span:nth-child(2) {
-  opacity: 0;
-  transform: scaleX(0);
-}
-
-.hamburger-btn.active span:nth-child(3) {
-  transform: translateY(-9px) rotate(-45deg);
-}
+/* ================= Responsive ================= */
 
 @media (max-width: 768px) {
   .hamburger-btn {
     display: flex;
   }
-  
+
   .navbar {
     display: none;
   }
-  
+
   .header .container {
     padding: 0 15px;
-  }
-  
-  /* Prevent header from being interactive when menu is open */
-  .header.menu-open {
-    pointer-events: none;
-  }
-  
-  .header.menu-open .hamburger-btn {
-    pointer-events: auto;
   }
 }
 
 @media (min-width: 769px) {
-  .hamburger-menu,
-  .hamburger-menu-overlay {
+  .hamburger-menu {
     display: none;
   }
 }
