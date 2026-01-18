@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState, useRef } from "react"
 import { useFeed } from "../../contexts/FeedContext"
 import ProductCard from "../../components/ProductCard/ProductCard"
 import SearchFilter from "../../components/SearchFilter/SearchFilter"
@@ -18,51 +18,112 @@ const Home = () => {
 
   const [showScrollTop, setShowScrollTop] = useState(false)
   const [isScrollingToTop, setIsScrollingToTop] = useState(false)
+  const scrollTimeoutRef = useRef(null)
+  const tickingRef = useRef(false)
 
-  // 👇 Infinite scroll + save scrollY
+  // 👇 Optimized infinite scroll with iOS fixes
   useEffect(() => {
     const handleScroll = () => {
       if (isScrollingToTop) return; // Don't save scroll position while scrolling to top
       
       const currentScrollY = window.scrollY
-      setScrollY(currentScrollY) // save scroll position
-
+      
       // Show scroll-to-top button when scrolled down 300px
       setShowScrollTop(currentScrollY > 300)
-
-      const scrollPosition = window.innerHeight + window.scrollY
-      const triggerPoint =
-        document.documentElement.scrollHeight - window.innerHeight * 2
-
-      if (scrollPosition >= triggerPoint && visible < products.length) {
-        setVisible((prev) => prev + 20)
+      
+      // Debounce scrollY updates to improve performance
+      clearTimeout(scrollTimeoutRef.current)
+      scrollTimeoutRef.current = setTimeout(() => {
+        setScrollY(currentScrollY)
+      }, 100)
+      
+      // Use requestAnimationFrame for smoother performance on iOS
+      if (!tickingRef.current) {
+        window.requestAnimationFrame(() => {
+          const scrollPosition = window.innerHeight + window.scrollY
+          const triggerPoint = 
+            document.documentElement.scrollHeight - window.innerHeight * 2
+          
+          if (scrollPosition >= triggerPoint && visible < products.length) {
+            setVisible(prev => Math.min(prev + 20, products.length))
+          }
+          tickingRef.current = false
+        })
+        tickingRef.current = true
       }
     }
 
-    window.addEventListener("scroll", handleScroll)
+    // Use passive scroll listener for better performance
+    window.addEventListener("scroll", handleScroll, { passive: true })
 
-    // restore saved scroll position on mount
-    if (!isScrollingToTop) {
-      window.scrollTo(0, scrollY)
+    // Check if iOS to apply specific fixes
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream
+    
+    // Restore scroll position with delay to ensure DOM is ready
+    if (!isScrollingToTop && scrollY > 0) {
+      const restoreTimeout = setTimeout(() => {
+        if (!isIOS) { // iOS has issues with programmatic scrolling
+          window.scrollTo(0, scrollY)
+        }
+      }, isIOS ? 100 : 0) // Longer delay for iOS
+      
+      return () => {
+        clearTimeout(restoreTimeout)
+        clearTimeout(scrollTimeoutRef.current)
+        window.removeEventListener("scroll", handleScroll)
+      }
     }
 
-    return () => window.removeEventListener("scroll", handleScroll)
+    return () => {
+      clearTimeout(scrollTimeoutRef.current)
+      window.removeEventListener("scroll", handleScroll)
+    }
   }, [visible, products.length, scrollY, setScrollY, setVisible, isScrollingToTop])
 
-  // Scroll to top function - FIXED
+  // Scroll to top function - Optimized for iOS
   const scrollToTop = () => {
     setIsScrollingToTop(true)
     
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    })
+    // Use CSS smooth scrolling for iOS compatibility
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream
     
-    // Reset after scroll completes
-    setTimeout(() => {
-      setIsScrollingToTop(false)
-      setScrollY(0) // Update the stored position to top
-    }, 500)
+    if (isIOS) {
+      // iOS-specific smooth scroll
+      const startY = window.scrollY
+      const duration = 500
+      const startTime = performance.now()
+      
+      const animateScroll = (currentTime) => {
+        const elapsed = currentTime - startTime
+        const progress = Math.min(elapsed / duration, 1)
+        const easeProgress = progress < 0.5 
+          ? 2 * progress * progress 
+          : -1 + (4 - 2 * progress) * progress
+        
+        window.scrollTo(0, startY * (1 - easeProgress))
+        
+        if (progress < 1) {
+          requestAnimationFrame(animateScroll)
+        } else {
+          setIsScrollingToTop(false)
+          setScrollY(0)
+        }
+      }
+      
+      requestAnimationFrame(animateScroll)
+    } else {
+      // Standard smooth scroll for other devices
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      })
+      
+      // Reset after scroll completes
+      setTimeout(() => {
+        setIsScrollingToTop(false)
+        setScrollY(0)
+      }, 500)
+    }
   }
 
   return (
@@ -115,6 +176,7 @@ const Home = () => {
         className={`home-scroll-to-top ${showScrollTop ? 'visible' : ''}`}
         onClick={scrollToTop}
         title="Scroll to top"
+        aria-label="Scroll to top"
       >
         <svg viewBox="0 0 24 24">
           <path d="M12 4l-8 8h6v8h4v-8h6z"/>
