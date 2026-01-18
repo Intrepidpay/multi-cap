@@ -1,3 +1,14 @@
+/* Fix for iOS Safari scrolling issues */
+.home-page {
+  padding: 30px 0;
+  min-height: calc(100vh - 100px);
+  -webkit-overflow-scrolling: touch; /* Enables momentum scrolling on iOS */
+  transform: translateZ(0); /* Force hardware acceleration */
+  backface-visibility: hidden; /* Prevent flickering */
+  -webkit-backface-visibility: hidden; /* Safari specific */
+  perspective: 1000; /* Force hardware acceleration */
+}
+
 .home-loading-more {
   display: flex;
   justify-content: center;
@@ -22,11 +33,6 @@
   to {
     transform: rotate(360deg);
   }
-}
-
-.home-page {
-  padding: 30px 0;
-  min-height: calc(100vh - 100px);
 }
 
 .home-container {
@@ -72,11 +78,6 @@
   margin-bottom: 15px;
 }
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
 .home-no-products {
   text-align: center;
   padding: 60px 0;
@@ -92,6 +93,9 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 24px;
+  touch-action: pan-y; /* Allows vertical scrolling, prevents horizontal */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  transform: translateZ(0); /* Hardware acceleration */
 }
 
 @media (max-width: 1024px) {
@@ -136,6 +140,7 @@
     gap: 16px;
   }
 }
+
 /* Scroll to Top Button */
 .home-scroll-to-top {
   position: fixed;
@@ -154,6 +159,8 @@
   opacity: 0;
   visibility: hidden;
   z-index: 1000;
+  -webkit-tap-highlight-color: transparent; /* Remove tap highlight on iOS */
+  transform: translateZ(0); /* Hardware acceleration */
 }
 
 .home-scroll-to-top.visible {
@@ -161,14 +168,22 @@
   visibility: visible;
 }
 
-.home-scroll-to-top:hover {
-  background-color: rgba(19, 59, 95, 0.2);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(19, 59, 95, 0.2);
+/* Only show hover effects on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  .home-scroll-to-top:hover {
+    background-color: rgba(19, 59, 95, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(19, 59, 95, 0.2);
+  }
+  
+  .home-scroll-to-top:hover svg {
+    transform: translateY(-2px);
+  }
 }
 
 .home-scroll-to-top:active {
   transform: translateY(0);
+  background-color: rgba(19, 59, 95, 0.2);
 }
 
 .home-scroll-to-top svg {
@@ -176,10 +191,6 @@
   height: 20px;
   fill: #133B5F;
   transition: transform 0.3s ease;
-}
-
-.home-scroll-to-top:hover svg {
-  transform: translateY(-2px);
 }
 
 @media (max-width: 768px) {
