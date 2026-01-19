@@ -3,7 +3,6 @@
   min-height: calc(100vh - 100px);
   -webkit-overflow-scrolling: touch; /* Enables momentum scrolling on iOS */
   transform: translateZ(0); /* Force hardware acceleration */
-  backface-visibility: hidden; /* Prevent flickering */
   perspective: 1000; /* Force hardware acceleration */
 }
 
