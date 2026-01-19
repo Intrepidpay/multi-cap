@@ -1,7 +1,5 @@
 .home-page {
   -webkit-overflow-scrolling: touch; /* Enables momentum scrolling on iOS */
-  transform: translateZ(0); /* Force hardware acceleration */
-  perspective: 1000; /* Force hardware acceleration */
 }
 
 .home-loading-more {
