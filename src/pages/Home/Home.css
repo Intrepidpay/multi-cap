@@ -159,8 +159,6 @@
   opacity: 0;
   visibility: hidden;
   z-index: 1000;
-  -webkit-tap-highlight-color: transparent; /* Remove tap highlight on iOS */
-  transform: translateZ(0); /* Hardware acceleration */
 }
 
 .home-scroll-to-top.visible {
