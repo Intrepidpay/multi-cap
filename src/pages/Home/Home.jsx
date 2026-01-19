@@ -171,7 +171,7 @@ const Home = () => {
         )}
       </div>
 
-      {/* Scroll to Top Button - Only on Home Page */}
+      {/* Scroll to Top Button - RESTORED */}
       <div 
         className={`home-scroll-to-top ${showScrollTop ? 'visible' : ''}`}
         onClick={scrollToTop}
