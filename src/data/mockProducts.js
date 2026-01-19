@@ -4,7 +4,7 @@ const products = [
     name: "Ferrari Roma Spider",
     price: 215599.99,
     category: "cars",
-    description: "Ferrari Roma Spider Karbon | Purple Metallic Color | Used | Accident-free | Petrol | Automatic | Emission Class: Euro6d-4(Green) | 8 Cylinders | Heated seats/steering wheel | On-board computer | Mileage: 11,680 km ",
+    description: "Ferrari Roma Spider Karbon | Purple Metallic Color | Used | Accident-free | Petrol | Automatic | Emission Class: Euro6d-4(Green) | 8 Cylinders | Heated seats/steering wheel | On-board computer | Mileage: 21,680 km ",
     images: [
       "/images/Vk1.jpg",
       "/images/Vk2.jpg",
@@ -45,7 +45,7 @@ const products = [
     name: "BMW 535",
     price: 16999.99,
     category: "cars",
-    description: "i xDrive M Sport Performance Exclusive Edition | Black Metallic Color | Used | Accident-free | Petrol | Automatic | Emission Class: Euro6d-4(Green) | 6 Cylinders | Heated seats/steering wheel | combustion engine | Mileage: 13,910 km",
+    description: "i xDrive M Sport Performance Exclusive Edition | Black Metallic Color | Used | Accident-free | Petrol | Automatic | Emission Class: Euro6d-4(Green) | 6 Cylinders | Heated seats/steering wheel | combustion engine | Mileage: 33,910 km",
     images: [
       "/images/Bm1.jpg",
       "/images/Bm2.jpg",
@@ -87,7 +87,7 @@ const products = [
     name: "Mercedes-Benz S 560",
     price: 49899.99,
     category: "cars",
-    description: "4Matic AMG-Plus | Obsidian Black Metallic Color | Used | Accident-free | Petrol | Automatic | Emission Class: Euro6d-4(Green) | combustion engine | Heated seats/steering wheel | On-board computer | Winter package | Mileage: 8,496 km ",
+    description: "4Matic AMG-Plus | Obsidian Black Metallic Color | Used | Accident-free | Petrol | Automatic | Emission Class: Euro6d-4(Green) | combustion engine | Heated seats/steering wheel | On-board computer | Winter package | Mileage: 28,496 km ",
     images: [
       "/images/Mb1.jpg",
       "/images/Mb2.jpg",
@@ -127,7 +127,7 @@ const products = [
     name: "Nissan Primastar",
     price: 19089.99,
     category: "cars",
-    description: "Kombi L1H1 2,8t dCi170 Tekna Auto | Black Metallic Color | Used | Accident-free | Diesel | Automatic | Emission Class: Euro6d-4(Green) | Internal combustion engine | Heated seats/steering wheel | On-board computer | 4 Cylinders | Mileage: 16,230 km ",
+    description: "Kombi L1H1 2,8t dCi170 Tekna Auto | Black Metallic Color | Used | Accident-free | Diesel | Automatic | Emission Class: Euro6d-4(Green) | Internal combustion engine | Heated seats/steering wheel | On-board computer | 4 Cylinders | Mileage: 26,230 km ",
     images: [
       "/images/Np1.jpg",
       "/images/Np2.jpg",
@@ -164,7 +164,7 @@ const products = [
       name: "Ford Mustang 5.0 GT",
       price: 28999.99,
       category: "cars",
-      description: "5.0 GT Cervini Performance / unique | Blue Metallic Color | Used | Single Owner | Petrol | 10-Speed Automatic | 8 Cylinders | Performance Package | Heated/Cooled Leather Seats | Apple CarPlay/Android Auto | Rear View Camera | combustion engine | Mileage: 15,127 km",
+      description: "5.0 GT Cervini Performance / unique | Blue Metallic Color | Used | Single Owner | Petrol | 10-Speed Automatic | 8 Cylinders | Performance Package | Heated/Cooled Leather Seats | Apple CarPlay/Android Auto | Rear View Camera | combustion engine | Mileage: 25,127 km",
       images: [
         "/images/ford_mustang_1.jpg", 
         "/images/ford_mustang_2.jpg", 
@@ -205,7 +205,7 @@ const products = [
       name: "Honda Civic",
       price: 14899.99,
       category: "cars",
-      description: "Lim. 5-door 1.0 Elegance | Gray Color | Used | Accident-free | Petrol | CVT Automatic | 1.5L Turbocharged Engine | Heated Front Seats | Leather-Trimmed Interior | Navigation System | Adaptive Cruise Control | combustion engine | Mileage: 7,926 km",
+      description: "Lim. 5-door 1.0 Elegance | Gray Color | Used | Accident-free | Petrol | CVT Automatic | 1.5L Turbocharged Engine | Heated Front Seats | Leather-Trimmed Interior | Navigation System | Adaptive Cruise Control | combustion engine | Mileage: 17,926 km",
       images: [
         "/images/honda_civic_1.jpg", 
         "/images/honda_civic_2.jpg", 
@@ -245,7 +245,7 @@ const products = [
       name: "Tesla Model 3 Performance",
       price: 35699.99,
       category: "cars",
-      description: "Performance Dual AWD | Grey Metallic Color | Used | Single Owner | Electric | Single-Speed Automatic | Dual Motor All-Wheel Drive | Autopilot | Premium Interior | Glass Roof | All-Season Tires | electric engine | Mileage: 14,418 km",
+      description: "Performance Dual AWD | Grey Metallic Color | Used | Single Owner | Electric | Single-Speed Automatic | Dual Motor All-Wheel Drive | Autopilot | Premium Interior | Glass Roof | All-Season Tires | electric engine | Mileage: 24,418 km",
       images: [
         "/images/tesla_model3_1.jpg", 
         "/images/tesla_model3_2.jpg", 
@@ -293,7 +293,7 @@ const products = [
       name: "Toyota RAV4 Hybrid Navi",
       price: 21399.99,
       category: "cars",
-      description: "RAV4 Hybrid Navi | Magnetic Gray Metallic Color | Used | Accident-free | Petrol | 8-Speed Automatic | 2.5L 4-Cylinder Engine | Moonroof | Power Liftgate | SofTex Trimmed Seats | Apple CarPlay/Android Auto | combustion engine | Mileage: 17,618 km",
+      description: "RAV4 Hybrid Navi | Magnetic Gray Metallic Color | Used | Accident-free | Petrol | 8-Speed Automatic | 2.5L 4-Cylinder Engine | Moonroof | Power Liftgate | SofTex Trimmed Seats | Apple CarPlay/Android Auto | combustion engine | Mileage: 37,618 km",
       images: [
         "/images/toyota_rav4_1.jpg", 
         "/images/toyota_rav4_2.jpg", 
@@ -338,7 +338,7 @@ const products = [
       name: "Chevrolet Camaro",
       price: 45999.99,
       category: "cars",
-      description: "6.2 V8 50th Anniversary Ed. | Grey Metallic Color | Used | Keyless central locking | Petrol | 8-Speed Dual-Clutch | 6.2L V8 Engine | Z51 Performance Package | GT2 Seats | Front Lift Adjustment | Bose Premium Audio | combustion engine | Mileage: 13,920 km",
+      description: "6.2 V8 50th Anniversary Ed. | Grey Metallic Color | Used | Keyless central locking | Petrol | 8-Speed Dual-Clutch | 6.2L V8 Engine | Z51 Performance Package | GT2 Seats | Front Lift Adjustment | Bose Premium Audio | combustion engine | Mileage: 33,920 km",
       images: [
 "/images/chevrolet_corvette_1.jpg", 
 "/images/chevrolet_corvette_2.jpg", 
@@ -388,7 +388,7 @@ const products = [
       name: "Subaru Outback",
       price: 34999.99,
       category: "cars",
-      description: "2.5i Platinum Lineartronic | Silver Metallic Color | Used | One Owner | Petrol | Blind spot assist | 2.4L Turbocharged Engine | Symmetrical All-Wheel Drive | Nappa Leather Seats | Harman Kardon Audio | Heated steering wheel | combustion engine | Mileage: 23,217 km",
+      description: "2.5i Platinum Lineartronic | Silver Metallic Color | Used | One Owner | Petrol | Blind spot assist | 2.4L Turbocharged Engine | Symmetrical All-Wheel Drive | Nappa Leather Seats | Harman Kardon Audio | Heated steering wheel | combustion engine | Mileage: 33,217 km",
       images: [
         "/images/subaru_outback_1.jpg", 
 "/images/subaru_outback_2.jpg", 
@@ -426,7 +426,7 @@ const products = [
       name: "Jeep Wrangler",
       price: 16999.99,
       category: "cars",
-      description: "Unlimited Sport | Black Color | Used | No Accidents | Diesel | Manual gearbox | 4 Cylinders | Body-Color Fender Flares | LED Lighting Group | Cold Weather Group | 8.4-Inch Radio | combustion engine | Mileage: 33,756 km",
+      description: "Unlimited Sport | Black Color | Used | No Accidents | Diesel | Manual gearbox | 4 Cylinders | Body-Color Fender Flares | LED Lighting Group | Cold Weather Group | 8.4-Inch Radio | combustion engine | Mileage: 43,756 km",
       images: [
         "/images/jeep_wrangler_1.jpg", 
 "/images/jeep_wrangler_2.jpg", 
@@ -477,7 +477,7 @@ const products = [
       name: "Audi A4 Avant 2.0",
       price: 26299.99,
       category: "cars",
-      description: "Avant 2.0 TDI quattro | Grey Metallic Color | Used | Clean History | Petrol | 7-Speed Automatic | 2.0L Turbocharged Engine | Virtual Cockpit | Bang & Olufsen Sound System | Heated Seats | Navigation | combustion engine | Mileage: 16,314 km",
+      description: "Avant 2.0 TDI quattro | Grey Metallic Color | Used | Clean History | Petrol | 7-Speed Automatic | 2.0L Turbocharged Engine | Virtual Cockpit | Bang & Olufsen Sound System | Heated Seats | Navigation | combustion engine | Mileage: 26,314 km",
       images: [
       "/images/audi_a4_1.jpg", 
 "/images/audi_a4_2.jpg", 
@@ -522,7 +522,7 @@ const products = [
       name: "Hyundai Tucson",
       price: 17199.99,
       category: "cars",
-      description: "Tucson Premium 2.0Ltr-136kW | White Color | Used | No Damage | Petrol | 8-Speed Automatic | 2.5L 4-Cylinder Engine | Leather Seats | Panoramic Sunroof | Wireless Charging | Highway Driving Assist | combustion engine | Mileage: 26,310 km",
+      description: "Tucson Premium 2.0Ltr-136kW | White Color | Used | No Damage | Petrol | 8-Speed Automatic | 2.5L 4-Cylinder Engine | Leather Seats | Panoramic Sunroof | Wireless Charging | Highway Driving Assist | combustion engine | Mileage: 36,310 km",
       images: [
         "/images/hyundai_tucson_1.jpg",
 "/images/hyundai_tucson_2.jpg", 
@@ -559,7 +559,7 @@ const products = [
       name: "Nissan Pathfinder",
       price: 41699.99,
       category: "cars",
-      description: " | Black Metallic Color | Used | Well Maintained | Petrol | CVT Automatic | Ambient lighting | 6 Cylinders Engine | ProPILOT Assist | Leather-Appointed Seats | Motion-Activated Liftgate | Bose Premium Audio | combustion engine | Mileage: 15,739 km",
+      description: " | Black Metallic Color | Used | Well Maintained | Petrol | CVT Automatic | Ambient lighting | 6 Cylinders Engine | ProPILOT Assist | Leather-Appointed Seats | Motion-Activated Liftgate | Bose Premium Audio | combustion engine | Mileage: 25,739 km",
       images: [
         "/images/nissan_rogue_1.jpg", 
 "/images/nissan_rogue_2.jpg", 
@@ -599,7 +599,7 @@ const products = [
     name: "Ford F-150 Lariat",
     price: 44999.99,
     category: "trucks",
-    description: "F-150 LARIAT DIESEL 3.0 AWD | 3.5L EcoBoost V6 | White Metallic Color | Highly Maintained | Diesel | Crew Cab | Leather Interior | Tow Package | Apple CarPlay/Android Auto | One owner | Clean title | Mileage: 14,378 km",
+    description: "F-150 LARIAT DIESEL 3.0 AWD | 3.5L EcoBoost V6 | White Metallic Color | Highly Maintained | Diesel | Crew Cab | Leather Interior | Tow Package | Apple CarPlay/Android Auto | One owner | Clean title | Mileage: 24,378 km",
     images: [
       "/images/truck_1.jpg",
 "/images/truck_2.jpg",
@@ -650,7 +650,7 @@ const products = [
     name: "Honda CR-V Executive",
     price: 22499.99,
     category: "cars",
-    description: "2021 Honda CR-V Executive | Silver Metallic | Used | Well Maintained | 1.5L Turbocharged Petrol Engine | Intelligent All-Wheel Drive (AWD) | CVT Automatic Transmission | Panoramic Sunroof | Head-Up Display (HUD) | Heated Front Seats | Honda Sensing Safety Suite | Leather-Appointed Interior | Dual-Zone Climate Control | Motion-Activated Power Tailgate | Premium Audio System | Low Mileage | Accident-Free | Mileage: 21,442 km",
+    description: "2021 Honda CR-V Executive | Silver Metallic | Used | Well Maintained | 1.5L Turbocharged Petrol Engine | Intelligent All-Wheel Drive (AWD) | CVT Automatic Transmission | Panoramic Sunroof | Head-Up Display (HUD) | Heated Front Seats | Honda Sensing Safety Suite | Leather-Appointed Interior | Dual-Zone Climate Control | Motion-Activated Power Tailgate | Premium Audio System | Low Mileage | Accident-Free | Mileage: 31,442 km",
     images: [
       "/images/suv_1.jpg",
       "/images/suv_2.jpg",
@@ -701,7 +701,7 @@ const products = [
     name: "Tesla Model Y AWD",
     price: 39499.99,
     category: "cars",
-    description: "2022 Tesla Model Y Long Range | White Metallic | Used | Excellent Condition | Dual Motor All-Wheel Drive | Fully Electric SUV | ~358 Mile EPA Range | Single-Speed Automatic | Autopilot with Full Self-Driving Capability (optional) | All-Glass Panoramic Roof | Premium Vegan Leather Interior | Heated Front & Rear Seats | 15-Inch Touchscreen with Navigation | Premium Audio | Supercharging Capability | Zero Emissions | Mileage: 15,310 km",
+    description: "2022 Tesla Model Y Long Range | White Metallic | Used | Excellent Condition | Dual Motor All-Wheel Drive | Fully Electric SUV | ~358 Mile EPA Range | Single-Speed Automatic | Autopilot with Full Self-Driving Capability (optional) | All-Glass Panoramic Roof | Premium Vegan Leather Interior | Heated Front & Rear Seats | 15-Inch Touchscreen with Navigation | Premium Audio | Supercharging Capability | Zero Emissions | Mileage: 25,310 km",
     images: [
       "/images/tsy_1.jpg",
       "/images/tsy_2.jpg",
@@ -753,7 +753,7 @@ const products = [
     name: "Toyota RAV4 Hybrid 4x4",
     price: 33999.99,
     category: "cars",
-    description: "2022 Toyota RAV4 Hybrid 4x4 Style Selection | White Metallic | Used | Well Maintained | Hybrid Powertrain for Excellent Fuel Economy | Intelligent All-Wheel Drive (AWD) | CVT Automatic Transmission | 360° Surround View Camera | Apple CarPlay & Android Auto | Toyota Safety Sense Package | Adaptive Cruise Control | Lane Keeping Assist | Leather-Appointed Interior | Heated Front Seats | Dual-Zone Climate Control | Power Tailgate | Certified Pre-Owned | Mileage: 24,113 km",
+    description: "2022 Toyota RAV4 Hybrid 4x4 Style Selection | White Metallic | Used | Well Maintained | Hybrid Powertrain for Excellent Fuel Economy | Intelligent All-Wheel Drive (AWD) | CVT Automatic Transmission | 360° Surround View Camera | Apple CarPlay & Android Auto | Toyota Safety Sense Package | Adaptive Cruise Control | Lane Keeping Assist | Leather-Appointed Interior | Heated Front Seats | Dual-Zone Climate Control | Power Tailgate | Certified Pre-Owned | Mileage: 34,113 km",
     images: [
       "/images/toy_rav4_1.jpg",
       "/images/toy_rav4_2.jpg",
@@ -800,7 +800,7 @@ const products = [
     name: "Chevrolet Silverado ZR2",
     price: 83999.99,
     category: "trucks",
-    description: "2025 Chevrolet Silverado ZR2 3LT | Black Metallic | Used | Powerful 6.2L V8 Engine | 10-Speed Automatic Transmission | 4x4 Off-Road Capability | ZR2 Off-Road Suspension Package | Tow/Haul Mode with 3.5t Trailering Capacity | Double Cab | Spray-On Bedliner | Skid Plates & Off-Road Protection | Premium Leather-Appointed Interior | Heated & Ventilated Front Seats | Dual-Zone Climate Control | Bose Premium Audio | Apple CarPlay & Android Auto | Advanced Safety Features | Local Trade-In | Well Maintained | Mileage: 17,624 km",
+    description: "2025 Chevrolet Silverado ZR2 3LT | Black Metallic | Used | Powerful 6.2L V8 Engine | 10-Speed Automatic Transmission | 4x4 Off-Road Capability | ZR2 Off-Road Suspension Package | Tow/Haul Mode with 3.5t Trailering Capacity | Double Cab | Spray-On Bedliner | Skid Plates & Off-Road Protection | Premium Leather-Appointed Interior | Heated & Ventilated Front Seats | Dual-Zone Climate Control | Bose Premium Audio | Apple CarPlay & Android Auto | Advanced Safety Features | Local Trade-In | Well Maintained | Mileage: 27,624 km",
     images: [
       "/images/chevy_1.jpg",
       "/images/chevy_2.jpg",
@@ -852,7 +852,7 @@ const products = [
     name: "Jeep Wrangler Sky One-Touch",
     price: 38999.99,
     category: "cars",
-    description: "2021 Jeep Wrangler Unlimited Sahara | Grey Metallic | Used | Well Maintained | 3.6L V6 Engine | 8-Speed Automatic Transmission | Legendary 4x4 Off-Road Capability | Sky One-Touch Power Top | Leather-Trimmed Seating | Cold Weather Group with Heated Seats & Steering Wheel | Uconnect Infotainment with Apple CarPlay & Android Auto | Dual-Zone Climate Control | Premium Alpine Audio System | Trail-Rated Durability | Iconic Jeep Style | Mileage: 16,832 km",
+    description: "2021 Jeep Wrangler Unlimited Sahara | Grey Metallic | Used | Well Maintained | 3.6L V6 Engine | 8-Speed Automatic Transmission | Legendary 4x4 Off-Road Capability | Sky One-Touch Power Top | Leather-Trimmed Seating | Cold Weather Group with Heated Seats & Steering Wheel | Uconnect Infotainment with Apple CarPlay & Android Auto | Dual-Zone Climate Control | Premium Alpine Audio System | Trail-Rated Durability | Iconic Jeep Style | Mileage: 26,832 km",
     images: [
       "/images/jeep_1.jpg",
       "/images/jeep_2.jpg",
@@ -893,7 +893,7 @@ const products = [
     name: "Porsche Boxster S",
     price: 23499.99,
     category: "cars",
-    description: "2004 Porsche Boxster S | Grey Metallic | Used | Well Maintained | 2.5L Turbocharged 4-Cylinder Boxer Engine | Rear-Wheel Drive (RWD) | 7-Speed PDK Automatic Transmission | Convertible Soft-Top | Leather Sport Seats | Heated Front Seats | Porsche Navigation | BOSE Surround Sound System | Sport Chrono Package | Dual-Zone Climate Control | Premium Interior in Leather | Iconic Roadster Design | Mileage: 28,890 km",
+    description: "2004 Porsche Boxster S | Grey Metallic | Used | Well Maintained | 2.5L Turbocharged 4-Cylinder Boxer Engine | Rear-Wheel Drive (RWD) | 7-Speed PDK Automatic Transmission | Convertible Soft-Top | Leather Sport Seats | Heated Front Seats | Porsche Navigation | BOSE Surround Sound System | Sport Chrono Package | Dual-Zone Climate Control | Premium Interior in Leather | Iconic Roadster Design | Mileage: 38,890 km",
     images: [
       "/images/s_out_1.jpg",
       "/images/s_out_2.jpg",
@@ -967,7 +967,7 @@ id: 24,
 name: "Chevrolet Camaro Coupe Schmidt Drago",
 price: 29999.99,
 category: "cars",
-description: "2024 Chevrolet Camaro Coupe Schmidt Drago | Black Metallic | Used | Performance-Oriented | 6.2L V8 Engine | 10-Speed Automatic | Rear-Wheel Drive | 20-Inch Schmidt Drago Wheels | GRAIL Performance Exhaust (Abgasanlage) | Aerodynamic Widebody Styling | Leather-Appointed Sports Seats | Dual-Zone Climate Control | Brembo High-Performance Brakes | Advanced Infotainment with Apple CarPlay & Android Auto | Custom Drive Modes | Premium Audio System | Mileage: 31,143 km",
+description: "2024 Chevrolet Camaro Coupe Schmidt Drago | Black Metallic | Used | Performance-Oriented | 6.2L V8 Engine | 10-Speed Automatic | Rear-Wheel Drive | 20-Inch Schmidt Drago Wheels | GRAIL Performance Exhaust (Abgasanlage) | Aerodynamic Widebody Styling | Leather-Appointed Sports Seats | Dual-Zone Climate Control | Brembo High-Performance Brakes | Advanced Infotainment with Apple CarPlay & Android Auto | Custom Drive Modes | Premium Audio System | Mileage: 41,143 km",
 images: [
 "/images/camaro_1.jpg",
 "/images/camaro_2.jpg",
@@ -1023,7 +1023,7 @@ id: 25,
 name: "Dodge RAM 1500 Crew Cab Limited Night",
 price: 87999.99,
 category: "trucks",
-description: "2025 Dodge RAM 1500 Limited Night Edition | Black Metallic | Used | Crew Cab 4x4 | 3.0L EcoDiesel V6 Engine | 8-Speed Automatic Transmission | Premium Blacked-Out Styling Package | LED Adaptive Headlights | Panoramic Sunroof | 12-Inch Uconnect Touchscreen | Harman Kardon Premium Audio | Ventilated Leather Seats | Heated Rear Seats | Adaptive Cruise Control | Active Park Assist | Multi-Function Tailgate | Class-Leading Towing Capacity | Mileage: 11,341 km",
+description: "2025 Dodge RAM 1500 Limited Night Edition | Black Metallic | Used | Crew Cab 4x4 | 3.0L EcoDiesel V6 Engine | 8-Speed Automatic Transmission | Premium Blacked-Out Styling Package | LED Adaptive Headlights | Panoramic Sunroof | 12-Inch Uconnect Touchscreen | Harman Kardon Premium Audio | Ventilated Leather Seats | Heated Rear Seats | Adaptive Cruise Control | Active Park Assist | Multi-Function Tailgate | Class-Leading Towing Capacity | Mileage: 21,341 km",
 images: [
 "/images/ram_limited_1.jpg",
 "/images/ram_limited_2.jpg",
@@ -1073,7 +1073,7 @@ id: 26,
 name: "Ford Mustang Mach-E AWD",
 price: 27999.99,
 category: "cars",
-description: "2023 Ford Mustang Mach-E | AWD 75 kWh Battery | Used | 273kW (365 HP) Electric Performance | Grey Metallic Exterior | Premium Leather LE Package | Extended Range ~290 Miles | BlueCruise Hands-Free Driving | 15.5-Inch Touchscreen with SYNC 4A | Panoramic Glass Roof | Heated & Ventilated Front Seats | Bang & Olufsen Premium Audio | Wireless Apple CarPlay & Android Auto | Fast-Charging Capability | Advanced Driver Assistance | Mileage: 14,428 km",
+description: "2023 Ford Mustang Mach-E | AWD 75 kWh Battery | Used | 273kW (365 HP) Electric Performance | Grey Metallic Exterior | Premium Leather LE Package | Extended Range ~290 Miles | BlueCruise Hands-Free Driving | 15.5-Inch Touchscreen with SYNC 4A | Panoramic Glass Roof | Heated & Ventilated Front Seats | Bang & Olufsen Premium Audio | Wireless Apple CarPlay & Android Auto | Fast-Charging Capability | Advanced Driver Assistance | Mileage: 24,428 km",
 images: [
 "/images/mustang_mach_e_1.jpg",
 "/images/mustang_mach_e_2.jpg",
@@ -1120,7 +1120,7 @@ rating: 4
   name: "Chevrolet Malibu SS",
   price: 52799.99,
   category: "cars",
-  description: "1965 Chevrolet Malibu SS | Vintage Classic | Creme de la Chrome Exterior | Well-Maintained & Slightly Used | Original V8 Engine | Automatic Transmission | Iconic Sport Styling | Clean Interior | Timeless Design | Collector’s Choice | Excellent Condition for Age | Runs Smoothly & Ready to Drive | Mileage: 18,262 km",
+  description: "1965 Chevrolet Malibu SS | Vintage Classic | Creme de la Chrome Exterior | Well-Maintained & Slightly Used | Original V8 Engine | Automatic Transmission | Iconic Sport Styling | Clean Interior | Timeless Design | Collector’s Choice | Excellent Condition for Age | Runs Smoothly & Ready to Drive | Mileage: 28,262 km",
 images: [
 "/images/malibu_1.jpg",
 "/images/malibu_2.jpg",
@@ -1161,7 +1161,7 @@ id: 28,
 name: "Dodge Challenger R/T",
 price: 56999.99,
 category: "cars",
-description: "2023 Dodge Challenger R/T Scat Pack | 6.4L HEMI V8 | Used | Widebody Last Call Edition | Purple Metallic Exterior | 485 HP | Tremec 6-Speed Manual or 8-Speed Automatic | Launch Control | Performance Hood with Air Intakes | Premium Alcantara & Leather Seats | Uconnect Performance Pages | Brembo High-Performance Brakes | Widebody Fender Flares | Dual Exhaust | Iconic Muscle Car Styling | Mileage: 17,382 km",
+description: "2023 Dodge Challenger R/T Scat Pack | 6.4L HEMI V8 | Used | Widebody Last Call Edition | Purple Metallic Exterior | 485 HP | Tremec 6-Speed Manual or 8-Speed Automatic | Launch Control | Performance Hood with Air Intakes | Premium Alcantara & Leather Seats | Uconnect Performance Pages | Brembo High-Performance Brakes | Widebody Fender Flares | Dual Exhaust | Iconic Muscle Car Styling | Mileage: 27,382 km",
 images: [
 "/images/challenger_1.jpg",
 "/images/challenger_2.jpg",
@@ -1242,7 +1242,7 @@ id: 30,
 name: "Lexus LM 350h Luxury",
 price: 141199.99,
 category: "cars",
-description: "2024 Lexus LM 350h Luxury | Black Exterior | Hybrid Luxury Minivan | 2.5L Hybrid Engine | E-CVT Automatic Transmission | Semi-Aniline Leather Captain Seats | Mark Levinson Premium Surround Sound | Adaptive Variable Suspension | Panoramic View Monitor | Lexus Safety System+ | Executive Rear Lounge Seating | Fold-Out Ottoman & Touchscreen Controls | Ultra-Quiet Ride | Mileage: 16,185 km",
+description: "2024 Lexus LM 350h Luxury | Black Exterior | Hybrid Luxury Minivan | 2.5L Hybrid Engine | E-CVT Automatic Transmission | Semi-Aniline Leather Captain Seats | Mark Levinson Premium Surround Sound | Adaptive Variable Suspension | Panoramic View Monitor | Lexus Safety System+ | Executive Rear Lounge Seating | Fold-Out Ottoman & Touchscreen Controls | Ultra-Quiet Ride | Mileage: 26,185 km",
 images: [
 "/images/lexus_lm_1.jpg",
 "/images/lexus_lm_2.jpg",
@@ -1293,7 +1293,7 @@ id: 31,
 name: "Dodge Charger AWD",
 price: 31499.99,
 category: "cars",
-description: "2023 Dodge Charger AWD | Green Metallic | Sport-Enhanced with K&N Filter & Alpina Sound Upgrade (+18 HP) | Used | 5.7L HEMI V8 Engine | 8-Speed Automatic Transmission | All-Wheel Drive Performance | Dual Exhaust | Performance Suspension | Apple CarPlay & Android Auto | Premium Cloth Interior | Classic Muscle Car DNA | Mileage: 21,422 km",
+description: "2023 Dodge Charger AWD | Green Metallic | Sport-Enhanced with K&N Filter & Alpina Sound Upgrade (+18 HP) | Used | 5.7L HEMI V8 Engine | 8-Speed Automatic Transmission | All-Wheel Drive Performance | Dual Exhaust | Performance Suspension | Apple CarPlay & Android Auto | Premium Cloth Interior | Classic Muscle Car DNA | Mileage: 31,422 km",
 images: [
 "/images/charger_1.jpg",
 "/images/charger_2.jpg",
@@ -1342,7 +1342,7 @@ id: 32,
 name: "Mazda CX-5 Exclusive-Line",
 price: 22899.99,
 category: "cars",
-description: "2023 Mazda CX-5 Exclusive-Line | Black Exterior | Premium Compact SUV | Used | 2.5L Turbocharged Petrol Engine | 6-Speed Automatic Transmission | Front-Wheel Drive | Deep Crystal Blue Mica Finish | Nappa Leather Seats | Bose 10-Speaker Premium Audio | Heated Steering Wheel | 360-Degree View Monitor | Adaptive Cruise Control | Accident-Free | Mileage: 33,672 km",
+description: "2023 Mazda CX-5 Exclusive-Line | Black Exterior | Premium Compact SUV | Used | 2.5L Turbocharged Petrol Engine | 6-Speed Automatic Transmission | Front-Wheel Drive | Deep Crystal Blue Mica Finish | Nappa Leather Seats | Bose 10-Speaker Premium Audio | Heated Steering Wheel | 360-Degree View Monitor | Adaptive Cruise Control | Accident-Free | Mileage: 39,672 km",
 images: [
 "/images/cx5_1.jpg",
 "/images/cx5_2.jpg",
@@ -1393,7 +1393,7 @@ rating: 4
   name: "GMC Sierra 1500 Denali",
   price: 93399.99,
   category: "trucks",
-  description: "2023 GMC Sierra 1500 Denali | Black Exterior | 6.2L V8 LPG Conversion | 10-Speed Automatic Transmission | Denali Premium Trim | Magnetic Ride Control | MultiPro Tailgate | Full 360° Surround View Camera | Bose Premium Audio System | Head-Up Display | Heated & Ventilated Leather Seats | Advanced Safety Assist Package | Power Sunroof | Strong Towing Capacity | Mileage: 22,210 km",
+  description: "2023 GMC Sierra 1500 Denali | Black Exterior | 6.2L V8 LPG Conversion | 10-Speed Automatic Transmission | Denali Premium Trim | Magnetic Ride Control | MultiPro Tailgate | Full 360° Surround View Camera | Bose Premium Audio System | Head-Up Display | Heated & Ventilated Leather Seats | Advanced Safety Assist Package | Power Sunroof | Strong Towing Capacity | Mileage: 36,210 km",
   images: [
     "/images/gmc_sierra_1.jpg",
     "/images/gmc_sierra_2.jpg",
@@ -1436,7 +1436,7 @@ rating: 4
   name: "Volvo XC60 R-Design T8 AWD",
   price: 38959.99,
   category: "cars",
-  description: "2022 Volvo XC60 R-Design T8 AWD | White Exterior | Plug-In Hybrid | 2.0L Turbo + Electric Motor | 8-Speed Automatic | All-Wheel Drive | Premium Nappa Leather Interior | Panoramic Sunroof | Head-Up Display | Adaptive Cruise Control (ACC) | Pilot Assist Semi-Autonomous Driving | Bowers & Wilkins Surround Audio | Navigation System | Advanced Safety Suite | Warranty: 7 Months Remaining",
+  description: "2022 Volvo XC60 R-Design T8 AWD | White Exterior | Plug-In Hybrid | 2.0L Turbo + Electric Motor | 8-Speed Automatic | All-Wheel Drive | Premium Nappa Leather Interior | Panoramic Sunroof | Head-Up Display | Adaptive Cruise Control (ACC) | Pilot Assist Semi-Autonomous Driving | Bowers & Wilkins Surround Audio | Navigation System | Advanced Safety Suite | Mileage: 31,710 km",
   images: [
     "/images/volvo_xc60_1.jpg",
     "/images/volvo_xc60_2.jpg",
@@ -1486,7 +1486,7 @@ rating: 4
   name: "Chrysler Pacifica Plug-in Hybrid",
   price: 51999.99,
   category: "cars",
-  description: "2023 Chrysler Pacifica Plug-in Hybrid | Grey Metallic Exterior | Used | 3.6L V6 Hybrid Engine | 9-Speed Automatic | Family Minivan | 7-Passenger Seating | Tri-Zone Climate Control | Uconnect Theater System with Dual Rear TVs | Full 360° Camera | Advanced Adaptive Cruise Control (ACC) | Leather Upholstery | Heated & Ventilated Front Seats | Hands-Free Power Sliding Doors | Mileage: 17,694 km",
+  description: "2023 Chrysler Pacifica Plug-in Hybrid | Grey Metallic Exterior | Used | 3.6L V6 Hybrid Engine | 9-Speed Automatic | Family Minivan | 7-Passenger Seating | Tri-Zone Climate Control | Uconnect Theater System with Dual Rear TVs | Full 360° Camera | Advanced Adaptive Cruise Control (ACC) | Leather Upholstery | Heated & Ventilated Front Seats | Hands-Free Power Sliding Doors | Mileage: 27,694 km",
   images: [
     "/images/chrysler_pacifica_1.jpg",
     "/images/chrysler_pacifica_2.jpg",
@@ -1532,7 +1532,7 @@ rating: 4
   name: "Acura RDX A-Spec",
   price: 29299.99,
   category: "cars",
-  description: "2022 Acura RDX A-Spec | Dark Silver Exterior | Used | 2.0L Turbocharged 4-Cylinder | 10-Speed Automatic Transmission | All-Wheel Drive | Sport-Inspired Design | Alcantara & Leather-Trimmed Seats | ELS Studio Premium Audio | Panoramic Sunroof | Adaptive Dampers | Jewel Eye LED Headlights | Hands-Free Power Tailgate | Mileage: 16,755 km",
+  description: "2022 Acura RDX A-Spec | Dark Silver Exterior | Used | 2.0L Turbocharged 4-Cylinder | 10-Speed Automatic Transmission | All-Wheel Drive | Sport-Inspired Design | Alcantara & Leather-Trimmed Seats | ELS Studio Premium Audio | Panoramic Sunroof | Adaptive Dampers | Jewel Eye LED Headlights | Hands-Free Power Tailgate | Mileage: 37,755 km",
   images: [
     "/images/acura_rdx_1.jpg",
     "/images/acura_rdx_2.jpg",
@@ -1568,7 +1568,7 @@ rating: 4
   name: "Ford Bronco Badlands",
   price: 54799.99,
   category: "cars",
-  description: "2023 Ford Bronco Badlands First Edition | Well-Maintained | Light Blue Exterior | 2.7L EcoBoost V6 | 10-Speed Automatic | e-4WD Advanced Off-Road System | Sasquatch Package with 35-Inch Tires | Removable Doors & Roof | Leather-Trimmed Interior | Trail Turn Assist | Off-Road Navigation | First Edition Badging | Heavy-Duty Suspension | Mileage: 10,990 km",
+  description: "2023 Ford Bronco Badlands First Edition | Well-Maintained | Light Blue Exterior | 2.7L EcoBoost V6 | 10-Speed Automatic | e-4WD Advanced Off-Road System | Sasquatch Package with 35-Inch Tires | Removable Doors & Roof | Leather-Trimmed Interior | Trail Turn Assist | Off-Road Navigation | First Edition Badging | Heavy-Duty Suspension | Mileage: 20,990 km",
   images: [
     "/images/ford_bronco_1.jpg",
     "/images/ford_bronco_2.jpg",
@@ -1619,7 +1619,7 @@ rating: 4
   name: "Hyundai Sonata",
   price: 6159.99,
   category: "cars",
-  description: "2006 Hyundai Sonata Comfort | Black Exterior | Used | 3.3L Petrol V6 Engine | 5-Speed Automatic Transmission | Comfortable Cloth Seating | Air Conditioning | Power Windows & Mirrors | Premium Factory Audio System | Spacious Interior | Reliable Daily Driver | Accident-Free | Mileage: 43,380 km",
+  description: "2006 Hyundai Sonata Comfort | Black Exterior | Used | 3.3L Petrol V6 Engine | 5-Speed Automatic Transmission | Comfortable Cloth Seating | Air Conditioning | Power Windows & Mirrors | Premium Factory Audio System | Spacious Interior | Reliable Daily Driver | Accident-Free | Mileage: 53,380 km",
   images: [
     "/images/hyundai_sonata_1.jpg",
     "/images/hyundai_sonata_2.jpg",
@@ -1649,7 +1649,7 @@ rating: 4
   name: "Jeep Grand Cherokee 4xe",
   price: 66199.99,
   category: "cars",
-  description: "2024 Jeep Grand Cherokee Summit 4xe Plug-in Hybrid | Grey Metallic Exterior | 2.0L Turbocharged Hybrid Engine | 8-Speed Automatic | Luxury Summit Trim | Quadra-Lift Air Suspension | 380 PS Combined Power | Well-Maintained | Panoramic Sunroof | McIntosh Premium Audio | Ventilated Nappa Leather Seats | Full 360° Camera System | Adaptive Cruise Control | Mileage: 16,733 km",
+  description: "2024 Jeep Grand Cherokee Summit 4xe Plug-in Hybrid | Grey Metallic Exterior | 2.0L Turbocharged Hybrid Engine | 8-Speed Automatic | Luxury Summit Trim | Quadra-Lift Air Suspension | 380 PS Combined Power | Well-Maintained | Panoramic Sunroof | McIntosh Premium Audio | Ventilated Nappa Leather Seats | Full 360° Camera System | Adaptive Cruise Control | Mileage: 28,733 km",
   images: [
     "/images/jeep_grand_cherokee_1.jpg",
     "/images/jeep_grand_cherokee_2.jpg",
@@ -1691,7 +1691,7 @@ rating: 4
   name: "Toyota Camry Hybrid",
   price: 28999.99,
   category: "cars",
-  description: "2022 Toyota Camry Hybrid Executive | White Exterior | Used | 2.5L VVT-i Hybrid Engine | CVT Automatic Transmission | Luxury Executive Trim | Full Leather Interior | Heated & Ventilated Seats | Panoramic Roof | Head-Up Display | Adaptive Cruise Control | Premium JBL Audio | Bird’s Eye View Camera | Accident-Free | Mileage: 14,372 km",
+  description: "2022 Toyota Camry Hybrid Executive | White Exterior | Used | 2.5L VVT-i Hybrid Engine | CVT Automatic Transmission | Luxury Executive Trim | Full Leather Interior | Heated & Ventilated Seats | Panoramic Roof | Head-Up Display | Adaptive Cruise Control | Premium JBL Audio | Bird’s Eye View Camera | Accident-Free | Mileage: 24,372 km",
   images: [
     "/images/toyota_camry_1.jpg",
     "/images/toyota_camry_2.jpg",
@@ -3617,8 +3617,8 @@ rating: 4
     "/images/BSTB2.jpg",
   ],
   highDemand: true,
-  sold: false,
-  quantity: 11,
+  sold: true,
+  quantity: 0,
   sku: "BSB-SPHERE-LV-TICKETS",
   brand: "Backstreet Boys",
   rating: {
