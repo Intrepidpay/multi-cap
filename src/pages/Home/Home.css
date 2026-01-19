@@ -166,22 +166,14 @@
   visibility: visible;
 }
 
-/* Only show hover effects on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  .home-scroll-to-top:hover {
-    background-color: rgba(19, 59, 95, 0.2);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(19, 59, 95, 0.2);
-  }
-  
-  .home-scroll-to-top:hover svg {
-    transform: translateY(-2px);
-  }
+.home-scroll-to-top:hover {
+  background-color: rgba(19, 59, 95, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(19, 59, 95, 0.2);
 }
 
 .home-scroll-to-top:active {
   transform: translateY(0);
-  background-color: rgba(19, 59, 95, 0.2);
 }
 
 .home-scroll-to-top svg {
@@ -189,6 +181,10 @@
   height: 20px;
   fill: #133B5F;
   transition: transform 0.3s ease;
+}
+
+.home-scroll-to-top:hover svg {
+  transform: translateY(-2px);
 }
 
 @media (max-width: 768px) {
