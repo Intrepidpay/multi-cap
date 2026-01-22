@@ -3628,6 +3628,100 @@ rating: 4
   reviews: [
     {
       rating: 5
+    },
+    {
+  id: 654,
+  name: "BMW X1 18d M Sport",
+  price: 32999.99,
+  category: "cars",
+  description: "BMW X1 18d M Sport | Black Metallic Exterior | Diesel Engine | Automatic Transmission | M Sport Package | Panoramic Sunroof | Electric Seats | Adaptive Cruise Control (ACC) | 360° Camera System | Harman Kardon Sound System | One Owner | Accident-Free | Mileage: 57,000 km",
+  images: [
+    "/images/bmw_x1_1.jpg",
+    "/images/bmw_x1_2.jpg",
+    "/images/bmw_x1_3.jpg",
+    "/images/bmw_x1_4.jpg",
+    "/images/bmw_x1_5.jpg",
+    "/images/bmw_x1_6.jpg",
+    "/images/bmw_x1_7.jpg",
+    "/images/bmw_x1_8.jpg",
+    "/images/bmw_x1_9.jpg",
+    "/images/bmw_x1_10.jpg",
+    "/images/bmw_x1_11.jpg",
+    "/images/bmw_x1_12.jpg",
+    "/images/bmw_x1_13.jpg",
+    "/images/bmw_x1_14.jpg",
+    "/images/bmw_x1_15.jpg",
+    "/images/bmw_x1_16.jpg",
+    "/images/bmw_x1_17.jpg",
+    "/images/bmw_x1_18.jpg",
+    "/images/bmw_x1_19.jpg",
+    "/images/bmw_x1_20.jpg",
+    "/images/bmw_x1_21.jpg",
+    "/images/bmw_x1_22.jpg",
+    "/images/bmw_x1_23.jpg",
+    "/images/bmw_x1_24.jpg",
+    "/images/bmw_x1_25.jpg"
+  ],
+  highDemand: false,
+  sold: false,
+  quantity: 1,
+  sku: "BMW-X1-18D-MS",
+  brand: "BMW",
+  rating: {
+    value: 4.1,
+    count: 3
+  },
+  reviews: [
+    {
+      rating: 4
+    }
+  ]
+   },
+    {
+  id: 655,
+  name: "Chevrolet Silverado 6.2L V8 Z71",
+  price: 63599.99,
+  category: "cars",
+  description: "Chevrolet Silverado 6.2L V8 Z71 4x4 | Black Exterior | Petrol Engine | 6.2L V8 | Automatic Transmission | Z71 Off-Road Package | Four-Wheel Drive (4x4) | 3.5T Tow Hitch (AHK) | Used As New | Powerful Performance | Premium Interior | Advanced Safety Features | Mileage: 7,400 km",
+  images: [
+    "/images/chevrolet_silverado_1.jpg",
+    "/images/chevrolet_silverado_2.jpg",
+    "/images/chevrolet_silverado_3.jpg",
+    "/images/chevrolet_silverado_4.jpg",
+    "/images/chevrolet_silverado_5.jpg",
+    "/images/chevrolet_silverado_6.jpg",
+    "/images/chevrolet_silverado_7.jpg",
+    "/images/chevrolet_silverado_8.jpg",
+    "/images/chevrolet_silverado_9.jpg",
+    "/images/chevrolet_silverado_10.jpg",
+    "/images/chevrolet_silverado_11.jpg",
+    "/images/chevrolet_silverado_12.jpg",
+    "/images/chevrolet_silverado_13.jpg",
+    "/images/chevrolet_silverado_14.jpg",
+    "/images/chevrolet_silverado_15.jpg",
+    "/images/chevrolet_silverado_16.jpg",
+    "/images/chevrolet_silverado_17.jpg",
+    "/images/chevrolet_silverado_18.jpg",
+    "/images/chevrolet_silverado_19.jpg",
+    "/images/chevrolet_silverado_20.jpg",
+    "/images/chevrolet_silverado_21.jpg",
+    "/images/chevrolet_silverado_22.jpg",
+    "/images/chevrolet_silverado_23.jpg"
+  ],
+  highDemand: false,
+  sold: false,
+  quantity: 1,
+  sku: "CHEV-SILV-62V8-Z71",
+  brand: "Chevrolet",
+  rating: {
+    value: 4.2,
+    count: 5
+  },
+  reviews: [
+    {
+      rating: 4
+    }
+  ]
     }
   ]
 },
