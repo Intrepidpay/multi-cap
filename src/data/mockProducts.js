@@ -3627,8 +3627,10 @@ rating: 4
   },
   reviews: [
     {
-      rating: 5
-    },
+      rating: 5  
+    } 
+    ]
+   },
     {
   id: 654,
   name: "BMW X1 18d M Sport",
@@ -3718,9 +3720,7 @@ rating: 4
       rating: 4
     }
   ]
-    }
-  ]
-},
+    },
 
  ]
 
