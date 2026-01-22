@@ -3656,11 +3656,7 @@ rating: 4
     "/images/bmw_x1_18.jpg",
     "/images/bmw_x1_19.jpg",
     "/images/bmw_x1_20.jpg",
-    "/images/bmw_x1_21.jpg",
-    "/images/bmw_x1_22.jpg",
-    "/images/bmw_x1_23.jpg",
-    "/images/bmw_x1_24.jpg",
-    "/images/bmw_x1_25.jpg"
+    "/images/bmw_x1_21.jpg"
   ],
   highDemand: false,
   sold: false,
