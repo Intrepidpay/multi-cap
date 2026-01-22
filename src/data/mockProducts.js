@@ -3677,7 +3677,7 @@ rating: 4
   id: 655,
   name: "Chevrolet Silverado 6.2L V8 Z71",
   price: 63599.99,
-  category: "cars",
+  category: "trucks",
   description: "Chevrolet Silverado 6.2L V8 Z71 4x4 | Black Exterior | Petrol Engine | 6.2L V8 | Automatic Transmission | Z71 Off-Road Package | Four-Wheel Drive (4x4) | 3.5T Tow Hitch (AHK) | Used As New | Powerful Performance | Premium Interior | Advanced Safety Features | Mileage: 7,400 km",
   images: [
     "/images/chevrolet_silverado_1.jpg",
