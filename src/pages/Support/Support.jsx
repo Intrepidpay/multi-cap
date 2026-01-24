@@ -11,11 +11,11 @@ const Support = () => {
     },
     {
       question: "What payment methods do you accept?",
-      answer: "We accept various payment methods including bank transfers, mobile money, and bitcoin. Details will be provided during the WhatsApp checkout process."
+      answer: "We accept various payment methods including bank transfers, mobile money, and bitcoin. Details will be provided during the checkout process."
     },
     {
       question: "How long does shipping take?",
-      answer: "Shipping typically takes 3-5 business days within the city and 5-10 business days for other locations. Express shipping options are also available."
+      answer: "Shipping typically takes 3-5 business days if the product is already in the US or Canada and 5-7 business days if being shipped from a different country. Express shipping options are also available."
     },
     {
       question: "What is your return policy?",
@@ -23,7 +23,7 @@ const Support = () => {
     },
     {
       question: "How can I track my order?",
-      answer: "Once your order ships, we'll provide you with a tracking number via WhatsApp. You can use this to monitor your package's journey."
+      answer: "Once your order ships, we'll provide you with a tracking number via WhatsApp. You can use this to monitor your shipment's journey."
     }
   ]
 
