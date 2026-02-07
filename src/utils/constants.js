@@ -1,5 +1,5 @@
 export const CATEGORIES = [
-  'all', 'trucks', 'cars', 'motorcycles', 'computers', 'appliances', 'cameras', 'collectable' , 'art' , 'fashion' , 'accessories', 'tickets' , 'other'
+  'all', 'trucks', 'cars', 'motorcycles', 'computers', 'appliances', 'cameras', 'collectable' , 'art' , 'fashion' , 'accessories' , 'other'
 ]
 
 export const SORT_OPTIONS = [
