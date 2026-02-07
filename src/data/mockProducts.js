@@ -3607,31 +3607,6 @@ rating: 4
   ]
 },
  {
-  id: 653,
-  name: "Backstreet Boys – Las Vegas",
-  price: 450,
-  category: "tickets",
-  description: "Live concert tickets for Backstreet Boys at Sphere, The Venetian Resort, Las Vegas, NV | Venue: Sphere at The Venetian Resort | Multicapital warehouse reserved inventory | Seating includes multiple premium sections and General Admission | General Admission: Row GA6 ($450), Row Floor ($470), Row GA1 ($820), Row GA7 ($2,899), Row GA7 (3 Tickets $8,299) | Section 102: Row 33 ($550), Row 19 ($929), Row 27 ($500) | Section 204: Row 18 ($720), Row 14 ($780), Row 19 ($3,399) | Section 405: Row 20 ($500), Row 15 ($570), Row 2 ($750) | For December 2025: 26th, 27th, 28th, 30th, 31th January 2026: 2nd, 3rd | Availability subject to confirmation | Parking tickets, VIP access, and backstage meet & greet options available | Please contact to confirm availability and package options",
-  images: [
-    "/images/BSTB1.jpg",
-    "/images/BSTB2.jpg",
-  ],
-  highDemand: true,
-  sold: true,
-  quantity: 0,
-  sku: "BSB-SPHERE-LV-TICKETS",
-  brand: "Backstreet Boys",
-  rating: {
-    value: 5,
-    count: 14
-  },
-  reviews: [
-    {
-      rating: 5  
-    } 
-    ]
-   },
-    {
   id: 654,
   name: "BMW X1 18d M Sport",
   price: 32999.99,
