@@ -57,7 +57,7 @@ body.lightbox-open {
   position: relative;
   touch-action: pan-y;
   cursor: pointer;
-  background-color: #f8f9fa;
+  background-color: #4c6a83;
   /* Remove blue flash on click */
   -webkit-tap-highlight-color: transparent;
   outline: none;
@@ -75,7 +75,6 @@ body.lightbox-open {
   height: 100%;     /* fill container vertically */
   width: 100%;      /* keep proportions */
   object-fit: fill; /* ensures no cropping */
-  background-color: #f8f9fa;
   border: none;
   outline: none;
   display: block;
